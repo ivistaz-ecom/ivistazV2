@@ -1,26 +1,777 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+*,
+body {
+  /* transition: background-color 1s ease; */
+  font-family: "monument regular", sans-serif;
+  font-weight: 500;
+  src: url("/font/MonumentGrotesk-font/MonumentGrotesk-Regular.ttf");
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.poppins {
+  font-family: "monument regular", sans-serif;
+}
+.font-monument-thin-italic {
+  font-weight: 100; 
+  font-style: italic;
+}
+.font-monument-extralight {
+  font-weight: 200;
+  font-style: normal;
+}
+.font-monument-light {
+  font-weight: 300;
+  font-style: normal;
+}
+.font-monument-light-italic {
+  font-weight: 300;
+  font-style: italic;
+}
+.font-monument-regular {
+  font-weight: 400;
+  font-style: normal;
+}
+.font-monument-italic {
+  font-weight: 400;
+  font-style: italic;
+}
+.font-monument-medium {
+  font-weight: 500;
+  font-style: normal;
+}
+.font-monument-medium-italic {
+  font-weight: 500;
+  font-style: italic;
+}
+.font-monument-semibold {
+  font-weight: 600;
+  font-style: normal;
+}
+.font-monument-semibold-italic {
+  font-weight: 600;
+  font-style: italic;
+}
+.font-monument-bold {
+  font-weight: 700;
+  font-style: normal;
+}
+.font-monument-bold-italic {
+  font-weight: 700;
+  font-style: italic;
+}
+.font-monument-extrabold {
+  font-weight: 800;
+  font-style: normal;
+}
+.font-monument-extrabold-italic {
+  font-weight: 800;
+  font-style: italic;
+}
+.font-monument-black {
+  font-weight: 900;
+  font-style: normal;
+}
+.font-monument-black-italic {
+  font-weight: 900;
+  font-style: italic;
+}
+.font-monument-hairline {
+  font-weight: 50;
+  font-style: normal;
+}
+.font-monument-hairline-italic {
+  font-weight: 50;
+  font-style: italic;
+}
+.btn-11 {
+  position: relative;
+  color: #ed2225 !important;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  max-width: 200px;
+  padding: 12px !important;
+  border-radius: 7px;
+  text-decoration: none !important;
+  font-family: "monument regular", sans-serif !important;
+  border: 1px solid #ed2225 !important;
+  text-align: center !important;
+  font-size: 24px !important;
+  z-index: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.btn-11:before,
+.btn-11:after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #ed2225;
+  border-radius: 50%;
+  color: #ed2225 !important;
+  z-index: -17 !important;
+}
+
+.btn-11:before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+
+.btn-11:after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+
+.btn-11:hover {
+  color: #ffffff !important;
+}
+
+.btn-11:hover:before {
+  -webkit-animation: criss-cross-left 0.8s both;
+  animation: criss-cross-left 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.btn-11:hover:after {
+  -webkit-animation: criss-cross-right 0.8s both;
+  animation: criss-cross-right 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+@-webkit-keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+@keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+
+.btn-12 {
+  position: relative;
+  color: #ffffff !important;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  max-width: 200px;
+  padding: 12px !important;
+  border-radius: 7px;
+  text-decoration: none !important;
+  font-family: "monument regular", sans-serif !important;
+  border: 1px solid #ffffff !important;
+  text-align: center !important;
+  font-size: 24px !important;
+  z-index: 0;
+}
+
+.btn-12:before,
+.btn-12:after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #fffefe;
+  border-radius: 50%;
+  color: #ffffff !important;
+  z-index: -17 !important;
+}
+
+.btn-12:before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+
+.btn-12:after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+
+.btn-12:hover {
+  color: #000000 !important;
+}
+
+.btn-12:hover:before {
+  -webkit-animation: criss-cross-left 0.8s both;
+  animation: criss-cross-left 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.btn-12:hover:after {
+  -webkit-animation: criss-cross-right 0.8s both;
+  animation: criss-cross-right 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+
+.btn-13 {
+  position: relative;
+  color: #fff !important;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  padding: 12px !important;
+  border-radius: 7px;
+  text-decoration: none !important;
+  font-family: "monument regular", sans-serif !important;
+  border: 1px solid #fff !important;
+  text-align: center !important;
+  font-size: 24px !important;
+  z-index: 0;
+}
+
+.btn-13:before,
+.btn-13:after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #fff !important;
+  z-index: -17 !important;
+}
+
+.btn-13:before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+
+.btn-13:after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+
+.btn-13:hover {
+  color: #ed2225 !important;
+}
+
+.btn-13:hover:before {
+  -webkit-animation: criss-cross-left 0.8s both;
+  animation: criss-cross-left 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.btn-13:hover:after {
+  -webkit-animation: criss-cross-right 0.8s both;
+  animation: criss-cross-right 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+
+.btn-19 {
+  position: relative;
+  color: #ed2225 !important;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  max-width: 365px;
+  padding: 12px !important;
+  border-radius: 7px;
+  text-decoration: none !important;
+  font-family: "monument regular", sans-serif !important;
+  border: 1px solid #ed2225 !important;
+  text-align: center !important;
+  font-size: 24px !important;
+  z-index: 0;
+  background: #fff !important;
+}
+
+.btn-19:before,
+.btn-19:after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #ed2225;
+  border-radius: 50%;
+  color: #ed2225 !important;
+  z-index: -17 !important;
+}
+
+.btn-19:before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+
+.btn-19:after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+
+.btn-19:hover {
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+.btn-19:hover:before {
+  -webkit-animation: criss-cross-left 0.8s both;
+  animation: criss-cross-left 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.btn-19:hover:after {
+  -webkit-animation: criss-cross-right 0.8s both;
+  animation: criss-cross-right 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.iv-bg {
+  background: #c32222;
+  background: linear-gradient(
+    90deg,
+    rgba(195, 34, 34, 1) 0%,
+    rgba(255, 0, 0, 1) 50%,
+    rgba(195, 34, 34, 1) 100%
+  );
+}
+
+.btn-151 {
+  position: relative;
+  color: #ed2225 !important;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  width: 100%;
+  padding: 12px !important;
+  border-radius: 8px;
+  text-decoration: none !important;
+  font-family: "monument regular", sans-serif !important;
+  border: 1px solid #ed2225 !important;
+  text-align: center !important;
+  font-size: 24px !important;
+  z-index: 0;
+  background: #fff !important;
+}
+
+.btn-151:before,
+.btn-151:after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #ed2225;
+  border-radius: 50%;
+  color: #ed2225 !important;
+  z-index: -17 !important;
+}
+
+.btn-151:before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+
+.btn-151:after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+
+.btn-151:hover {
+  color: #fff !important;
+  border: 0px solid #fff !important;
+}
+
+.btn-151:hover:before {
+  -webkit-animation: criss-cross-left 0.8s both;
+  animation: criss-cross-left 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.btn-151:hover:after {
+  -webkit-animation: criss-cross-right 0.8s both;
+  animation: criss-cross-right 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+
+.btn-14 {
+  position: relative;
+  color: #ed2225 !important;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  max-width: 200px;
+  padding: 12px !important;
+  border-radius: 7px;
+  text-decoration: none !important;
+  font-family: "monument regular", sans-serif !important;
+  border: 1px solid #ed2225 !important;
+  text-align: center !important;
+  font-size: 24px !important;
+  z-index: 0;
+  background: #fff !important;
+}
+
+.btn-14:before,
+.btn-14:after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #ed2225;
+  border-radius: 50%;
+  color: #ed2225 !important;
+  z-index: -17 !important;
+}
+
+.btn-14:before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+
+.btn-14:after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+
+.btn-14:hover {
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+.btn-14:hover:before {
+  -webkit-animation: criss-cross-left 0.8s both;
+  animation: criss-cross-left 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.btn-14:hover:after {
+  -webkit-animation: criss-cross-right 0.8s both;
+  animation: criss-cross-right 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+
+.btn-18 {
+  position: relative;
+  color: #ed2225 !important;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  padding: 12px !important;
+  border-radius: 7px;
+  text-decoration: none !important;
+  font-family: "monument regular", sans-serif !important;
+  border: 1px solid #ed2225 !important;
+  text-align: center !important;
+  font-size: 24px !important;
+  z-index: 0;
+  background: #fff !important;
+}
+
+.btn-18:before,
+.btn-18:after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #ed2225;
+  border-radius: 50%;
+  color: #ed2225 !important;
+  z-index: -17 !important;
+}
+
+.btn-18:before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+
+.btn-18:after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+
+.btn-18:hover {
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+.btn-18:hover:before {
+  -webkit-animation: criss-cross-left 0.8s both;
+  animation: criss-cross-left 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.btn-18:hover:after {
+  -webkit-animation: criss-cross-right 0.8s both;
+  animation: criss-cross-right 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.btn-15 {
+  position: relative;
+  color: #ed2225 !important;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  max-width: 200px;
+  padding: 12px !important;
+  border-radius: 7px;
+  text-decoration: none !important;
+  font-family: "monument regular", sans-serif !important;
+  border: 1px solid #ed2225 !important; /* ✅ Set visible red border */
+  text-align: center !important;
+  font-size: 24px !important;
+  z-index: 0;
+  background: #fff !important;
+}
+
+.btn-15:before,
+.btn-15:after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #ed2225;
+  border-radius: 50%;
+  color: #ed2225 !important;
+  z-index: -17 !important;
+}
+
+.btn-15:before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+
+.btn-15:after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+
+.btn-15:hover {
+  color: #fff !important;
+  border: 0px solid #fff !important;
+}
+
+.btn-15:hover:before {
+  -webkit-animation: criss-cross-left 0.8s both;
+  animation: criss-cross-left 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.btn-15:hover:after {
+  -webkit-animation: criss-cross-right 0.8s both;
+  animation: criss-cross-right 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.btn-16 {
+  position: relative;
+  color: #ffffff !important;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  max-width: 200px;
+  padding: 12px !important;
+  border-radius: 7px;
+  text-decoration: none !important;
+  font-family: "monument regular", sans-serif !important;
+  border: 1px solid #ffffff !important;
+  text-align: center !important;
+  font-size: 24px !important;
+  z-index: 0;
+  background: #ed2225 !important;
+  
+}
+
+.btn-16:before,
+.btn-16:after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  color: #000000 !important;
+  z-index: -17 !important;
+}
+
+.btn-16:before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+
+.btn-16:after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+
+.btn-16:hover {
+  color: #ed2225 !important;
+  border: 1px solid #ed2a2a !important;
+}
+
+.btn-16:hover:before {
+  -webkit-animation: criss-cross-left 0.8s both;
+  animation: criss-cross-left 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.btn-16:hover:after {
+  -webkit-animation: criss-cross-right 0.8s both;
+  animation: criss-cross-right 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+
+.iv-cards {
+  background: #ffffff !important;
+  padding: 16px;
+  border-radius: 19px;
+  font-family: "monument regular", sans-serif;
+}
+
+.iv-cards:hover {
+  background: #ed2225 !important;
+  padding: 16px;
+  border-radius: 19px;
+  font-family: "monument regular", sans-serif;
+}
+
+.iv-cards:hover .card-body .icons {
+  transition: 0.9s !important;
+  transform: rotateZ(360deg) !important;
+}
+
+.iv-cards:hover .card-body .card-title {
+  color: #ffffff;
+  font-weight: 600;
+  font-family: "monument regular", sans-serif;
+}
+
+.iv-cards:hover .iv-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "monument regular", sans-serif !important;
+}
+
+.iv-cards:hover .card-body .card-date {
+  color: #ffffff;
+}
+
+.iv-cards .card-body .card-title {
+  color: #000000;
+  font-weight: 600;
+  font-family: "monument regular", sans-serif;
+}
+
+.iv-cards .card-body {
+  padding-top: 19px;
+}
+
+.iv-cards .card-body .card-text {
+  color: #000000;
+  font-weight: 300;
+  font-family: "monument regular", sans-serif;
+  padding-top: 12px;
+  min-height: 100px;
+}
+
+.iv-link {
+  color: #000000;
+  text-decoration: none;
+  font-family: "monument regular", sans-serif !important;
 }

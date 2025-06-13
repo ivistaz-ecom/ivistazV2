@@ -1,0 +1,271 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
+import { IoIosArrowDown } from "react-icons/io";
+import Image from "next/image";
+import Link from "next/link";
+
+const Header = () => {
+  const [activeMenu, setActiveMenu] = useState(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileDropdown, setMobileDropdown] = useState(null);
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    // Clean up when unmounting
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  const menuItems = [
+    {
+      title: "Services",
+      submenu: [
+        { label: "Overview", pageLink: "/art/services" },
+        {
+          label: "Content Development (B2B & B2C)",
+          pageLink: "/service/content-development-b2b-b2c",
+        },
+        { label: "Design", pageLink: "/service/design" },
+        {
+          label: "Search Engine Marketing",
+          pageLink: "/service/search-engine-marketing",
+        },
+        {
+          label: "Search Engine Optimization",
+          pageLink: "/service/search-engine-optimization",
+        },
+        {
+          label: "Social Media Marketing",
+          pageLink: "/service/social-media-marketing",
+        },
+        {
+          label: "Social Media - Organic",
+          pageLink: "/service/organic-social-media",
+        },
+        {
+          label: "Website Design & Development",
+          pageLink: "/service/website-design-and-development",
+        },
+      ],
+    },
+    {
+      title: "Solutions",
+      pageLink: "/mastery/solutions",
+      submenu: [],
+    },
+    {
+      title: "Industries",
+      submenu: [
+        { label: "Overview", pageLink: "/performance/industries" },
+        { label: "Appliances", pageLink: "/industries/appliances" },
+        { label: "Automobiles", pageLink: "/industries/automobiles" },
+        { label: "Beauty & Wellness", pageLink: "/industries/beauty-wellness" },
+        {
+          label: "Fashion & Accessories",
+          pageLink: "/industries/fashion-accessories",
+        },
+        { label: "Hospitality", pageLink: "/industries/hospitality" },
+        { label: "Jewelry", pageLink: "/industries/jewellery" },
+        { label: "NGOs", pageLink: "/industries/ngos" },
+        { label: "Tech/IT", pageLink: "/industries/technology-IT" },
+      ],
+    },
+    {
+      title: "Blogs",
+      pageLink: "/blogs",
+      submenu: [],
+    },
+    {
+      title: "Company",
+      submenu: [
+        { label: "Team", pageLink: "/our-team" },
+        { label: "Clients", pageLink: "/our-clients" },
+        { label: "About Us", pageLink: "/mastery/about-us" },
+        { label: "Careers", pageLink: "/careers" },
+        { label: "M.A.P", pageLink: "/mastery-art-performance" },
+      ],
+    },
+    {
+      title: "Contact",
+      pageLink: "/contact-us",
+      submenu: [],
+    },
+  ];
+
+  return (
+    <div className="bg-black text-white fixed w-full z-50">
+      <div className="container mx-auto flex items-center justify-between px-4 lg:px-0 py-4">
+        <div className="flex items-center">
+          <Link href="/welcome">
+            <Image src="/ivista_logo.svg" width={200} height={100} alt="logo" />
+          </Link>
+        </div>
+
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex space-x-10 items-center">
+          {menuItems.map((item, index) => (
+            <div key={index} className="relative">
+              {item.pageLink ? (
+                <Link
+                  href={item.pageLink}
+                  onMouseEnter={() => setActiveMenu(index)}
+                  onMouseLeave={() => setActiveMenu(null)}
+                  className="hover:text-red-500 transition flex items-center gap-1"
+                >
+                  {item.title}
+                  {item.submenu.length > 0 && (
+                    <IoIosArrowDown className="text-xs" />
+                  )}
+                </Link>
+              ) : (
+                <span
+                  onMouseEnter={() => setActiveMenu(index)}
+                  onMouseLeave={() => setActiveMenu(null)}
+                  className="hover:text-red-500 transition flex items-center gap-1 cursor-default"
+                >
+                  {item.title}
+                  {item.submenu.length > 0 && (
+                    <IoIosArrowDown className="text-xs" />
+                  )}
+                </span>
+              )}
+
+              {hasMounted && (
+                <AnimatePresence>
+                  {activeMenu === index && item.submenu.length > 0 && (
+                    <motion.div
+                      onMouseEnter={() => setActiveMenu(index)}
+                      onMouseLeave={() => setActiveMenu(null)}
+                      className="fixed top-16 left-0 w-full bg-white text-black z-40 shadow-lg"
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 px-4 sm:px-8 py-10">
+                        <div className="space-y-2">
+                          {item.submenu.slice(0, 4).map((sub, subIndex) => (
+                            <Link
+                              key={subIndex}
+                              href={sub.pageLink}
+                              className="block hover:bg-gradient-to-r hover:from-[#BCBDFF] hover:via-[#AFD7FF] hover:to-[#AFD7FF] rounded-lg p-2 transition"
+                            >
+                              {sub.label}
+                            </Link>
+                          ))}
+                        </div>
+                        <div className="space-y-2">
+                          {item.submenu.slice(4).map((sub, subIndex) => (
+                            <Link
+                              key={subIndex}
+                              href={sub.pageLink}
+                              className="block hover:bg-gradient-to-r hover:from-[#BCBDFF] hover:via-[#AFD7FF] hover:to-[#AFD7FF] rounded-lg p-2 transition"
+                            >
+                              {sub.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              )}
+            </div>
+          ))}
+
+          <Link href="/case-studies">
+            <button className="relative py-2 px-4 bg-white rounded-full overflow-hidden group text-black">
+              <span className="absolute inset-0 bg-[#D0AC59] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
+              <span className="relative z-10">Case Studies</span>
+            </button>
+          </Link>
+
+          <div className="bg-[#111] p-2 rounded-full">
+            <FaSearch className="text-white" />
+          </div>
+        </nav>
+
+        {/* Hamburger */}
+        <div className="md:hidden flex items-center gap-4">
+          <button onClick={() => setMobileOpen(!mobileOpen)}>
+            {mobileOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {hasMounted && (
+        <AnimatePresence>
+          {mobileOpen && (
+            <motion.div
+              className="md:hidden bg-black text-white w-full px-4 py-6 space-y-4"
+              initial={{ y: -50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -50, opacity: 0 }}
+            >
+              {menuItems.map((item, index) => (
+                <div key={index}>
+                  <button
+                    className="flex justify-between w-full text-left font-medium py-2"
+                    onClick={() =>
+                      setMobileDropdown(mobileDropdown === index ? null : index)
+                    }
+                  >
+                    <span>{item.title}</span>
+                    {item.submenu.length > 0 && <IoIosArrowDown />}
+                  </button>
+
+                  <AnimatePresence initial={false}>
+                    {mobileDropdown === index && item.submenu.length > 0 && (
+                      <motion.div
+                        key="mobile-submenu"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden pl-4 pt-2 space-y-2 text-black bg-white"
+                      >
+                        {item.submenu.map((sub, subIndex) => (
+                          <Link
+                            key={subIndex}
+                            href={sub.pageLink}
+                            className="block text-sm hover:text-red-600 transition"
+                          >
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ))}
+
+              <Link href="/case-studies">
+                <button className="relative py-2 px-4 bg-white rounded-full overflow-hidden group text-black">
+                  <span className="absolute inset-0 bg-[#D0AC59] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
+                  <span className="relative z-10">Case Studies</span>
+                </button>
+              </Link>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      )}
+    </div>
+  );
+};
+
+export default Header;
