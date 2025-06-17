@@ -54,7 +54,7 @@ const LatestInsights = ({ isVisible }) => {
 
   return (
     <div className="bg-black pb-10 w-full border-b-2 border-dashed border-[#2D2D2D]">
-      <div className="max-w-7xl mx-auto px-4 flex justify-between items-end">
+      <div className="container mx-auto flex justify-between items-end">
         <div>
           <h4 className="text-white text-4xl sm:text-6xl py-10">
             Stay Informed <br className="hidden sm:block" /> with Our Latest
@@ -68,7 +68,7 @@ const LatestInsights = ({ isVisible }) => {
               src="/new-home-page/white-arrow-right.png"
               width={25}
               height={25}
-              className="rotate-180"
+              className="rotate-180 lg:w-7 lg:h-7"
             />
           </button>
           <button
@@ -80,12 +80,13 @@ const LatestInsights = ({ isVisible }) => {
               src="/new-home-page/white-arrow-right.png"
               width={25}
               height={25}
+              className="lg:w-7 lg:h-7"
             />
           </button>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 mt-10">
+      <div className="container mx-auto mt-10">
         {loading ? (
           <LazyMotion features={domAnimation}>
             <div className="flex gap-6 overflow-hidden">
