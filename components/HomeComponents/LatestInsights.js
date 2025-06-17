@@ -54,7 +54,7 @@ const LatestInsights = ({ isVisible }) => {
 
   return (
     <div className="bg-black pb-10 w-full border-b-2 border-dashed border-[#2D2D2D]">
-      <div className="max-w-6xl mx-auto px-4 flex justify-between items-end">
+      <div className="max-w-7xl mx-auto px-4 flex justify-between items-end">
         <div>
           <h4 className="text-white text-4xl sm:text-6xl py-10">
             Stay Informed <br className="hidden sm:block" /> with Our Latest

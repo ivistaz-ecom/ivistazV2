@@ -53,7 +53,7 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
           overflow: hidden;
           text-overflow: ellipsis;
           display: -webkit-box;
-          -webkit-line-clamp: 5;
+          -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
         }
         .post-content {
@@ -69,7 +69,7 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
         {data ? (
           data.map((item) => (
             <div key={item.id} className="mb-10">
-              <img
+              <Image
                 src={item.acf.thumbnail_image.url}
                 alt={item.title.rendered}
                 width={1200}
@@ -137,7 +137,7 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
                 <div className="mt-6 flex justify-center">
                   <Link
                     href="/contact-us"
-                    className="bg-red-600 text-white py-2 px-6 rounded hover:bg-red-700"
+                    className="btn-14"
                   >
                     Contact Us
                   </Link>
@@ -156,7 +156,7 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
               pathname === "/engagement") && (
               <Link
                 href="/welcome"
-                className="bg-red-600 text-white py-2 px-6 rounded hover:bg-red-700"
+                className="btn-14"
               >
                 Enter website
               </Link>

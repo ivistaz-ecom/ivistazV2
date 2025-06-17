@@ -12,7 +12,7 @@ export default function ExploreCaseStudiesButton() {
     
     <div className="bg-black">
     <div className="relative w-full flex items-center justify-center py-32 h-96">
-      <Link href="/">
+      <Link href="/case-studies">
         <motion.div
           onHoverStart={() => setHovered(true)}
           onHoverEnd={() => setHovered(false)}

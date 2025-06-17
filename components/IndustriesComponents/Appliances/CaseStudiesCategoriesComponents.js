@@ -69,30 +69,30 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
         {data ? (
           data.map((item) => (
             <div key={item.id} className="mb-10">
-              <img
+              <Image
                 src={item.acf.thumbnail_image.url}
                 alt={item.title.rendered}
                 width={1200}
                 height={600}
                 className="w-full h-auto"
               />
-              <div className="bg-white shadow-lg p-6 mt-4 flex flex-col lg:flex-row justify-between gap-4">
+              <div className="bg-white shadow-lg p-6 mt-4 flex flex-col lg:flex-row justify-between gap-4 lg:items-center">
                 <div className="lg:w-1/3">
                   <div
-                    className="text-xl font-monument-bold text-red-600 post-content-title"
+                    className="text-xl font-monument-bold text-[#ed2225] post-content-title text-start"
                     dangerouslySetInnerHTML={{ __html: item.title.rendered }}
                   />
                 </div>
                 <div className="lg:w-2xl">
                   <p
-                    className="text-gray-600 post-content"
+                    className="text-gray-600 post-content text-start"
                     dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}
                   />
                 </div>
                 <div className="lg:w-auto lg:self-center">
                   <button
                     onClick={() => handleShowModal(item)}
-                    className="text-red-600 font-medium flex items-center gap-2 hover:underline"
+                    className="text-[#ed2225] font-medium flex items-center gap-2 hover:underline"
                   >
                     Learn More
                     <FiArrowUpRight size={24} />
@@ -137,10 +137,10 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
                 <div className="mt-6 flex justify-center">
                   <Link
                     href="/contact-us"
-                    className="bg-red-600 text-white py-2 px-6 rounded hover:bg-red-700"
+                    className="btn-14"
                   >
-                    Contact Us
-                  </Link>
+                    Contact Us 
+                  </Link> 
                 </div>
               </div>
             </div>
@@ -156,7 +156,7 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
               pathname === "/engagement") && (
               <Link
                 href="/welcome"
-                className="bg-red-600 text-white py-2 px-6 rounded hover:bg-red-700"
+                className="btn-13"
               >
                 Enter website
               </Link>
