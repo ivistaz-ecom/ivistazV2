@@ -4,6 +4,7 @@ import { CiCircleChevRight } from "react-icons/ci";
 import Link from "next/link";
 import ConfigData from "../../../config";
 import PageNotFound from "../../[service]/page";
+import Image from "next/image";
 
 const Posts = ({ slug }) => {
   const siteUrl = ConfigData.wpApiUrl;
@@ -82,11 +83,13 @@ const Posts = ({ slug }) => {
               </div>
 
               {/* Banner Image */}
-              <img
+              <Image
                 src={post.acf.desktop_banner_image.url}
                 alt={post.title.rendered}
                 loading="lazy"
-                className="w-full h-auto rounded-4xl pt-5"
+                className="w-full h-full rounded-4xl pt-5 object-cover"
+                width={800}
+                height={600}
               />
 
               {/* Content */}
@@ -96,10 +99,23 @@ const Posts = ({ slug }) => {
                   dangerouslySetInnerHTML={{ __html: post.title.rendered }}
                 />
                 <div>
-                  <p
-                    className="text-base leading-relaxed"
-                    dangerouslySetInnerHTML={{ __html: post.content.rendered }}
-                  />
+                <div className="text-base leading-relaxed text-black [&>ul]:list-disc [&>ul]:pl-6 [&>li]:mb-2">
+  <div
+    dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+  />
+</div>
+
+                  {/* <ul className="list-disc lg:pl-10 pl-5 space-y-2 lg:text-xl">
+                      {post.content.rendered
+                        .replace(/<[^>]+>/g, "") // Remove all HTML tags
+                        .split(/[.\n•]/) // Split by full stop, newline, bullet, dash
+                        .map((point, index) => {
+                          const cleaned = point.trim();
+                          return cleaned ? (
+                            <li key={index}>{cleaned}</li>
+                          ) : null;
+                        })}
+                    </ul> */}
                 </div>
               </div>
             </div>
