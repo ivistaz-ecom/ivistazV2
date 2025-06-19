@@ -12,7 +12,7 @@ const CaseStudiesCard = () => {
             Smarter, Faster, AI-Powered Marketing for Tech Brands
           </h3>
           <Link href="/ai-powered-marketing" className="btn-18">
-            Ecplore Solutions
+            Explore Solutions
           </Link>
           <h3 className="lg:text-[32px] text-xl text-center lg:py-10 lg:p-0 p-5">
             Here are some instances where our expertise and cutting-edge
