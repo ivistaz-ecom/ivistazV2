@@ -125,13 +125,13 @@ const LatestInsights = ({ isVisible }) => {
                         />
                       )}
                       <div className="p-4 flex flex-col justify-between flex-grow">
-                        <p className="text-sm text-gray-400 mb-1">
+                        <p className="text-sm text-gray-400 mb-1  px-4">
                           {new Date(post.date).toLocaleDateString("en-US", {
                             year: "numeric",
                             month: "long",
                           })}
                         </p>
-                        <h5 className="text-lg font-semibold mb-2 text-white">
+                        <h5 className="text-lg font-semibold mb-2 text-white px-4">
                           {post.title.rendered}
                         </h5>
                       </div>

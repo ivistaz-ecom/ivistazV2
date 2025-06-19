@@ -31,8 +31,15 @@ const servicesList = [
   },
   {
     ques: "5. What kind of services do you offer?",
-    bachelor:
-      "We work across strategy, design, development, and performance marketing. - Explore our services",
+    bachelor: (
+      <>
+        We work across strategy, design, development, and performance marketing.
+        -{" "}
+        <Link href="/art/services" className="text-blue-400 hover:underline">
+          Explore our services
+        </Link>
+      </>
+    ),
   },
   {
     ques: "6. Do you have experience in my industry?",
@@ -47,7 +54,12 @@ const servicesList = [
         >
           reach@ivistaz.com
         </a>{" "}
-        - Explore the industries we serve
+        <Link
+          href="/performance/industries"
+          className="text-blue-400 hover:underline"
+        >
+          Explore the industries we serve
+        </Link>
       </>
     ),
   },
@@ -57,7 +69,7 @@ const servicesList = [
       "We’re always open to working with talented professionals who share our passion for performance.",
     master: (
       <>
-        <Link href="/" className="text-blue-400 hover:underline">
+        <Link href="/careers" className="text-blue-400 hover:underline">
           - See open positions
         </Link>
       </>
@@ -66,7 +78,7 @@ const servicesList = [
   {
     ques: "8. Can I work with iVistaz for a one-time project?",
     bachelor:
-      "For most digital marketing services like SEO, social media marketing, search engine marketing or content development, we prefer to work on a retainer model. Web design/redesign projects can be treated as a one-time projects",
+      "For most digital marketing services like SEO, social media marketing, search engine marketing or content development, we prefer to work on a retainer model. Web design/redesign projects can be treated as a one-time projects.",
   },
 ];
 
@@ -96,7 +108,7 @@ const Accordion = () => {
                   type="button"
                   className="flex items-center justify-between w-full py-5 font-medium text-[#fff] gap-3"
                 >
-                  <span className="text-left text-xl md:text-2xl text-[#fff] font-tthoves-demibold">
+                  <span className="text-left text-xl md:text-xl text-[#fff] font-monument-semibold">
                     {service.ques}
                   </span>
                   {/* <span

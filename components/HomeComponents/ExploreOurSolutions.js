@@ -11,8 +11,8 @@ export default function ExploreOurSolutions() {
   return (
     <>
     <div className="bg-black">
-    <div className="relative w-full flex items-center justify-center pb-10 h-96">
-      <Link href="/">
+    <div className="relative w-full flex items-center justify-center h-48">
+      <Link href="/mastery/solutions">
         <motion.div
           onHoverStart={() => setHovered(true)}
           onHoverEnd={() => setHovered(false)}
