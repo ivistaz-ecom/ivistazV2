@@ -33,7 +33,7 @@ function NextSeo({ title, description, path, metaImage }) {
             url: "https://ivistaz.com/",
             potentialAction: {
               "@type": "SearchAction",
-              target: `https://ivistaz.com/${path}`,
+              target: `https://ivistaz.com${path}`,
               "query-input": "required name=search_term_string",
             },
           }),

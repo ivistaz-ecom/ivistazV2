@@ -6,19 +6,22 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
 import { servicesData } from "@/utils/data";
+import NextSeo from "@/components/Seo/Seo";
 
 function page() {
   const pathname = usePathname();
   const [domainName, setDomainName] = useState("");
 
-  const title = "Art Marketing Solutions ";
-  const description =
-    "Promote your art with iVistaz's specialized marketing solutions. We help artists and galleries increase their online presence and connect with art enthusiasts, ensuring your work reaches a broader audience.";
-  const path = `${pathname}`;
-  const metaImage = "";
+  const seoData = {
+    title: "Performance-focused digital marketing services",
+    description:
+      "At iVistaz, digital marketing services are tailored for optimal performance for the business, ensuring results are delivered.",
+    path: pathname,
+  };
 
   return (
     <>
+      <NextSeo {...seoData} />
       <div className="flex flex-col justify-between min-h-screen">
         <Image
           width={600}
@@ -80,7 +83,9 @@ function page() {
                 <Image src={item.logo} width={60} height={60} alt="icon" />
                 <div>
                   <p className="text-[18px] py-5 text-center">
-                    <Link href={item.pageLink} className="hover:text-[#ed2023]">{item.description}</Link>
+                    <Link href={item.pageLink} className="hover:text-[#ed2023]">
+                      {item.description}
+                    </Link>
                   </p>
                 </div>
               </div>

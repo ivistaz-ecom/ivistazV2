@@ -5,26 +5,30 @@ import { CiCircleChevRight } from "react-icons/ci";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
+import NextSeo from "@/components/Seo/Seo";
 
 function page() {
   const pathname = usePathname();
   const [domainName, setDomainName] = useState("");
 
-  const title = "Art Marketing Solutions ";
-  const description =
-    "Promote your art with iVistaz's specialized marketing solutions. We help artists and galleries increase their online presence and connect with art enthusiasts, ensuring your work reaches a broader audience.";
-  const path = `${pathname}`;
-  const metaImage = "";
+
+   const seoData = {
+    title: "Art Marketing Solutions",
+    description: "Promote your art with iVistaz's specialized marketing solutions. We help artists and galleries increase their online presence and connect with art enthusiasts, ensuring your work reaches a broader audience.",
+    path: pathname,
+    metaImage: "",
+  };
 
   return (
     <>
+    <NextSeo {...seoData}/>
       <div className="flex flex-col justify-between min-h-screen w-full">
         <Image
           width={600}
           height={300}
           src="/art/h-icon.svg"
           className="absolute h-2/3 -right-0 -top-56 hidden lg:block overflow-hidden"
-          alt=""
+          alt="icon"
         />
 
         <div className="w-full md:w-4/5 py-4 mt-32 container mx-auto lg:px-0 px-5">
@@ -70,7 +74,7 @@ function page() {
         <div className="w-full px-4 md:w-4/5 lg:-mt-56 mx-auto pb-10">
           <div className="flex flex-col-reverse lg:flex-row">
             <div className="w-full flex lg:justify-end">
-              <Image width={500} height={200} src="/art/arts.svg" alt="" />
+              <Image width={500} height={200} src="/art/arts.svg" alt="arts" />
             </div>
           </div>
           {/* Mobile-only links can be added here */}
