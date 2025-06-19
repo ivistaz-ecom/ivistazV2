@@ -1004,3 +1004,13 @@ body {
 .blog-content li {
   margin-bottom: 0.5rem;
 }
+
+
+
+.wbg-red {
+  color: #ed2225 !important;
+}
+
+.wb-marker-red::marker {
+  color: #ed2225 !important;
+}

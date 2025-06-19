@@ -8,50 +8,49 @@ const BlogsCard = () => {
   const siteUrl = ConfigData.wpApiUrl;
   const serverUrl = ConfigData.SERVER;
   const [data, setData] = useState([]);
-  const [visibleData, setVisibleData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [visibleCount, setVisibleCount] = useState(6);
+  const [page, setPage] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
+
+  const fetchBlogs = async (pageNum) => {
+    try {
+      const response = await fetch(
+        `${siteUrl}/blogs?_embed&production_mode[]=${serverUrl}&per_page=6&page=${pageNum}`
+      );
+      if (!response.ok) {
+        setHasMore(false);
+        return;
+      }
+      
+      const newData = await response.json();
+      if (newData.length === 0) {
+        setHasMore(false);
+      } else {
+        // Filter out duplicate entries based on 'id'
+        setData((prevData) => {
+          const existingIds = new Set(prevData.map(post => post.id));
+          const filteredNewData = newData.filter(post => !existingIds.has(post.id));
+          return [...prevData, ...filteredNewData];
+        });
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    } finally {
+      setLoading(false);
+      setLoadingMore(false);
+    }
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        let allData = [];
-        let page = 1;
-        let hasMore = true;
-
-        while (hasMore) {
-          const response = await fetch(
-            `${siteUrl}/blogs?_embed&production_mode[]=${serverUrl}&per_page=100&page=${page}`
-          );
-          if (response.ok) {
-            const pageData = await response.json();
-            if (pageData.length > 0) {
-              allData = [...allData, ...pageData];
-              page++;
-            } else {
-              hasMore = false;
-            }
-          } else {
-            hasMore = false;
-          }
-        }
-
-        setData(allData);
-        setVisibleData(allData.slice(0, 6));
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [siteUrl, serverUrl]);
+    fetchBlogs(1);
+  }, []);
 
   const handleLoadMore = () => {
-    const newVisibleCount = visibleCount + 6;
-    setVisibleData(data.slice(0, newVisibleCount));
-    setVisibleCount(newVisibleCount);
+    setLoadingMore(true);
+    const nextPage = page + 1;
+    setPage(nextPage);
+    fetchBlogs(nextPage);
   };
 
   return (
@@ -89,8 +88,8 @@ const BlogsCard = () => {
               </div>
             </div>
           ))
-        ) : visibleData.length > 0 ? (
-          visibleData.map((post) => (
+        ) : data.length > 0 ? (
+          data.map((post) => (
             <div
               key={post.id}
               className="flex flex-col bg-white shadow-md rounded-lg overflow-hidden iv-cards transition duration-300"
@@ -112,7 +111,6 @@ const BlogsCard = () => {
                   <div className="mt-4 flex justify-between items-center">
                     <Link href={`/blogs/${post.slug}`} className="iv-link">
                       <p className="flex items-center gap-3">
-                        {" "}
                         Read more <FaArrowRight className="icons" size={20} />
                       </p>
                     </Link>
@@ -132,10 +130,10 @@ const BlogsCard = () => {
         )}
       </div>
 
-      {visibleCount < data.length && (
+      {hasMore && (
         <div className="flex justify-center mt-10">
-          <button onClick={handleLoadMore} className="btn-15">
-            Load More
+          <button onClick={handleLoadMore} className="btn-15" disabled={loadingMore}>
+            {loadingMore ? "Loading..." : "Load More"}
           </button>
         </div>
       )}

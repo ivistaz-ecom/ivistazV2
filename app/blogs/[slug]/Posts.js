@@ -36,23 +36,59 @@ const Posts = ({ slug }) => {
 
   return (
     <>
-      {data ? (
-        data.map((post) => (
-          <React.Fragment key={post.id}>
-            <title>{post.acf.meta_title}</title>
-            <meta name="description" content={post.acf.meta_description_} />
-            <meta name="robots" content="index,follow" />
-            <meta
-              name="viewport"
-              content="width=device-width, initial-scale=1"
-            />
-            <meta
-              property="article:modified_time"
-              content="2023-07-06T15:35:40+00:00"
-            />
-          </React.Fragment>
-        ))
-      ) : null}
+      <style>
+        {`
+        h1, h2, h3, h4, h5, h6 {
+          margin-bottom: 1rem !important;
+        }
+        h1, h2, h3, h4, h5, h6, p {
+          margin-top: 1rem !important;
+        }
+        
+        ul li{
+        margin-bottom: 1rem !important
+        }
+
+        ul{
+        padding-left: 20px !important;
+        margin-top: 1rem !important
+        }
+
+        h4{
+        font-size: 24px !important
+        }
+
+        h3{
+        font-size: 28px !important
+        }
+        
+        h2{
+        font-size: 28px !important
+        }
+
+        b {
+        font-weight: 700 !important;
+        font-style: normal !important;
+        }
+      `}
+      </style>
+      {data
+        ? data.map((post) => (
+            <React.Fragment key={post.id}>
+              <title>{post.acf.meta_title}</title>
+              <meta name="description" content={post.acf.meta_description_} />
+              <meta name="robots" content="index,follow" />
+              <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1"
+              />
+              <meta
+                property="article:modified_time"
+                content="2023-07-06T15:35:40+00:00"
+              />
+            </React.Fragment>
+          ))
+        : null}
 
       <div className="w-full container mx-auto px-4 sm:px-6 lg:px-0 pt-32">
         {loading ? (
@@ -99,11 +135,13 @@ const Posts = ({ slug }) => {
                   dangerouslySetInnerHTML={{ __html: post.title.rendered }}
                 />
                 <div>
-                <div className="text-base leading-relaxed text-black [&>ul]:list-disc [&>ul]:pl-6 [&>li]:mb-2">
-  <div
-    dangerouslySetInnerHTML={{ __html: post.content.rendered }}
-  />
-</div>
+                  <div className="prose prose-lg text-black max-w-none text-lg">
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: post.content.rendered,
+                      }}
+                    />
+                  </div>
 
                   {/* <ul className="list-disc lg:pl-10 pl-5 space-y-2 lg:text-xl">
                       {post.content.rendered

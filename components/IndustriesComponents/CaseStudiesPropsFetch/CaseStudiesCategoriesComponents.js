@@ -48,7 +48,8 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
 
   return (
     <>
-      <style jsx>{`
+      <style jsx>
+        {`
         .post-content-title {
           overflow: hidden;
           text-overflow: ellipsis;
@@ -63,7 +64,44 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
         }
-      `}</style>
+      
+       
+        
+        h1, h2, h3, h4, h5, h6 {
+          margin-bottom: 1rem !important;
+        }
+        h1, h2, h3, h4, h5, h6, p {
+          margin-top: 1rem !important;
+        }
+        
+        ul li{
+        margin-bottom: 0.5rem !important
+        font-size: 20px !important
+        }
+
+        ul{
+        padding-left: 20px !important;
+        margin-top: 1rem !important
+        }
+
+        h4{
+        font-size: 24px !important
+        }
+
+        h3{
+        font-size: 28px !important
+        }
+        
+        h2 { 
+        font-size: 32px !important
+        }
+
+        b {
+        font-weight: 700 !important;
+        font-style: normal !important;
+        }
+      `}
+      </style>
 
       <div className="container mx-auto lg:py-10">
         {data ? (
@@ -76,23 +114,23 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
                 height={600}
                 className="w-full h-auto"
               />
-              <div className="bg-white shadow-lg p-6 mt-4 flex flex-col lg:flex-row justify-between gap-4 lg:items-center">
+              <div className="bg-white shadow-lg p-6  flex flex-col lg:flex-row justify-between gap-4">
                 <div className="lg:w-1/3">
                   <div
-                    className="text-xl font-monument-bold text-[#ed2225] post-content-title text-start"
+                    className="text-xl font-monument-bold text-red-600 post-content-title text-left"
                     dangerouslySetInnerHTML={{ __html: item.title.rendered }}
                   />
                 </div>
-                <div className="lg:w-2xl">
+                <div className="lg:w-xl lg:self-center text-left">
                   <p
-                    className="text-gray-600 post-content text-start"
+                    className="text-gray-600 post-content"
                     dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}
                   />
                 </div>
                 <div className="lg:w-auto lg:self-center">
                   <button
                     onClick={() => handleShowModal(item)}
-                    className="text-[#ed2225] font-medium flex items-center gap-2 hover:underline"
+                    className="text-red-600 font-medium flex items-center gap-2 hover:underline text-xl"
                   >
                     Learn More
                     <FiArrowUpRight size={24} />
@@ -135,12 +173,9 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
                   }}
                 />
                 <div className="mt-6 flex justify-center">
-                  <Link
-                    href="/contact-us"
-                    className="btn-14"
-                  >
-                    Contact Us 
-                  </Link> 
+                  <Link href="/contact-us" className="btn-14">
+                    Contact Us
+                  </Link>
                 </div>
               </div>
             </div>
@@ -154,10 +189,7 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
               pathname === "/traffic" ||
               pathname === "/keyword-ranking" ||
               pathname === "/engagement") && (
-              <Link
-                href="/welcome"
-                className="btn-13"
-              >
+              <Link href="/welcome" className="btn-14">
                 Enter website
               </Link>
             )}
