@@ -114,7 +114,7 @@ const LatestInsights = ({ isVisible }) => {
                   className="min-w-0 flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.3333%]"
                 >
                   <Link href={`/blogs/${post.slug}`} className="block h-full">
-                    <div className="flex flex-col h-full border rounded-lg shadow-sm overflow-hidden">
+                    <div className="flex flex-col h-full shadow-sm overflow-hidden">
                       {post.acf?.thumbnail_image?.url && (
                         <Image
                           src={post.acf.thumbnail_image.url}

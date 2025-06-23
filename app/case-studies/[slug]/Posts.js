@@ -64,7 +64,7 @@ const Posts = ({ slug }) => {
         }
       `}
       </style>
-      {data && !loading
+      {/* {data && !loading
         ? data.map((post) => (
             <React.Fragment key={post.id}>
               <title>{post.acf.meta_title}</title>
@@ -80,7 +80,7 @@ const Posts = ({ slug }) => {
               />
             </React.Fragment>
           ))
-        : null}
+        : null} */}
 
      <div className="border-b-2 border-dashed border-[#2D2D2D]">
      <div className="w-full px-4 container mx-auto lg:px-0">

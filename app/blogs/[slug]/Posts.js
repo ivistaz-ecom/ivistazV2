@@ -5,10 +5,12 @@ import Link from "next/link";
 import ConfigData from "../../../config";
 import PageNotFound from "../../[service]/page";
 import Image from "next/image";
+import Head from "next/head"; // ✅ Import Head
 
 const Posts = ({ slug }) => {
   const siteUrl = ConfigData.wpApiUrl;
   const serverUrl = ConfigData.SERVER;
+  const mainWebUrl = ConfigData.mainWebUrl;
 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -45,50 +47,84 @@ const Posts = ({ slug }) => {
           margin-top: 1rem !important;
         }
         
-        ul li{
-        margin-bottom: 1rem !important
+        ul li {
+          margin-bottom: 1rem !important;
         }
 
-        ul{
-        padding-left: 20px !important;
-        margin-top: 1rem !important
+        ul {
+          padding-left: 20px !important;
+          margin-top: 1rem !important;
         }
 
-        h4{
-        font-size: 24px !important
+        h4 {
+          font-size: 24px !important;
         }
 
-        h3{
-        font-size: 28px !important
+        h3 {
+          font-size: 28px !important;
         }
         
-        h2{
-        font-size: 28px !important
+        h2 {
+          font-size: 28px !important;
         }
 
         b {
-        font-weight: 700 !important;
-        font-style: normal !important;
+          font-weight: 700 !important;
+          font-style: normal !important;
         }
       `}
       </style>
-      {data
-        ? data.map((post) => (
-            <React.Fragment key={post.id}>
-              <title>{post.acf.meta_title}</title>
-              <meta name="description" content={post.acf.meta_description_} />
-              <meta name="robots" content="index,follow" />
-              <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1"
-              />
-              <meta
-                property="article:modified_time"
-                content="2023-07-06T15:35:40+00:00"
-              />
-            </React.Fragment>
-          ))
-        : null}
+
+      {/* ✅ SEO Head tags (Safe via next/head) */}
+      {/* {data && data.length > 0 && (
+        <head>
+          <title>{data[0].acf.meta_title}</title>
+          <meta name="description" content={data[0].acf.meta_description_} />
+          <meta name="robots" content="index, follow" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta property="article:modified_time" content={data[0].modified} />
+          <meta property="og:title" content={data[0].acf.meta_title} />
+          <meta
+            property="og:description"
+            content={data[0].acf.meta_description_}
+          />
+          <meta
+            property="og:image"
+            content={data[0].acf.desktop_banner_image?.url}
+          />
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content={`${mainWebUrl}/blogs/${slug}`} />
+          <link rel="canonical" href={`${mainWebUrl}/blogs/${slug}`} />
+
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                headline: data[0].acf.meta_title,
+                description: data[0].acf.meta_description_,
+                image: data[0].acf.desktop_banner_image?.url,
+                author: {
+                  "@type": "Person",
+                  name: data[0].acf.author || "Unknown Author",
+                },
+                publisher: {
+                  "@type": "Organization",
+                  name: "Your Website Name",
+                  logo: {
+                    "@type": "ImageObject",
+                    url: `${serverUrl}/logo.png`,
+                  },
+                },
+                datePublished: data[0].date,
+                dateModified: data[0].modified,
+                mainEntityOfPage: `${serverUrl}/blogs/${slug}`,
+              }),
+            }}
+          />
+        </head>
+      )} */}
 
       <div className="w-full container mx-auto px-4 sm:px-6 lg:px-0 pt-32">
         {loading ? (
@@ -142,18 +178,6 @@ const Posts = ({ slug }) => {
                       }}
                     />
                   </div>
-
-                  {/* <ul className="list-disc lg:pl-10 pl-5 space-y-2 lg:text-xl">
-                      {post.content.rendered
-                        .replace(/<[^>]+>/g, "") // Remove all HTML tags
-                        .split(/[.\n•]/) // Split by full stop, newline, bullet, dash
-                        .map((point, index) => {
-                          const cleaned = point.trim();
-                          return cleaned ? (
-                            <li key={index}>{cleaned}</li>
-                          ) : null;
-                        })}
-                    </ul> */}
                 </div>
               </div>
             </div>

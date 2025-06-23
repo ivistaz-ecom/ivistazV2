@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const stats = [
   {
@@ -21,7 +21,7 @@ const stats = [
   },
   {
     value: 6,
-    prefix: "$", // ✅ Add dollar prefix
+    prefix: "$",
     suffix: "B",
     title: (
       <>
@@ -42,35 +42,30 @@ const stats = [
   },
 ];
 
-const CountUp = ({ end, suffix, prefix }) => {
-  const [count, setCount] = useState(0);
+const CountUpGroup = ({ start }) => {
+  const duration = 1500; // 1.5 seconds total
+  const steps = 60; // Number of updates
+  const intervalTime = duration / steps;
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    let start = 0;
-    const duration = 1500;
-    const stepTime = Math.abs(Math.floor(duration / end));
+    if (!start) return;
+
+    let step = 0;
     const interval = setInterval(() => {
-      start += 1;
-      setCount(start);
-      if (start === end) clearInterval(interval);
-    }, stepTime);
+      step++;
+      setProgress(step / steps);
+      if (step === steps) clearInterval(interval);
+    }, intervalTime);
+
     return () => clearInterval(interval);
-  }, [end]);
+  }, [start]);
 
   return (
-    <span className="text-white lg:text-7xl text-2xl font-semibold">
-      {prefix || ""}
-      {count}
-      {suffix}
-    </span>
-  );
-};
-
-const Count = () => {
-  return (
-    <section className="bg-black lg:py-16 lg:px-6 p-5">
-      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        {stats.map((stat, idx) => (
+    <>
+      {stats.map((stat, idx) => {
+        const current = Math.round(stat.value * progress);
+        return (
           <div key={idx} className="flex flex-col items-center">
             <div
               className="pb-2 border-b-4 w-full max-w-[250px] mb-4"
@@ -86,15 +81,51 @@ const Count = () => {
                 borderImageOutset: 0,
               }}
             >
-              <CountUp
-                end={stat.value}
-                suffix={stat.suffix}
-                prefix={stat.prefix}
-              />
+              <span className="text-white lg:text-7xl text-2xl font-semibold">
+                {stat.prefix || ""}
+                {progress < 1 ? current : stat.value}
+                {stat.suffix}
+              </span>
             </div>
             <p className="text-lg text-white/80 leading-snug">{stat.title}</p>
           </div>
-        ))}
+        );
+      })}
+    </>
+  );
+};
+
+const Count = () => {
+  const sectionRef = useRef(null);
+  const [start, setStart] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStart(true);
+          observer.disconnect(); // run only once
+        }
+      },
+      {
+        threshold: 0.4,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section
+      ref={sectionRef}
+      className="bg-black lg:py-16 lg:px-6 p-5"
+    >
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <CountUpGroup start={start} />
       </div>
     </section>
   );

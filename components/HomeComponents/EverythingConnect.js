@@ -49,7 +49,7 @@ const EverythingConnect = () => {
             className="relative group lg:w-80 w-full h-[400px] overflow-hidden mt-10 shadow-xl"
           >
             {/* Image transitions out on hover */}
-            <div className={`absolute inset-0 z-0 transition-all duration-500 ease-in-out group-hover:translate-x-10 group-hover:translate-y-10 group-hover:scale-110 group-hover:opacity-0 ${card.marginHeight}`}>
+            <div className={`absolute  bg-black bg-opacity-50 inset-0 z-0 transition-all duration-500 ease-in-out group-hover:translate-x-10 group-hover:translate-y-10 group-hover:scale-110 group-hover:opacity-0 ${card.marginHeight}`}>
               <Image
                 src={card.imageUrl}
                 alt={card.title}

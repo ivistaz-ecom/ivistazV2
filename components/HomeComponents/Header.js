@@ -87,7 +87,7 @@ const Header = () => {
                     <motion.div
                       onMouseEnter={() => setActiveMenu(index)}
                       onMouseLeave={() => setActiveMenu(null)}
-                      className="fixed top-16 left-0 w-full bg-white text-black z-40 shadow-lg"
+                      className="fixed top-[6.2%] left-0 w-full bg-white text-black z-40 shadow-lg"
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
