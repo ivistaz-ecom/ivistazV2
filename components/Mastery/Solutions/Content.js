@@ -7,9 +7,9 @@ const Content = () => {
     <>
       <div className="pt-5">
         <div className="bg-white lg:p-12 rounded-2xl px-5 p-5">
-          <h2 className="text-[48px] text-[#ed2225] font-monument-bold">
+          <h1 className="text-[48px] text-[#ed2225] font-monument-bold">
             Solutions
-          </h2>
+          </h1>
           <p className="font-monument-light lg:text-lg">
             Through a range of digital marketing services, we offer our clients
             solutions to their pressing challenges whether lead-generation,
@@ -38,9 +38,9 @@ const Content = () => {
                 here.
               </Link>
             </p>
-            <h2 className="text-[28px] text-[#ed2225] font-monument-bold pt-4">
+            <h3 className="text-[28px] text-[#ed2225] font-monument-bold pt-4">
               Lead-Gen
-            </h2>
+            </h3>
             <p className="font-monument-light lg:text-lg py-5">
               If you are a B2B company looking to consistently deliver MQLs
               (Marketing Qualified Leads) to your sales pipeline, we are here to
@@ -54,9 +54,9 @@ const Content = () => {
                 here.
               </Link>
             </p>
-            <h2 className="text-[28px] text-[#ed2225] font-monument-bold pt-4">
+            <h3 className="text-[28px] text-[#ed2225] font-monument-bold pt-4">
               Online Sales
-            </h2>
+            </h3>
             <p className="font-monument-light lg:text-lg py-5">
               Whether it is B2C products like home appliances, automobiles,
               earphones, airline tickets, or hotel room bookings, we have helped

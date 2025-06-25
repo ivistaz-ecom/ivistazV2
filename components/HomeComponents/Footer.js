@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
 
         {/* Follow Us Box */}
-        <div className="border border-[#2D2D2D] rounded-xl px-8 lg:w-[450px] w-80 h-32 text-center ">
+        <div className="border border-[#2D2D2D] rounded-xl px-8 lg:w-[450px] w-80 h-32 text-center hover:bg-[#0E2043] duration-300 transition">
           <p className="text-gray-400 text-sm mb-3 mt-4">Follow Us</p>
           <div className="flex gap-4 justify-center pt-2">
             <Link

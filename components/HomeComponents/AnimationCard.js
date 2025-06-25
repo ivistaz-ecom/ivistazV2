@@ -10,23 +10,23 @@ export const testimonials = [
       "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
     name: "Sarah Chen",
     designation: "Product Manager at TechFlow",
-    src: "/new-home-page/we-work/tech.png",
+    src: "/new-home-page/we-work/tech-new.png",
     category: "Tech/IT",
   },
-  {
-    quote:
-      "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-    name: "Michael Rodriguez",
-    designation: "CTO at InnovateSphere",
-    src: "/new-home-page/we-work/health.png",
-    category: "HealthCare",
-  },
+  // {
+  //   quote:
+  //     "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
+  //   name: "Michael Rodriguez",
+  //   designation: "CTO at InnovateSphere",
+  //   src: "/new-home-page/we-work/health.png",
+  //   category: "HealthCare",
+  // },
   {
     quote:
       "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
     name: "Emily Watson",
     designation: "Operations Director at CloudScale",
-    src: "/new-home-page/we-work/e-com.png",
+    src: "/new-home-page/we-work/ecom-new.png",
     category: "E-Commerce",
   },
   {
@@ -34,7 +34,7 @@ export const testimonials = [
       "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
     name: "James Kim",
     designation: "Engineering Lead at DataPro",
-    src: "/new-home-page/we-work/hospitality.png",
+    src: "/new-home-page/we-work/hospitality-new.png",
     category: "Hospitality",
   },
   {
@@ -42,7 +42,7 @@ export const testimonials = [
       "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
     name: "Lisa Thompson",
     designation: "VP of Technology at FutureNet",
-    src: "/new-home-page/we-work/ngo.png",
+    src: "/new-home-page/we-work/ngos-new.png",
     category: "Not-For-Profits/Ngos",
   },
   {
@@ -50,7 +50,7 @@ export const testimonials = [
       "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
     name: "Lisa Thompson",
     designation: "VP of Technology at FutureNet",
-    src: "/new-home-page/we-work/appliances.png",
+    src: "/new-home-page/we-work/appliances-new.png",
     category: "Appliances",
   },
   {
@@ -58,7 +58,7 @@ export const testimonials = [
       "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
     name: "Lisa Thompson",
     designation: "VP of Technology at FutureNet",
-    src: "/new-home-page/we-work/fashion.png",
+    src: "/new-home-page/we-work/fa-new.png",
     category: "Fashion & Accessories",
   },
   {
@@ -66,7 +66,7 @@ export const testimonials = [
       "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
     name: "Lisa Thompson",
     designation: "VP of Technology at FutureNet",
-    src: "/new-home-page/we-work/beauty.png",
+    src: "/new-home-page/we-work/beauty-new.png",
     category: "Beauty & Wellness",
   },
   {
@@ -74,7 +74,7 @@ export const testimonials = [
       "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
     name: "Lisa Thompson",
     designation: "VP of Technology at FutureNet",
-    src: "/new-home-page/we-work/auto-mobile.png",
+    src: "/new-home-page/we-work/automobiles-new.png",
     category: "Automobiles",
   },
   {
@@ -82,7 +82,7 @@ export const testimonials = [
       "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
     name: "Lisa Thompson",
     designation: "VP of Technology at FutureNet",
-    src: "/new-home-page/we-work/jewelry.png",
+    src: "/new-home-page/we-work/jewelry-new.png",
     category: "Jewelry",
   },
 ];
@@ -179,7 +179,7 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
                         width={500}
                         height={500}
                         draggable={false}
-                        className="lg:mt-16 lg:h-[500px] object-cover"
+                        className="lg:mt-10 lg:h-[500px] object-cover"
                       />
                     </motion.div>
                   ))}
