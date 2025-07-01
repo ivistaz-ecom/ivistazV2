@@ -124,14 +124,14 @@ const LatestInsights = ({ isVisible }) => {
                           className="w-full object-cover h-[220px]"
                         />
                       )}
-                      <div className="p-4 flex flex-col justify-between flex-grow">
-                        <p className="text-sm text-gray-400 mb-1  px-4">
+                      <div className="py-5 flex flex-col justify-between flex-grow">
+                        <p className="text-sm text-gray-400 mb-3">
                           {new Date(post.date).toLocaleDateString("en-US", {
                             year: "numeric",
                             month: "long",
                           })}
                         </p>
-                        <h5 className="text-lg font-semibold mb-2 text-white px-4">
+                        <h5 className="text-lg font-semibold mb-2 text-white">
                           {post.title.rendered}
                         </h5>
                       </div>

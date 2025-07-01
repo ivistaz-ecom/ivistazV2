@@ -179,7 +179,7 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
                         width={500}
                         height={500}
                         draggable={false}
-                        className="lg:mt-10 lg:h-[500px] object-cover"
+                        className="lg:mt-20 object-cover"
                       />
                     </motion.div>
                   ))}

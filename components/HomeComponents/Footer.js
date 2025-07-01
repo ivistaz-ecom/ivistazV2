@@ -37,17 +37,17 @@ const Footer = () => {
       </div>
       <div className="flex flex-col sm:flex-row gap-6 justify-center items-center border-b-2 border-dashed border-[#2D2D2D] pb-10">
         {/* Business Enquiries Box */}
-        <div className="border border-[#2D2D2D] rounded-xl h-32  w-80 lg:w-[450px] text-center">
+        {/* <div className="border border-[#2D2D2D] rounded-xl h-32  w-80 lg:w-[450px] text-center">
           <p className="text-gray-400 text-sm mb-3 mt-4">
             Business Enquiries
           </p>
 
-          {/* Contact Info Hover Section */}
+
           <div className="relative group mx-auto h-[62%] overflow-hidden rounded-b-xl flex items-center justify-center cursor-pointer">
-            {/* Animated Gradient Background */}
+
             <div className="absolute inset-0 bg-gradient-to-r from-[#582777]  to-[#212274] transform -translate-x-full group-hover:translate-x-0 transition duration-500 ease-in-out"></div>
 
-            {/* Text Content */}
+
             <div className="relative z-10 flex items-center justify-center text-white text-base font-medium gap-4">
               <span>
                 <a href="tel:+91 80 41966600">+91 80 41966600</a>
@@ -58,7 +58,7 @@ const Footer = () => {
               </span>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Follow Us Box */}
         <div className="border border-[#2D2D2D] rounded-xl px-8 lg:w-[450px] w-80 h-32 text-center hover:bg-[#0E2043] duration-300 transition">

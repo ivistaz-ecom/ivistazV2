@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-import Caeers from "../../components/CompanyComponents/Careers";
+import GenerationForTech from "../../components/GenerationForTech"
 import { usePathname } from "next/navigation";
 import NextSeo from "@/components/Seo/Seo";
 const page = () => {
@@ -21,9 +21,9 @@ const page = () => {
   return (
     <>
       <NextSeo {...seoData} />
-      <div className="pt-24">
+      <div className="">
         <div>
-          <Caeers />
+          <GenerationForTech />
         </div>
       </div>
     </>

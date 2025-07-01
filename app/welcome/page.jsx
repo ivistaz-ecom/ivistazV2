@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import HomeComponents from "../../components/HomeComponents";
 import NextSeo from "@/components/Seo/Seo";
@@ -11,10 +11,10 @@ const page = () => {
     title: "Welcome to Our Home Page",
     description: "Discover our innovative solutions and services.",
     path: `${pathname}`,
-  }
+  };
   return (
     <>
-      <NextSeo {...seoData}/>
+      <NextSeo {...seoData} />
       <div>
         <HomeComponents />
       </div>

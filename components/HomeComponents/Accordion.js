@@ -108,7 +108,7 @@ const Accordion = () => {
                   type="button"
                   className="flex items-center justify-between w-full py-5 font-medium text-[#fff] gap-3"
                 >
-                  <span className="text-left text-xl md:text-xl text-[#fff] font-monument-semibold">
+                  <span className="text-left text-xl md:text-xl text-[#C1C1C1]">
                     {service.ques}
                   </span>
                   {/* <span

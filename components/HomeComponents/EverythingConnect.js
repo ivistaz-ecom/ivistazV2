@@ -25,7 +25,7 @@ const EverythingConnect = () => {
       // marginHeight: "mt-10"
     },
     {
-      imageUrl: "/new-home-page/eveything/img-4.png",
+      imageUrl: "/new-home-page/eveything/technology.png",
       title: "Technology.",
       desc: "Tech that fits, scales, and works quietly in the background. Tailored tech solutions carefully chosen to fit your needs.",
       bgGradient: "from-[#1416B4] to-[#4C146A]",
