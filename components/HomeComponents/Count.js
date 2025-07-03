@@ -81,13 +81,13 @@ const CountUpGroup = ({ start }) => {
                 borderImageOutset: 0,
               }}
             >
-              <span className="text-white lg:text-7xl text-2xl font-semibold">
+              <span className="text-white lg:text-7xl text-5xl font-semibold">
                 {stat.prefix || ""}
                 {progress < 1 ? current : stat.value}
                 {stat.suffix}
               </span>
             </div>
-            <p className="text-lg text-white/80 leading-snug">{stat.title}</p>
+            <p className="lg:text-lg text-md text-white/80 leading-snug">{stat.title}</p>
           </div>
         );
       })}

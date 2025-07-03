@@ -43,14 +43,14 @@ export const testimonials = [
     name: "Lisa Thompson",
     designation: "VP of Technology at FutureNet",
     src: "/new-home-page/we-work/ngos-new.png",
-    category: "Not-For-Profits/Ngos",
+    category: "Not-For-Profits/NGOs",
   },
   {
     quote:
       "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
     name: "Lisa Thompson",
     designation: "VP of Technology at FutureNet",
-    src: "/new-home-page/we-work/appliances-new.png",
+    src: "/new-home-page/we-work/appliances-updated.png",
     category: "Appliances",
   },
   {

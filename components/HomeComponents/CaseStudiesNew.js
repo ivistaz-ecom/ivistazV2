@@ -65,14 +65,14 @@ const CaseStudiesNew = () => {
                   <div className="relative group w-full h-[130px] flex items-stretch">
                     {/* Main Card */}
                     <div className="flex-1 bg-white shadow flex items-center p-6 z-10 w-full">
-                      <div className="lg:flex justify-between items-center gap-5 w-full">
+                      <div className="lg:flex justify- items-center gap-5 w-full">
                         <h2
-                          className={`lg:text-[40px] font-monument-bold text-xl ${slide.textColor}`}
+                          className={`lg:text-[30px] font-monument-bold text-xl ${slide.textColor}`}
                         >
                           {slide.title}
                         </h2>
                         <span className="h-20 w-0.5 bg-[#C3C3C3]"></span>
-                        <p className="lg:text-[28px] font-monument-light text-black text-sm pt-3">
+                        <p className="lg:text-[24px] font-monument-light text-black text-sm pt-3">
                           {slide.subtitle}
                         </p>
                       </div>
@@ -80,7 +80,7 @@ const CaseStudiesNew = () => {
 
                     {/* Arrow Block */}
                     <div
-                      className="w-20 h-auto flex items-center justify-center shadow 
+                      className="w-32 h-auto flex items-center justify-center shadow 
       md:flex 
       
       opacity-100 
@@ -92,8 +92,8 @@ const CaseStudiesNew = () => {
                       <Image
                         src="/new-home-page/white-arrow-right.png"
                         alt="arrow black"
-                        width={20}
-                        height={20}
+                        width={30}
+                        height={30}
                       />
                     </div>
                   </div>

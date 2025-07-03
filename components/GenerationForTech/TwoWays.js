@@ -17,7 +17,7 @@ const TwoWays = () => {
         Your browser does not support the video tag.
       </video>
       <div className="lg:absolute lg:top-0 flex justify-center-safe items-center-safe left-0 w-full h-full lg:z-0 -mt-10">
-        <h4 className="text-white text-center text-3xl md:text-5xl">Two Ways We Can Work</h4>
+        <h4 className="text-white text-center text-3xl md:text-5xl font-monument-bold">Two Ways We Can Work</h4>
       </div>
       {/* Overlay Box */}
       <div className="lg:absolute -bottom-20 px-5 left-0 w-full flex flex-col md:flex-row z-10 ">

@@ -53,25 +53,31 @@ const Header = () => {
             {menuItems.map((item, index) => (
               <div key={index} className="relative">
                 {item.pageLink ? (
-                  <Link
-                    href={item.pageLink}
-                    onMouseEnter={() => setActiveMenu(index)}
-                    onMouseLeave={() => setActiveMenu(null)}
-                    className={`transition flex items-center gap-1 ${
-                      pathname === item.pageLink
-                        ? "text-red-500"
-                        : "hover:text-red-500"
-                    }`}
-                  >
-                    {item.title}
-                    {item.submenu.length > 0 && (
-                      <IoIosArrowDown className="text-xs" />
-                    )}
-                  </Link>
+                 <Link
+                 href={item.pageLink}
+                 onClick={() =>
+                   setActiveMenu(activeMenu === index ? null : index)
+                 }
+                 className={`transition flex items-center gap-1 ${
+                   pathname === item.pageLink
+                     ? "text-red-500"
+                     : "hover:text-red-500"
+                 }`}
+               >
+                 {item.title}
+                 {item.submenu.length > 0 && (
+                   <IoIosArrowDown
+                     className={`text-xs transition-transform duration-300 ${
+                       activeMenu === index ? "rotate-180" : "rotate-0"
+                     }`}
+                   />
+                 )}
+               </Link>
                 ) : (
                   <span
-                    onMouseEnter={() => setActiveMenu(index)}
-                    onMouseLeave={() => setActiveMenu(null)}
+                    onClick={() =>
+                      setActiveMenu(activeMenu === index ? null : index)
+                    }
                     className={`transition flex items-center gap-1 cursor-default ${
                       item.submenu.some((s) => s.pageLink === pathname)
                         ? "text-red-500"
@@ -89,47 +95,70 @@ const Header = () => {
                   <AnimatePresence>
                     {activeMenu === index && item.submenu.length > 0 && (
                       <motion.div
-                        onMouseEnter={() => setActiveMenu(index)}
-                        onMouseLeave={() => setActiveMenu(null)}
                         className="fixed top-[6.2%] left-0 w-full bg-white text-black z-40 shadow-lg"
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2 }}
                       >
-                        <div className="container mx-auto flex gap-20 items-start justify-center py-10">
-                          <div className="space-y-2">
-                            {item.submenu.slice(0, 4).map((sub, subIndex) => (
-                              <Link
-                                key={subIndex}
-                                href={sub.pageLink}
-                                onClick={() => setActiveMenu(null)}
-                                className={`block rounded-lg p-2 transition ${
-                                  pathname === sub.pageLink
-                                    ? "bg-gradient-to-r from-[#BCBDFF] via-[#AFD7FF] to-[#AFD7FF]"
-                                    : "hover:bg-gradient-to-r hover:from-[#BCBDFF] hover:via-[#AFD7FF] hover:to-[#AFD7FF]"
-                                }`}
+                        <div className="grid grid-cols-4 border-t border-l border-gray-300">
+                          {item.submenu.map((sub, subIndex) => (
+                            <Link
+                              key={subIndex}
+                              href={sub.pageLink}
+                              onClick={() => setActiveMenu(null)}
+                              className="group relative flex flex-col justify-center p-4 py-7 border-b border-r border-gray-300 overflow-hidden"
+                            >
+                              <span
+                                className={`relative z-10 flex items-center justify-between font-semibold transition-colors duration-300 ${
+                                  pathname === sub.pageLink ? "text-white" : ""
+                                } group-hover:text-white`}
                               >
                                 {sub.label}
-                              </Link>
-                            ))}
-                          </div>
-                          <div className="space-y-2">
-                            {item.submenu.slice(4).map((sub, subIndex) => (
-                              <Link
-                                key={subIndex}
-                                href={sub.pageLink}
-                                onClick={() => setActiveMenu(null)}
-                                className={`block rounded-lg p-2 transition ${
+                                <div className="relative w-4 h-4">
+                                  <Image
+                                    src="/new-home-page/black-arrow.png"
+                                    alt="arrow"
+                                    fill
+                                    className={`object-contain transition-opacity duration-300 ${
+                                      pathname === sub.pageLink
+                                        ? "opacity-0"
+                                        : ""
+                                    } group-hover:opacity-0`}
+                                  />
+                                  <Image
+                                    src="/new-home-page/white-arrow-right.png"
+                                    alt="arrow"
+                                    fill
+                                    className={`object-contain opacity-0 transition-opacity duration-300 ${
+                                      pathname === sub.pageLink
+                                        ? "opacity-100"
+                                        : ""
+                                    } group-hover:opacity-100`}
+                                  />
+                                </div>
+                              </span>
+                              {sub.description && (
+                                <span
+                                  className={`relative z-10 text-sm mt-2 transition-colors duration-300 ${
+                                    pathname === sub.pageLink
+                                      ? "text-white"
+                                      : ""
+                                  } group-hover:text-white`}
+                                >
+                                  {sub.description}
+                                </span>
+                              )}
+                              {/* background: animate on hover, or fixed if active */}
+                              <span
+                                className={`absolute left-0 top-0 h-full z-0 transition-all duration-500 ease-in-out ${
                                   pathname === sub.pageLink
-                                    ? "bg-gradient-to-r from-[#BCBDFF] via-[#AFD7FF] to-[#AFD7FF]"
-                                    : "hover:bg-gradient-to-r hover:from-[#BCBDFF] hover:via-[#AFD7FF] hover:to-[#AFD7FF]"
+                                    ? "w-full bg-gradient-to-r from-[#570E7E] to-[#0A3586]"
+                                    : "w-0 group-hover:w-full bg-gradient-to-r from-[#570E7E] to-[#0A3586]"
                                 }`}
-                              >
-                                {sub.label}
-                              </Link>
-                            ))}
-                          </div>
+                              />
+                            </Link>
+                          ))}
                         </div>
                       </motion.div>
                     )}
@@ -139,8 +168,8 @@ const Header = () => {
             ))}
 
             <Link href="/case-studies">
-              <button className="relative py-2 px-4 bg-white rounded-full overflow-hidden group text-black">
-                <span className="absolute inset-0 bg-[#D0AC59] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
+              <button className="relative py-2 px-4 bg-[#D0AC59] rounded-full overflow-hidden group hover:text-black text-white duration-200 transition">
+                <span className="absolute inset-0 bg-white  transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
                 <span className="relative z-10">Case Studies</span>
               </button>
             </Link>
@@ -169,7 +198,25 @@ const Header = () => {
                 exit={{ y: -50, opacity: 0 }}
               >
                 {menuItems.map((item, index) => (
-                  <div key={index}>
+                  <motion.div
+                    key={index}
+                    initial={false}
+                    animate={{
+                      opacity:
+                        mobileDropdown === null || mobileDropdown === index
+                          ? 1
+                          : 0,
+                      height:
+                        mobileDropdown === null || mobileDropdown === index
+                          ? "auto"
+                          : 0,
+                      overflow:
+                        mobileDropdown === null || mobileDropdown === index
+                          ? "visible"
+                          : "hidden",
+                    }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                  >
                     {item.submenu.length > 0 ? (
                       <button
                         className="flex justify-between w-full text-left font-medium py-2"
@@ -208,10 +255,9 @@ const Header = () => {
                     <AnimatePresence initial={false}>
                       {mobileDropdown === index && item.submenu.length > 0 && (
                         <motion.div
-                          key="mobile-submenu"
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.3, ease: "easeInOut" }}
                           className="overflow-hidden pl-4 pt-2 space-y-2 text-black bg-white"
                         >
@@ -223,7 +269,7 @@ const Header = () => {
                                 setMobileDropdown(null);
                                 setMobileOpen(false);
                               }}
-                              className={`block text-sm transition ${
+                              className={`block text-sm py-2 transition ${
                                 pathname === sub.pageLink
                                   ? "text-red-500"
                                   : "hover:text-red-600"
@@ -235,7 +281,7 @@ const Header = () => {
                         </motion.div>
                       )}
                     </AnimatePresence>
-                  </div>
+                  </motion.div>
                 ))}
 
                 <Link href="/case-studies">

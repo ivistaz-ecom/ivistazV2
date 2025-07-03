@@ -78,7 +78,7 @@ const servicesList = [
   {
     ques: "8. Can I work with iVistaz for a one-time project?",
     bachelor:
-      "For most digital marketing services like SEO, social media marketing, search engine marketing or content development, we prefer to work on a retainer model. Web design/redesign projects can be treated as a one-time projects.",
+      "Yes, web design/redesign projects can be treated as one-time projects. However, for most digital marketing services like SEO, social media marketing, search engine marketing, or content development, we prefer to work on a retainer model.",
   },
 ];
 
