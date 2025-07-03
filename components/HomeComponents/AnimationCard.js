@@ -22,14 +22,14 @@ export const testimonials = [
   //   src: "/new-home-page/we-work/health.png",
   //   category: "HealthCare",
   // },
-  {
-    quote:
-      "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-    name: "Emily Watson",
-    designation: "Operations Director at CloudScale",
-    src: "/new-home-page/we-work/ecom-new.png",
-    category: "E-Commerce",
-  },
+  // {
+  //   quote:
+  //     "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
+  //   name: "Emily Watson",
+  //   designation: "Operations Director at CloudScale",
+  //   src: "/new-home-page/we-work/ecom-new.png",
+  //   category: "E-Commerce",
+  // },
   {
     quote:
       "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
