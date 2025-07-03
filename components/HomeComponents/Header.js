@@ -201,9 +201,9 @@ const Header = () => {
               </button>
             </Link>
 
-            <div className="bg-[#111] p-2 rounded-full">
+            {/* <div className="bg-[#111] p-2 rounded-full">
               <FaSearch className="text-white" />
-            </div>
+            </div> */}
           </nav>
 
           {/* Hamburger */}
