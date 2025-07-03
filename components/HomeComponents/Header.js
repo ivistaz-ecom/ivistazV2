@@ -53,26 +53,22 @@ const Header = () => {
             {menuItems.map((item, index) => (
               <div key={index} className="relative">
                 {item.pageLink ? (
-                 <Link
-                 href={item.pageLink}
-                 onClick={() =>
-                   setActiveMenu(activeMenu === index ? null : index)
-                 }
-                 className={`transition flex items-center gap-1 ${
-                   pathname === item.pageLink
-                     ? "text-red-500"
-                     : "hover:text-red-500"
-                 }`}
-               >
-                 {item.title}
-                 {item.submenu.length > 0 && (
-                   <IoIosArrowDown
-                     className={`text-xs transition-transform duration-300 ${
-                       activeMenu === index ? "rotate-180" : "rotate-0"
-                     }`}
-                   />
-                 )}
-               </Link>
+                  <Link
+                    href={item.pageLink}
+                    onClick={() =>
+                      setActiveMenu(activeMenu === index ? null : index)
+                    }
+                    className={`transition flex items-center gap-1 ${
+                      pathname === item.pageLink
+                        ? "text-red-500"
+                        : "hover:text-red-500"
+                    }`}
+                  >
+                    {item.title}
+                    {item.submenu.length > 0 && (
+                      <IoIosArrowDown className="text-xs" />
+                    )}
+                  </Link>
                 ) : (
                   <span
                     onClick={() =>
@@ -198,33 +194,25 @@ const Header = () => {
                 exit={{ y: -50, opacity: 0 }}
               >
                 {menuItems.map((item, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={false}
-                    animate={{
-                      opacity:
-                        mobileDropdown === null || mobileDropdown === index
-                          ? 1
-                          : 0,
-                      height:
-                        mobileDropdown === null || mobileDropdown === index
-                          ? "auto"
-                          : 0,
-                      overflow:
-                        mobileDropdown === null || mobileDropdown === index
-                          ? "visible"
-                          : "hidden",
-                    }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className={
+                      mobileDropdown !== null && mobileDropdown !== index
+                        ? "hidden"
+                        : ""
+                    }
                   >
                     {item.submenu.length > 0 ? (
                       <button
                         className="flex justify-between w-full text-left font-medium py-2"
-                        onClick={() =>
-                          setMobileDropdown(
-                            mobileDropdown === index ? null : index
-                          )
-                        }
+                        onClick={() => {
+                          if (mobileDropdown === index) {
+                            setMobileDropdown(null);
+                          } else {
+                            setMobileDropdown(index);
+                            // hide all other items
+                          }
+                        }}
                       >
                         <span
                           className={`${
@@ -254,13 +242,7 @@ const Header = () => {
 
                     <AnimatePresence initial={false}>
                       {mobileDropdown === index && item.submenu.length > 0 && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: "auto" }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.3, ease: "easeInOut" }}
-                          className="overflow-hidden pl-4 pt-2 space-y-2 text-black bg-white"
-                        >
+                        <div className="overflow-hidden pl-4 pt-2 space-y-2 text-black bg-white transition-all duration-300 ease-in-out max-h-[1000px]">
                           {item.submenu.map((sub, subIndex) => (
                             <Link
                               key={subIndex}
@@ -278,10 +260,10 @@ const Header = () => {
                               {sub.label}
                             </Link>
                           ))}
-                        </motion.div>
+                        </div>
                       )}
                     </AnimatePresence>
-                  </motion.div>
+                  </div>
                 ))}
 
                 <Link href="/case-studies">
