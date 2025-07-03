@@ -80,7 +80,7 @@ const CaseStudiesNew = () => {
 
                     {/* Arrow Block */}
                     <div
-                      className="w-32 h-auto flex items-center justify-center shadow 
+                      className="lg:w-32 w-20 h-auto flex items-center justify-center shadow 
       md:flex 
       
       opacity-100 
