@@ -30,6 +30,36 @@ const Header = () => {
       document.body.style.overflow = "";
     };
   }, [mobileOpen]);
+  useEffect(() => {
+    if (activeMenu !== null) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [activeMenu]);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // if the click is outside the dropdown area
+      if (
+        !event.target.closest(".desktop-menu-container")
+      ) {
+        setActiveMenu(null);
+      }
+    };
+  
+    if (activeMenu !== null) {
+      document.addEventListener("click", handleClickOutside);
+    }
+  
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [activeMenu]);
+  
+  
 
   if (pathname === "/") return null;
 
@@ -49,7 +79,8 @@ const Header = () => {
           </div>
 
           {/* Desktop Menu */}
-          <nav className="hidden md:flex space-x-10 items-center">
+          <nav className="hidden md:flex space-x-10 items-center desktop-menu-container">
+
             {menuItems.map((item, index) => (
               <div key={index} className="relative">
                 {item.pageLink ? (
@@ -91,13 +122,13 @@ const Header = () => {
                   <AnimatePresence>
                     {activeMenu === index && item.submenu.length > 0 && (
                       <motion.div
-                        className="fixed top-[6.2%] left-0 w-full bg-white text-black z-40 shadow-lg"
+                        className="fixed top-16 left-0 w-full bg-white text-black z-40 shadow-lg"
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2 }}
                       >
-                        <div className="grid grid-cols-4 border-t border-l border-gray-300">
+                        <div className="grid grid-cols-4 border-t-0 border-l-0 border-gray-300">
                           {item.submenu.map((sub, subIndex) => (
                             <Link
                               key={subIndex}

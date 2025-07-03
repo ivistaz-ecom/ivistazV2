@@ -12,6 +12,7 @@ export const testimonials = [
     designation: "Product Manager at TechFlow",
     src: "/new-home-page/we-work/tech-new.png",
     category: "Tech/IT",
+    link: "/industries/technology-IT",
   },
   // {
   //   quote:
@@ -36,7 +37,9 @@ export const testimonials = [
     designation: "Engineering Lead at DataPro",
     src: "/new-home-page/we-work/hospitality-new.png",
     category: "Hospitality",
+    link: "/industries/hospitality",
   },
+
   {
     quote:
       "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
@@ -44,6 +47,7 @@ export const testimonials = [
     designation: "VP of Technology at FutureNet",
     src: "/new-home-page/we-work/ngos-new.png",
     category: "Not-For-Profits/NGOs",
+    link: "/industries/ngos",
   },
   {
     quote:
@@ -52,6 +56,7 @@ export const testimonials = [
     designation: "VP of Technology at FutureNet",
     src: "/new-home-page/we-work/appliances-updated.png",
     category: "Appliances",
+    link: "/industries/appliances",
   },
   {
     quote:
@@ -60,6 +65,7 @@ export const testimonials = [
     designation: "VP of Technology at FutureNet",
     src: "/new-home-page/we-work/fa-new.png",
     category: "Fashion & Accessories",
+    link: "/industries/fashion-accessories",
   },
   {
     quote:
@@ -68,6 +74,7 @@ export const testimonials = [
     designation: "VP of Technology at FutureNet",
     src: "/new-home-page/we-work/beauty-new.png",
     category: "Beauty & Wellness",
+    link: "/industries/beauty-wellness",
   },
   {
     quote:
@@ -76,6 +83,7 @@ export const testimonials = [
     designation: "VP of Technology at FutureNet",
     src: "/new-home-page/we-work/automobiles-new.png",
     category: "Automobiles",
+    link: "/industries/automobiles",
   },
   {
     quote:
@@ -84,6 +92,7 @@ export const testimonials = [
     designation: "VP of Technology at FutureNet",
     src: "/new-home-page/we-work/jewelry-new.png",
     category: "Jewelry",
+    link: "/industries/jewellery",
   },
 ];
 
@@ -173,14 +182,22 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
                       }}
                       className="absolute inset-0  origin-bottom"
                     >
-                      <img
-                        src={testimonial.src}
-                        alt={testimonial.name}
-                        width={500}
-                        height={500}
-                        draggable={false}
-                        className="lg:mt-20 object-cover"
-                      />
+                      <div className="relative h-full w-full">
+                        <img
+                          src={testimonial.src}
+                          alt={testimonial.name}
+                          width={500}
+                          height={500}
+                          draggable={false}
+                          className="lg:mt-20 object-cover h-full w-full"
+                        />
+                        <a
+                          href={testimonial.link}
+                          className="absolute bottom-4 right-4  lg:text-xl text-black hover:text-black px-4 py-2 rounded-3xl text-sm hover:bg-[#D0AC59] bg-white transition"
+                        >
+                          Explore
+                        </a>
+                      </div>
                     </motion.div>
                   ))}
                 </AnimatePresence>
@@ -201,8 +218,8 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
                 >
                   {cat === activeCategory && (
                     <Image
-                    width={4}
-                    height={4}
+                      width={4}
+                      height={4}
                       src="/new-home-page/red-arrow.png"
                       alt="arrow"
                       className="w-4 h-4"
