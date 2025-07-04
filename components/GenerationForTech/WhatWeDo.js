@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const WhatWeDo = () => {
   return (
@@ -27,7 +28,8 @@ const WhatWeDo = () => {
             Lead Generation
           </h3>
           <p className="text-lg md:text-2xl mb-6 font-monument-light">
-            We run multi-channel campaigns that bring in high-quality, <br className="hidden sm:block"/>
+            We run multi-channel campaigns that bring in high-quality,{" "}
+            <br className="hidden sm:block" />
             sales-ready leads through:
           </p>
           <div className="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-white/30 text-sm md:text-lg">
@@ -87,17 +89,30 @@ const WhatWeDo = () => {
           </p>
           {/* cols section */}
           <div className="flex flex-col md:flex-row text-sm md:text-base divide-y md:divide-y-0 md:divide-x divide-white/30 text-left">
-            <div className="py-3 md:py-0 md:pr-6 text-base/tight">Website redesigns</div>
+            <div className="py-3 md:py-0 md:pr-6 text-base/tight">
+              Website redesigns
+            </div>
             <div className="py-3 md:py-0 md:px-6 text-base/tight">
               Web and mobile app development
             </div>
-            <div className="py-3 md:py-0 md:px-6 text-base/tight">UX/UI development</div>
+            <div className="py-3 md:py-0 md:px-6 text-base/tight">
+              UX/UI development
+            </div>
             <div className="py-3 md:py-0 md:pl-6 text-base/tight">
-              Conversion-driven content and Conversion Rate Optimization
-              (CRO)
+              Conversion-driven content and Conversion Rate Optimization (CRO)
             </div>
           </div>
         </div>
+      </div>
+      <div className="text-center flex flex-col items-center justify-center">
+        <h3 className="lg:text-[32px] text-xl text-center lg:pt-20 pt-10">
+          Smarter, Faster, AI-Powered Marketing for Tech Brands
+        </h3>
+       <div className="pt-10">
+       <Link href="/ai-powered-marketing" className="bg-white text-black rounded-lg p-2 h-12 w-48 flex items-center justify-center text-lg font-semibold hover:bg-gray-200 transition duration-300">
+          Explore Solutions
+        </Link>
+       </div>
       </div>
     </section>
   );

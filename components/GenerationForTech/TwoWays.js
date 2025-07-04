@@ -21,11 +21,11 @@ const TwoWays = () => {
       </video>
 
       {/* Overlay over video for darkening */}
-      <div className="absolute inset-0 bg-black/25"></div>
+      <div className="absolute inset-0 lg:bg-black/25"></div>
 
       {/* Centered Heading */}
-      <div className="absolute inset-0 flex justify-center items-center">
-        <h4 className="text-white text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+      <div className="absolute lg:bottom-0 bottom-[750px] inset-0 flex justify-center items-center">
+        <h4 className="text-white text-center text-3xl p-5 sm:text-3xl md:text-4xl lg:text-5xl">
           Two Ways We Can Work
         </h4>
       </div>

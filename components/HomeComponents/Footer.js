@@ -28,13 +28,12 @@ const Footer = () => {
           we can design solutions for your needs
         </p>
 
-      {/* Call to Action Circle */}
-{pathname !== "/contact-us" && (
-  <div className="flex justify-center mb-14">
-    <StartTheConversation />
-  </div>
-)}
-
+        {/* Call to Action Circle */}
+        {pathname !== "/contact-us" && (
+          <div className="flex justify-center mb-14">
+            <StartTheConversation />
+          </div>
+        )}
 
         {/* Bottom Sections */}
       </div>
@@ -72,7 +71,7 @@ const Footer = () => {
               target="_blank"
             >
               <span className="w-12 h-12 border border-[#2D2D2D] rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
-                <FaInstagram  size={20}/>
+                <FaInstagram size={20} />
               </span>
             </Link>
             <Link
@@ -80,7 +79,7 @@ const Footer = () => {
               target="_blank"
             >
               <span className="w-12 h-12 border border-[#2D2D2D] rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
-                <FaFacebookF  size={20}/>
+                <FaFacebookF size={20} />
               </span>
             </Link>
 
@@ -89,12 +88,12 @@ const Footer = () => {
               target="_blank"
             >
               <span className="w-12 h-12 border border-[#2D2D2D] rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
-                <FaLinkedinIn  size={20}/>
+                <FaLinkedinIn size={20} />
               </span>
             </Link>
             <Link href="https://x.com/ivistazecom" target="_blank">
               <span className="w-12 h-12 border border-[#2D2D2D] rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
-                <FaXTwitter size={20}/>
+                <FaXTwitter size={20} />
               </span>
             </Link>
           </div>

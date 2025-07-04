@@ -11,9 +11,9 @@ const page = () => {
       : "https://ivistaz.com";
   const pathname = usePathname();
   const seoData = {
-    title: "Join the iVistaz Team",
+    title: "B2B Lead Generation for Tech Brands | Scalable & Targeted Campaigns",
     description:
-      "Looking for a dynamic career in digital marketing? Join the iVistaz team and be part of an innovative company dedicated to driving success for our clients. Explore our career opportunities today.",
+      "Discover tailored B2B lead generation solutions designed for tech companies. From qualified lead capture to multi-channel outreach, we help you connect with decision-makers and grow your pipeline with measurable ROI. Explore how we combine strategy, content, and digital execution to drive results for your tech brand.",
     path: pathname,
     // metaImage: `${domainName}`,
   };

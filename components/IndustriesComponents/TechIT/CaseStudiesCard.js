@@ -9,10 +9,11 @@ const CaseStudiesCard = () => {
       <div>
         <div className="container mx-auto flex flex-col items-center justify-center">
           <h3 className="lg:text-[32px] text-xl text-center lg:py-10 lg:p-0 p-5">
-            Smarter, Faster, AI-Powered Marketing for Tech Brands
+            Smarter Lead Generation + Scalable Digital Execution for Tech
+            Companies
           </h3>
-          <Link href="/ai-powered-marketing" className="btn-18">
-            Explore Solutions
+          <Link href="/b2b-lead-generation-for-tech" className="btn-18">
+            Explore More
           </Link>
           <h3 className="lg:text-[32px] text-xl text-center lg:py-10 lg:p-0 p-5">
             Here are some instances where our expertise and cutting-edge
