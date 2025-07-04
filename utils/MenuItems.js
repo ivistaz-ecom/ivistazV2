@@ -64,7 +64,7 @@ export const menuItems = [
         { label: "Clients", pageLink: "/our-clients" },
         { label: "About Us", pageLink: "/mastery/about-us" },
         { label: "Careers", pageLink: "/careers" },
-        { label: "M.A.P", pageLink: "/mastery-art-performance" },
+        { label: "Mastery. Art. Performance", pageLink: "/mastery-art-performance" },
       ],
     },
     {

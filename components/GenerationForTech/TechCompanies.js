@@ -14,11 +14,11 @@ const TechCompanies = () => {
         Choose Us
       </h2>
 
-      <div className="container mx-auto lg:py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="container mx-auto lg:py-16 grid grid-cols-1 md:grid-cols-4 gap-5">
         {techCompaniesData.map((card) => (
           <div
             key={card.id}
-            className={`relative lg:w-[320px] h-[450px] overflow-hidden text-white group cursor-pointer bg-gradient-to-br ${card.gradient}`}
+            className={`relative w-full h-[450px] overflow-hidden text-white group cursor-pointer bg-gradient-to-br ${card.gradient}`}
           >
             {/* Hover Image */}
             <div className="absolute top-0 left-0 w-full h-[50%] z-10 overflow-hidden">
