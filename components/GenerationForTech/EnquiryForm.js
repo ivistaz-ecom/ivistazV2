@@ -61,7 +61,7 @@ const CustomSelect = ({
 
           <Image
             alt="down-arrow"
-            src="/generation-for-tech/down-arrow.svg"
+            src="/generation-for-tech/down-aroow-white.png"
             width={18}
             height={18}
             className={`ml-2 transition-transform text-[#2050B1] ${
@@ -70,11 +70,11 @@ const CustomSelect = ({
           />
         </button>
         {isOpen && (
-          <ul className="absolute left-0 right-0 text-[#3B76CB] w-full lg:w-1/2 bg-[#fff] shadow transition-all duration-300 ease-in-out overflow-hidden z-50 max-h-60 opacity-100">
+          <ul className="absolute left-0 right-0 text-[#000] w-full bg-[#fff] shadow transition-all duration-300 ease-in-out overflow-hidden z-50 max-h-60 opacity-100">
             {options.map((opt) => (
               <li
                 key={opt}
-                className="px-4 hover:text-black cursor-pointer text-[#3B76CB] py-1"
+                className="px-4 hover:text-black cursor-pointer text-[#000] py-1"
                 onClick={() => {
                   if (multi) {
                     let newSelection = Array.isArray(value) ? [...value] : [];
@@ -203,9 +203,16 @@ export default function EnquiryForm() {
       errors.phone = "Phone number must be 10 digits if provided.";
     }
 
-    if (!formData.reachingOut) {
-      errors.reachingOut = "Please select where you’re reaching out from.";
+    if (!formData.job) {
+      errors.job = "Job title is required.";
+    } else if (formData.job.length < 2) {
+      errors.job = "Job title must be at least 2 characters.";
     }
+
+    if (!formData.reachingOut) {
+      errors.reachingOut = "Please specify where you’re reaching out from.";
+    }
+
     if (!formData.interest || formData.interest.length === 0) {
       errors.interest = "Please select at least one interest.";
     } else if (formData.interest.length > 2) {
@@ -220,11 +227,6 @@ export default function EnquiryForm() {
       errors.textField = "Please provide some details.";
     } else if (formData.textField.length < 10) {
       errors.textField = "Details must be at least 10 characters.";
-    }
-
-    // job is optional, but if entered should be reasonable
-    if (formData.job && formData.job.length < 2) {
-      errors.job = "Job title must be at least 2 characters.";
     }
 
     setFormErrors(errors);
@@ -341,7 +343,8 @@ export default function EnquiryForm() {
           Schedule a Call
         </h2>
 
-        <div className="container mx-auto lg:px-20 py-8 text-white border-2 rounded-lg border-[#5F5F69]">
+        <div className="container mx-auto lg:px-20 py-8 text-white bg-black shadow-lg border border-[#5B5B5B] rounded-2xl">
+        {/* <div className="container mx-auto lg:px-20 py-8 text-white bg-gradient-to-r from-[#0059BE] via-[#0059BE] to-[#0078B1] shadow-lg"> */}
           <h2 className="text-4xl text-center font-tthoves-bold mb-6 text-white">
             Enquiry Form
           </h2>
@@ -351,10 +354,10 @@ export default function EnquiryForm() {
               <div>
                 <label className="text-sm font-tthoves-demibold mb-1 block">
                   <span className="text-xl">Full Name</span>{" "}
-                  <span className="text-gray-400">(Required)</span>
+                  <span className="text-[#fff] font-monument-light"> (Required)</span>
                 </label>
                 <input
-                  placeholder="We’d Love To Know Who We’re Speaking To"
+                  // placeholder="We’d Love To Know Who We’re Speaking To"
                   type="text"
                   className={`w-full border ${
                     formErrors.fullName
@@ -376,11 +379,11 @@ export default function EnquiryForm() {
               <div>
                 <label className="text-sm font-tthoves-demibold mb-1 block">
                   <span className="text-xl">Company Name</span>
-                  <span className="text-gray-400"> (Required)</span>
+                  <span className="text-[#fff] font-monument-light"> (Required)</span>
                 </label>
 
                 <input
-                  placeholder="This Helps Us Tailor Our Recommendations"
+                  // placeholder="This Helps Us Tailor Our Recommendations"
                   type="text"
                   className={`w-full border ${
                     formErrors.company
@@ -403,10 +406,10 @@ export default function EnquiryForm() {
               <div>
                 <label className="text-sm font-tthoves-demibold mb-1 block">
                   <span className="text-xl">Work Email</span>
-                  <span className="text-gray-400"> (Required)</span>
+                  <span className="text-[#fff] font-monument-light"> (Required)</span>
                 </label>
                 <input
-                  placeholder="Your Business Email Helps Us Reach You Directly"
+                  // placeholder="Your Business Email Helps Us Reach You Directly"
                   type="email"
                   className={`w-full border ${
                     formErrors.email
@@ -425,11 +428,11 @@ export default function EnquiryForm() {
               <div>
                 <label className="text-sm font-tthoves-demibold mb-1 block">
                   <span className="text-xl">Phone Number</span>
-                  <span className="text-gray-400"> (Optional)</span>
+                  <span className="text-[#fff] font-monument-light"> (Optional)</span>
                 </label>
                 <input
                   type="text"
-                  placeholder="Share This Only If You’d Prefer A Quick Call"
+                  // placeholder="Share This Only If You’d Prefer A Quick Call"
                   className={`w-full border ${
                     formErrors.phone
                       ? "border-red-500 border-dashed rounded-md "
@@ -451,10 +454,11 @@ export default function EnquiryForm() {
 
             {/* Row 4 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Job Title / Role */}
               <div>
                 <label className="text-sm font-tthoves-demibold mb-1 block">
                   <span className="text-xl">Job Title / Role</span>
-                  <span className="text-gray-400"> (Optional)</span>
+                  <span className="text-[#fff] font-monument-light"> (Required)</span>
                 </label>
                 <input
                   type="text"
@@ -472,31 +476,35 @@ export default function EnquiryForm() {
                   <p className="text-red-600 text-sm">{formErrors.job}</p>
                 )}
               </div>
-              <CustomSelect
-                label={
+
+              {/* Where Are You Reaching Out From? */}
+              <div>
+                <label className="text-sm font-tthoves-demibold mb-1 block">
                   <span className="text-xl">
                     Where Are You Reaching Out From?
                   </span>
-                }
-                options={[
-                  "High School",
-                  "Undergraduate",
-                  "Postgraduate",
-                  "Other",
-                ]}
-                onChange={(val) =>
-                  setFormData({ ...formData, reachingOut: val })
-                }
-                value={
-                  formData.reachingOut || (
-                    <span className="text-[#807F7F]">
-                      Helps Us Coordinate Time Zones And Context
-                    </span>
-                  )
-                }
-                error={formErrors.reachingOut}
-              />
+                  <span className="text-[#fff] font-monument-light"> (Required)</span>
+                </label>
+                <input
+                  type="text"
+                  className={`w-full border ${
+                    formErrors.reachingOut
+                      ? "border-red-500 border-dashed rounded-md "
+                      : "border-dashed border-[#5B5B5B] focus:outline-none rounded-md p-3"
+                  } p-2`}
+                  value={formData.reachingOut}
+                  onChange={(e) =>
+                    setFormData({ ...formData, reachingOut: e.target.value })
+                  }
+                />
+                {formErrors.reachingOut && (
+                  <p className="text-red-600 text-sm">
+                    {formErrors.reachingOut}
+                  </p>
+                )}
+              </div>
             </div>
+
             {/* Row 5 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex flex-col">
@@ -505,12 +513,18 @@ export default function EnquiryForm() {
                   label={
                     <span className="text-xl flex flex-col py-2">
                       What Are You Most Interested In?{" "}
-                      <span className="text-sm text-gray-400">
+                      <span className="text-sm text-[#fff] font-monument-light">
                         (Required – Multi-Select Checkboxes)
                       </span>
                     </span>
                   }
-                  options={["Lead Generation", "Website/Ux Revamp", "Conversion Optimization", "Remote Delivery Support (For Client Projects)", "Other"]}
+                  options={[
+                    "Lead Generation",
+                    "Website/Ux Revamp",
+                    "Conversion Optimization",
+                    "Remote Delivery Support (For Client Projects)",
+                    "Other",
+                  ]}
                   onChange={(val) =>
                     setFormData({ ...formData, interest: val })
                   }
@@ -537,7 +551,7 @@ export default function EnquiryForm() {
                     }}
                     showTimeSelect
                     dateFormat="yyyy-MM-dd HH:mm"
-                    placeholderText="We’ll Do Our Best To Match Your Availability."
+                    // placeholderText="We’ll Do Our Best To Match Your Availability."
                     className={`lg:w-[504px] border w-full ${
                       formErrors.dateTime
                         ? "border-red-500 border-dashed rounded-md"
@@ -558,13 +572,13 @@ export default function EnquiryForm() {
                 <label className="text-sm font-tthoves-demibold mb-1 block">
                   <span className="text-xl flex flex-col py-2">
                     Tell Us Briefly What You’re Looking For{" "}
-                    <span className="text-sm text-gray-400">
+                    <span className="text-sm text-[#fff] font-monument-light">
                       (Short Text Field)
                     </span>
                   </span>
                 </label>
                 <textarea
-                  // placeholder="Briefly describe what you're looking for"
+                  placeholder="Briefly describe what you're looking for"
                   className={`w-full border ${
                     formErrors.textField
                       ? "border-red-500 border-dashed rounded-md"
@@ -582,11 +596,24 @@ export default function EnquiryForm() {
             </div>
 
             {/* Declaration */}
-            <div className="space-y-4">
-              <button type="submit" disabled={submitting} className="btn-15">
+            {/* <div className="space-y-4">
+              <button
+                type="submit"
+                disabled={submitting}
+                className="bg-white text-black rounded-md text-xl hover:bg-gradient-to-r from-[#0078B1] to-[#0059BE] p-3 w-32"
+              >
                 {submitting ? "Submitting..." : "Submit"}
               </button>
-            </div>
+            </div> */}
+            <button
+            type="submit"
+            disabled={submitting}
+             className="relative inline-flex h-12 w-36 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-black hover:bg-white px-3 py-1 text-xl font-medium text-white hover:text-black backdrop-blur-3xl divide-neutral-400 transition">
+              {submitting ? "Submitting..." : "Submit"}
+              </span>
+            </button>
 
             {/* Response Message */}
             {responseMsg && (
@@ -618,7 +645,12 @@ export default function EnquiryForm() {
                       &times;
                     </button>
                     <div className="flex justify-center items-center">
-                      <Image src="/ivista_logo.svg" width={250} height={100} alt="logo"/>
+                      <Image
+                        src="/ivista_logo.svg"
+                        width={250}
+                        height={100}
+                        alt="logo"
+                      />
                     </div>
                     {/* Thank You Message */}
                     <h2 className="text-4xl pt-4 font-tthoves-demibold text-[#fff] mb-4">

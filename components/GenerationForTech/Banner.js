@@ -21,10 +21,10 @@ const Banner = () => {
 
         {/* Content */}
         <div className="relative z-10 text-white flex flex-col items-center justify-center h-full text-center">
-          <h1 className="text-3xl md:text-[80px] font- lg:mb-4">
+          <h1 className="text-3xl md:text-[80px] ">
             Smarter Lead Generation <span className="text-[#FF5C00] font-monument-semibold"> +</span>{" "}
           </h1>
-          <h1 className="text-3xl md:text-[80px] font- lg:mb-3">
+          <h1 className="text-3xl md:text-[80px]">
             Scalable Digital Execution{" "}
           </h1>
           <h1 className="text-3xl md:text-[80px] font- mb-4">

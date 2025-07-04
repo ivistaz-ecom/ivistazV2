@@ -4,7 +4,7 @@ import React from "react";
 const WhoWe = () => {
   return (
     <>
-      <div className="bg-gradient-to-r from-[#0D285C] to-[#2F1F4A] text-white px-6 py-32">
+      <div className="bg-gradient-to-r from-[#0D285C] to-[#2F1F4A] text-white px-6 py-28">
         <div className="container mx-auto flex items-center lg:gap-52 gap-10 flex-col md:flex-row lg:px-20">
           <div>
             <h4 className="lg:text-6xl text-3xl">
