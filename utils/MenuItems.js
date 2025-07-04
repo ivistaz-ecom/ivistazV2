@@ -68,7 +68,7 @@ export const menuItems = [
       ],
     },
     {
-      title: "Contact",
+      title: "Contact Us",
       pageLink: "/contact-us",
       submenu: [],
     },
