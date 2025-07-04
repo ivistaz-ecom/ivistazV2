@@ -8,7 +8,7 @@ const TechCompanies = () => {
     <div className="bg-black">
       <h2 className="lg:text-5xl text-3xl font-bold text-white text-center lg:pt-48 py-10 lg:py-0 font-monument-light">
         Why{" "}
-        <span className="text-[#FF5C00] font-monument-bold">
+        <span className="text-[#FF5C00]">
           Tech Companies
         </span>{" "}
         Choose Us

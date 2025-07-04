@@ -28,10 +28,13 @@ const Footer = () => {
           we can design solutions for your needs
         </p>
 
-        {/* Call to Action Circle */}
-        <div className="flex justify-center mb-14">
-          <StartTheConversation />
-        </div>
+      {/* Call to Action Circle */}
+{pathname !== "/contact-us" && (
+  <div className="flex justify-center mb-14">
+    <StartTheConversation />
+  </div>
+)}
+
 
         {/* Bottom Sections */}
       </div>

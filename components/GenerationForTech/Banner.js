@@ -12,7 +12,7 @@ const Banner = () => {
           muted
           playsInline
         >
-          <source src="/generation-for-tech/hero-banner.webm" type="video/mp4" />
+          <source src="/generation-for-tech/blue-bg.webm" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -21,7 +21,7 @@ const Banner = () => {
 
         {/* Content */}
         <div className="relative z-10 text-white flex flex-col items-center justify-center h-full text-center">
-          <h1 className="text-3xl md:text-[80px] ">
+          <h1 className="text-3xl md:text-[75px] ">
             Smarter Lead Generation <span className="text-[#FF5C00] font-monument-semibold"> +</span>{" "}
           </h1>
           <h1 className="text-3xl md:text-[80px]">

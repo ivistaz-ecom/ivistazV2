@@ -31,13 +31,13 @@ const WhatWeDo = () => {
             sales-ready leads through:
           </p>
           <div className="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-white/30 text-sm md:text-lg">
-            <div className="py-3 md:py-0 md:pe-6 font-monument-light">
+            <div className="py-3 md:py-0 md:pe-6 font-monument-light text-base/tight">
               Performance-driven <br /> paid media
             </div>
-            <div className="py-3 md:py-0 md:px-6 font-monument-light">
+            <div className="py-3 md:py-0 md:px-6 font-monument-light text-base/tight">
               Precision <br /> outbound email
             </div>
-            <div className="py-3 md:py-0 md:px-6 font-monument-light">
+            <div className="py-3 md:py-0 md:px-6 font-monument-light text-base/tight">
               Custom Account-Based <br /> Marketing (ABM) strategies
             </div>
           </div>
@@ -87,13 +87,13 @@ const WhatWeDo = () => {
           </p>
           {/* cols section */}
           <div className="flex flex-col md:flex-row text-sm md:text-base divide-y md:divide-y-0 md:divide-x divide-white/30 text-left">
-            <div className="py-3 md:py-0 md:pr-6">Website redesigns</div>
-            <div className="py-3 md:py-0 md:px-6">
+            <div className="py-3 md:py-0 md:pr-6 text-base/tight">Website redesigns</div>
+            <div className="py-3 md:py-0 md:px-6 text-base/tight">
               Web and mobile app development
             </div>
-            <div className="py-3 md:py-0 md:px-6">UX/UI development</div>
-            <div className="py-3 md:py-0 md:pl-6">
-              Conversion-driven content and <br /> Conversion Rate Optimization
+            <div className="py-3 md:py-0 md:px-6 text-base/tight">UX/UI development</div>
+            <div className="py-3 md:py-0 md:pl-6 text-base/tight">
+              Conversion-driven content and Conversion Rate Optimization
               (CRO)
             </div>
           </div>

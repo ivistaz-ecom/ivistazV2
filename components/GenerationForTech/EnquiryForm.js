@@ -572,17 +572,17 @@ export default function EnquiryForm() {
                 <label className="text-sm font-tthoves-demibold mb-1 block">
                   <span className="text-xl flex flex-col py-2">
                     Tell Us Briefly What You’re Looking For{" "}
-                    <span className="text-sm text-[#fff] font-monument-light">
+                    {/* <span className="text-sm text-[#fff] font-monument-light">
                       (Short Text Field)
-                    </span>
+                    </span> */}
                   </span>
                 </label>
                 <textarea
-                  placeholder="Briefly describe what you're looking for"
+                  // placeholder="Briefly describe what you're looking for"
                   className={`w-full border ${
                     formErrors.textField
                       ? "border-red-500 border-dashed rounded-md"
-                      : "border-dashed border-[#5B5B5B] focus:outline-none rounded-md p-3 h-40"
+                      : "border-dashed border-[#5B5B5B] focus:outline-none rounded-md p-3 h-44"
                   }`}
                   value={formData.textField}
                   onChange={(e) =>
