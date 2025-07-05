@@ -25,7 +25,7 @@ const TwoWays = () => {
 
       {/* Centered Heading */}
       <div className="absolute lg:bottom-0 bottom-[750px] inset-0 flex justify-center items-center">
-        <h4 className="text-white text-center text-3xl p-5 sm:text-3xl md:text-4xl lg:text-5xl">
+        <h4 className="text-white text-center text-3xl w-xl sm:text-3xl md:text-4xl lg:text-5xl p-3 lg:bg-black/0 bg-black/25">
           Two Ways We Can Work
         </h4>
       </div>
