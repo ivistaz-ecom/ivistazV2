@@ -50,7 +50,7 @@ const EverythingConnect = () => {
             >
               {/* Image transitions out on hover */}
               <div
-                className={`absolute  inset-0 z-0 transition-all duration-500 ease-in-out group-hover:translate-x-10 group-hover:translate-y-10 group-hover:scale-110 group-hover:opacity-0 ${card.marginHeight}`}
+                className={`absolute inset-0 z-0 transition-all duration-500 ease-in-out group-hover:translate-x-10 group-hover:translate-y-10 group-hover:scale-110 group-hover:opacity-0`}
               >
                 <Image
                   src={card.imageUrl}
@@ -59,6 +59,8 @@ const EverythingConnect = () => {
                   objectFit="cover"
                   className="transition-transform duration-500 ease-in-out"
                 />
+                {/* mobile-only black semi-transparent overlay */}
+                <div className="absolute inset-0  bg-black/55 lg:hidden"></div>
               </div>
 
               {/* Gradient background that fades in smoothly */}
@@ -69,7 +71,7 @@ const EverythingConnect = () => {
               {/* Text content */}
               <div className="absolute inset-0 z-20 flex flex-col py-10 px-6">
                 <h4 className="text-3xl text-white mb-4">{card.title}</h4>
-                <p className="text-white lg:opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300">
+                <p className="text-lg text-white lg:opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300">
                   {card.desc}
                 </p>
               </div>

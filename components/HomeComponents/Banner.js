@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <>
       <div>
-        <div className="h-[100vh] flex flex-col justify-center items-center bg-black text-[#EBEBEB] text-center">
+        <div className="lg:h-[100vh] h-[73vh] flex flex-col justify-center items-center bg-black text-[#EBEBEB] text-center">
           <h1 className="text-5xl md:text-5xl lg:text-8xl font-bold w-3/4">
             Not here to make noise.
           </h1>
