@@ -338,7 +338,7 @@ export default function EnquiryForm() {
   return (
     <>
       <div className="bg-black">
-        <h2 className="lg:text-3xl text-xl text-center font-tthoves-bold mb-6 text-white lg:pt-28 pb-10 pt-10">
+        <h2 className="lg:text-3xl text-xl text-center font-tthoves-bold mb-6 text-white lg:pt-28 lg:pb-10 pt-10">
           Fill this form to Schedule a Call
         </h2>
 
