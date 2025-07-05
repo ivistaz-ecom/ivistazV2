@@ -338,13 +338,12 @@ export default function EnquiryForm() {
   return (
     <>
       <div className="bg-black">
-        <h2 className="lg:text-2xl text-xl text-center font-tthoves-bold mb-6 text-white lg:pt-28 pb-10 pt-10">
-          Book a quick 15-minute call to explore fit <br /> Fill this form to
-          Schedule a Call
+        <h2 className="lg:text-3xl text-xl text-center font-tthoves-bold mb-6 text-white lg:pt-28 pb-10 pt-10">
+          Fill this form to Schedule a Call
         </h2>
 
         <div className="container mx-auto lg:px-20 py-8 text-white bg-black shadow-lg border border-[#5B5B5B] rounded-2xl">
-        {/* <div className="container mx-auto lg:px-20 py-8 text-white bg-gradient-to-r from-[#0059BE] via-[#0059BE] to-[#0078B1] shadow-lg"> */}
+          {/* <div className="container mx-auto lg:px-20 py-8 text-white bg-gradient-to-r from-[#0059BE] via-[#0059BE] to-[#0078B1] shadow-lg"> */}
           <h2 className="text-4xl text-center font-tthoves-bold mb-6 text-white">
             Enquiry Form
           </h2>
@@ -354,7 +353,10 @@ export default function EnquiryForm() {
               <div>
                 <label className="text-sm font-tthoves-demibold mb-1 block">
                   <span className="text-xl">Full Name</span>{" "}
-                  <span className="text-[#fff] font-monument-light"> (Required)</span>
+                  <span className="text-[#fff] font-monument-light">
+                    {" "}
+                    (Required)
+                  </span>
                 </label>
                 <input
                   // placeholder="We’d Love To Know Who We’re Speaking To"
@@ -379,7 +381,10 @@ export default function EnquiryForm() {
               <div>
                 <label className="text-sm font-tthoves-demibold mb-1 block">
                   <span className="text-xl">Company Name</span>
-                  <span className="text-[#fff] font-monument-light"> (Required)</span>
+                  <span className="text-[#fff] font-monument-light">
+                    {" "}
+                    (Required)
+                  </span>
                 </label>
 
                 <input
@@ -406,7 +411,10 @@ export default function EnquiryForm() {
               <div>
                 <label className="text-sm font-tthoves-demibold mb-1 block">
                   <span className="text-xl">Work Email</span>
-                  <span className="text-[#fff] font-monument-light"> (Required)</span>
+                  <span className="text-[#fff] font-monument-light">
+                    {" "}
+                    (Required)
+                  </span>
                 </label>
                 <input
                   // placeholder="Your Business Email Helps Us Reach You Directly"
@@ -428,7 +436,10 @@ export default function EnquiryForm() {
               <div>
                 <label className="text-sm font-tthoves-demibold mb-1 block">
                   <span className="text-xl">Phone Number</span>
-                  <span className="text-[#fff] font-monument-light"> (Optional)</span>
+                  <span className="text-[#fff] font-monument-light">
+                    {" "}
+                    (Optional)
+                  </span>
                 </label>
                 <input
                   type="text"
@@ -458,7 +469,10 @@ export default function EnquiryForm() {
               <div>
                 <label className="text-sm font-tthoves-demibold mb-1 block">
                   <span className="text-xl">Job Title / Role</span>
-                  <span className="text-[#fff] font-monument-light"> (Required)</span>
+                  <span className="text-[#fff] font-monument-light">
+                    {" "}
+                    (Required)
+                  </span>
                 </label>
                 <input
                   type="text"
@@ -483,7 +497,10 @@ export default function EnquiryForm() {
                   <span className="text-xl">
                     Where Are You Reaching Out From?
                   </span>
-                  <span className="text-[#fff] font-monument-light"> (Required)</span>
+                  <span className="text-[#fff] font-monument-light">
+                    {" "}
+                    (Required)
+                  </span>
                 </label>
                 <input
                   type="text"
@@ -606,12 +623,13 @@ export default function EnquiryForm() {
               </button>
             </div> */}
             <button
-            type="submit"
-            disabled={submitting}
-             className="relative inline-flex h-12 w-36 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+              type="submit"
+              disabled={submitting}
+              className="relative inline-flex h-12 w-36 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+            >
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
               <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-black hover:bg-white px-3 py-1 text-xl font-medium text-white hover:text-black backdrop-blur-3xl divide-neutral-400 transition">
-              {submitting ? "Submitting..." : "Submit"}
+                {submitting ? "Submitting..." : "Submit"}
               </span>
             </button>
 
