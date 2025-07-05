@@ -14,7 +14,7 @@ const TwoWays = () => {
         className="w-full h-auto object-cover"
       >
         <source
-          src="/generation-for-tech/two-ways-video.webm"
+          src="/generation-for-tech/building-video.webm"
           type="video/webm"
         />
         Your browser does not support the video tag.
@@ -25,7 +25,7 @@ const TwoWays = () => {
 
       {/* Centered Heading */}
       <div className="absolute lg:bottom-0 bottom-[750px] inset-0 flex justify-center items-center">
-        <h4 className="text-white text-center text-3xl w-xl sm:text-3xl md:text-4xl lg:text-5xl p-3 lg:bg-black/0 bg-black/25">
+        <h4 className="text-white text-center text-3xl w-xl sm:text-3xl md:text-4xl lg:text-5xl p-3 lg:bg-black/0">
           Two Ways We Can Work
         </h4>
       </div>
