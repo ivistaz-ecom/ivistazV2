@@ -31,7 +31,7 @@ const ContactusContent = () => {
 
         {/* Contact Info */}
         <div className="w-full lg:w-1/2 iv-bg lg:my-5 rounded-xl flex flex-col justify-center">
-          <h1 className="text-white lg:text-[30px] text-xl text-center pb-4 pt-2 font-monument-bold">
+          <h1 className="text-white lg:text-[30px] text-xl text-center lg:pb-4 pt-5 lg:pt-2 font-monument-bold">
             iVistaz Ecom Services Pvt. Ltd.
           </h1>
           <div className="py-5">

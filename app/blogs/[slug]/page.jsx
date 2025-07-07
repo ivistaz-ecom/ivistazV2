@@ -1,7 +1,6 @@
 import Posts from "./Posts";
 import ConfigData from "../../../config";
 
-// ✅ SEO metadata for dynamic blogs
 export async function generateMetadata({ params }) {
   const siteUrl = ConfigData.wpApiUrl;
   const serverUrl = ConfigData.SERVER;
@@ -28,7 +27,7 @@ export async function generateMetadata({ params }) {
       title: post.acf.meta_title,
       description: post.acf.meta_description_,
       alternates: {
-        canonical: `${mainWebUrl}/blogs/${slug}`,
+        canonical: `${mainWebUrl}/blogs/${slug}`, 
       },
       openGraph: {
         title: post.acf.meta_title,
@@ -55,6 +54,38 @@ export async function generateMetadata({ params }) {
   }
 }
 
-export default function BlogPage({ params }) {
-  return <Posts slug={params.slug} />;
+export default async function BlogPage({ params }) {
+  const siteUrl = ConfigData.wpApiUrl;
+  const slug = params.slug;
+
+  const res = await fetch(`${siteUrl}/blogs?_embed&slug=${slug}`);
+  const data = await res.json();
+
+  if (!data || data.length === 0) {
+    return <div>Post Not Found</div>;
+  }
+
+  const post = data[0];
+
+  const schemaData = {
+    "@context": "https://schema.org/",
+    "@type": "WebSite",
+    name: "iVistaz",
+    url: `${ConfigData.mainWebUrl}/`,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${ConfigData.mainWebUrl}/blogs/${slug}?search={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+      <Posts slug={params.slug} />
+    </>
+  );
 }
