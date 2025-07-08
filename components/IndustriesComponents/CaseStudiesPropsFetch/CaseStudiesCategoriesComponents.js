@@ -194,7 +194,7 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
               </Link>
             )}
             {pathname.startsWith("/industries") && (
-              <Link href="/case-studies" className="btn-18">
+              <Link href="/case-studies" className="btn-18 mb-10 lg:mb-0">
                 View All Case Studies
               </Link>
             )}
