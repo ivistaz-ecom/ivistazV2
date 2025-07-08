@@ -65,7 +65,7 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
         }
       `}</style>
 
-      <div className="container mx-auto lg:py-10">
+      <div className="container mx-auto lg:pt-5">
         {data ? (
           data.map((item) => (
             <div key={item.id} className="mb-10">
@@ -76,7 +76,7 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
                 height={600}
                 className="w-full h-auto"
               />
-              <div className="bg-white shadow-lg p-6 mt-4 flex flex-col lg:flex-row justify-between gap-4">
+              <div className="bg-white shadow-lg flex flex-col lg:flex-row justify-between gap-4">
                 <div className="lg:w-1/3">
                   <div
                     className="text-xl font-monument-bold text-red-600 post-content-title"
