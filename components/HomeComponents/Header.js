@@ -21,45 +21,40 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    const updateBodyOverflow = () => {
+      if (typeof window !== "undefined") {
+        if (window.innerWidth < 768 && (mobileOpen || activeMenu !== null)) {
+          document.body.style.overflow = "hidden";
+        } else {
+          document.body.style.overflow = "";
+        }
+      }
+    };
+
+    updateBodyOverflow();
+    window.addEventListener("resize", updateBodyOverflow);
+
     return () => {
+      window.removeEventListener("resize", updateBodyOverflow);
       document.body.style.overflow = "";
     };
-  }, [mobileOpen]);
-  useEffect(() => {
-    if (activeMenu !== null) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [activeMenu]);
+  }, [mobileOpen, activeMenu]);
+
   useEffect(() => {
     const handleClickOutside = (event) => {
-      // if the click is outside the dropdown area
-      if (
-        !event.target.closest(".desktop-menu-container")
-      ) {
+      if (!event.target.closest(".desktop-menu-container")) {
         setActiveMenu(null);
       }
     };
-  
+
     if (activeMenu !== null) {
       document.addEventListener("click", handleClickOutside);
     }
-  
+
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, [activeMenu]);
-  
-  
 
   if (pathname === "/") return null;
 
@@ -80,15 +75,16 @@ const Header = () => {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex space-x-10 items-center desktop-menu-container">
-
             {menuItems.map((item, index) => (
-              <div key={index} className="relative">
+              <div
+                key={index}
+                className="relative"
+                onMouseEnter={() => setActiveMenu(index)}
+                onMouseLeave={() => setActiveMenu(null)}
+              >
                 {item.pageLink ? (
                   <Link
                     href={item.pageLink}
-                    onClick={() =>
-                      setActiveMenu(activeMenu === index ? null : index)
-                    }
                     className={`transition flex items-center gap-1 ${
                       pathname === item.pageLink
                         ? "text-red-500"
@@ -102,9 +98,6 @@ const Header = () => {
                   </Link>
                 ) : (
                   <span
-                    onClick={() =>
-                      setActiveMenu(activeMenu === index ? null : index)
-                    }
                     className={`transition flex items-center gap-1 cursor-default ${
                       item.submenu.some((s) => s.pageLink === pathname)
                         ? "text-red-500"
@@ -122,7 +115,7 @@ const Header = () => {
                   <AnimatePresence>
                     {activeMenu === index && item.submenu.length > 0 && (
                       <motion.div
-                        className="fixed top-16 left-0 w-full bg-white text-black z-40 shadow-lg"
+                        className="fixed top-14.5 left-0 w-full bg-white text-black z-40 shadow-lg"
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
@@ -176,7 +169,6 @@ const Header = () => {
                                   {sub.description}
                                 </span>
                               )}
-                              {/* background: animate on hover, or fixed if active */}
                               <span
                                 className={`absolute left-0 top-0 h-full z-0 transition-all duration-500 ease-in-out ${
                                   pathname === sub.pageLink
@@ -200,10 +192,6 @@ const Header = () => {
                 <span className="relative z-10">Case Studies</span>
               </button>
             </Link>
-
-            {/* <div className="bg-[#111] p-2 rounded-full">
-              <FaSearch className="text-white" />
-            </div> */}
           </nav>
 
           {/* Hamburger */}
@@ -241,7 +229,6 @@ const Header = () => {
                             setMobileDropdown(null);
                           } else {
                             setMobileDropdown(index);
-                            // hide all other items
                           }
                         }}
                       >

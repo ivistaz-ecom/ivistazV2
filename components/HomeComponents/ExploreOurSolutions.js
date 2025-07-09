@@ -19,11 +19,11 @@ export default function ExploreOurSolutions() {
           initial={{ width: 144, height: 144 }}
           animate={hovered ? { width: 80, height: 80 } : { width: 144, height: 144 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="relative rounded-full bg-[#ED1C24] cursor-pointer flex items-center justify-center overflow-hidden"
+          className="relative rounded-full  bg-[#111] cursor-pointer flex items-center justify-center overflow-hidden"
         >
           {/* Shrinking overlay */}
           <motion.div
-            className="absolute inset-0 rounded-full bg-[#111] z-0"
+            className="absolute inset-0 rounded-full bg-[#ED1C24] z-0"
             initial={{ scale: 2.5 }}
             animate={{ scale: hovered ? 0 : 1.5 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
