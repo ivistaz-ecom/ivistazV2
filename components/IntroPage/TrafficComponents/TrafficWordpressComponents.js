@@ -12,7 +12,7 @@ const TrafficWordpressComponents = () => {
       {/* Logo and Heading Section */}
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col items-center justify-center h-[300px]">
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <Link href="/">
               <Image
                 src="/ivista_logo.svg"
@@ -22,12 +22,12 @@ const TrafficWordpressComponents = () => {
                 className=""
               />
             </Link>
-          </div>
+          </div> */}
 
           <div>
             {/* Desktop */}
-            <p className="text-white font-monument-bold text-2xl md:text-[28px] pt-10">
-            Here are some traffic performances
+            <p className="text-white font-monument-bold text-2xl md:text-[28px]">
+              Here are some traffic performances
             </p>
             <p className="text-white font-monument-bold text-2xl md:text-[28px] pt-4">
               we have achieved for our clients.

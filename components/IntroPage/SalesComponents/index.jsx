@@ -1,12 +1,12 @@
-import React from 'react'
-import SalesWordpressComponents from './SalesWordpressComponents'
+import React from "react";
+import SalesWordpressComponents from "./SalesWordpressComponents";
 
 const index = () => {
   return (
     <div>
-      <SalesWordpressComponents/>
+      <SalesWordpressComponents />
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default index;

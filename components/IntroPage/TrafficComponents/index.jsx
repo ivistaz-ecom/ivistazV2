@@ -1,12 +1,12 @@
-import React from 'react'
-import TrafficWordpressComponents from "./TrafficWordpressComponents"
+import React from "react";
+import TrafficWordpressComponents from "./TrafficWordpressComponents";
 
 const index = () => {
   return (
     <div>
-      <TrafficWordpressComponents/>
+      <TrafficWordpressComponents />
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default index;
