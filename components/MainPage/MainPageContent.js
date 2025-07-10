@@ -34,7 +34,7 @@ const HomePage = () => {
         ref={secondSectionRef}
       >
         <div className="flex flex-col items-center justify-between lg:min-h-screen lg:pt-[250px] pt-[50px] pb-10">
-          <div className="flex flex-col justify-center items-center mt-20 md:mt-0">
+          <div className="flex flex-col justify-center items-center mt-12 md:mt-0">
             <h2 className="text-white text-3xl md:text-[60px] font-monument-bold pb-3">
               WHAT DOES
             </h2>
