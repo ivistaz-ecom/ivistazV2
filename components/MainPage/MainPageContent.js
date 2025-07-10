@@ -33,7 +33,7 @@ const HomePage = () => {
         }`}
         ref={secondSectionRef}
       >
-        <div className="flex flex-col items-center justify-between min-h-screen lg:pt-[250px] pt-[50px] pb-10">
+        <div className="flex flex-col items-center justify-between lg:min-h-screen lg:pt-[250px] pt-[50px] pb-10">
           <div className="flex flex-col justify-center items-center mt-20 md:mt-0">
             <h2 className="text-white text-3xl md:text-[60px] font-monument-bold pb-3">
               WHAT DOES
@@ -64,7 +64,7 @@ const HomePage = () => {
               visible: { transition: { staggerChildren: 0.25 } },
             }}
           >
-            <div className="flex flex-col md:flex-row items-center justify-end gap-3 w-full lg:pt-0 pt-4">
+            <div className="flex flex-col md:flex-row items-center justify-end gap-3 w-full lg:pt-0 pt-10">
               {[
                 {
                   href: "/sales",
