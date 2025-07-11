@@ -78,7 +78,7 @@ const Content = () => {
             promotional materials.
           </p>
           <p className="text-[#ed2023] text-[20px] font-monument-bold pt-5 pb-10">
-            What is your content requirement?{" "}
+            What is your design requirement?{" "}
             <Link href="/contact-us" className="underline">
               Contact us
             </Link>{" "}
