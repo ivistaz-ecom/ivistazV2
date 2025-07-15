@@ -1,12 +1,12 @@
-import React from 'react'
-import CareersFetchData from './CareersFetchData'
+import React from "react";
+import CareersFetchData from "./CareersFetchData";
 
 const index = () => {
   return (
     <div>
-      <CareersFetchData/>
+      <CareersFetchData />
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default index;
