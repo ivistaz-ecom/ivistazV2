@@ -36,14 +36,14 @@ const ContactUs = () => {
             </li>
           </ul>
         </div>
-        <div className="pt-8 flex justify-center">
+        {/* <div className="pt-8 flex justify-center">
           <Link
             href="/contact-us"
             className="btn-14 py-2 rounded-full font-semibold"
           >
             Contact Us
           </Link>
-        </div>
+        </div> */}
       </div>
     </>
   );

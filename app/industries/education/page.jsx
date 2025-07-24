@@ -11,9 +11,9 @@ const page = () => {
   const pathname = usePathname();
   const seoData = {
     title:
-      "Increase Online Sales for Home Appliances | Expert Digital Marketing for Appliance Brands",
+      "Performance Marketing Solutions for Educational Institutions | iVistaz",
     description:
-      "Boost your appliance brand's online sales with our specialised digital marketing strategies. Capitalise on the growing market and enhance your brand's visibility and engagement on e-stores and marketplaces. Discover how we can help you succeed in the rapidly evolving appliances industry.",
+      "Enhance student and faculty enrollment with iVistaz’s specialized digital strategies for education. We help institutions increase visibility with SEO for educational institutions, drive leads through high-intent student recruitment campaigns, and create mobile-friendly websites with compelling content. Our structured retargeting, organic social media presence, and data-backed reporting support long-term credibility and growth.",
     path: pathname,
     metaImage: `${domainName}/industries/appliances-banner.png`,
   };

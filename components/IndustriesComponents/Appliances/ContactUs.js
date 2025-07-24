@@ -13,16 +13,15 @@ const ContactUs = () => {
             capture the growing market of online shoppers and drive significant
             sales growth.
           </p>
-         
         </div>
-        <div className="pt-8 flex justify-center">
-            <Link
-              href="/contact-us"
-              className="btn-14 py-2 rounded-full font-semibold"
-            >
-              Contact Us
-            </Link>
-          </div>
+        {/* <div className="pt-8 flex justify-center">
+          <Link
+            href="/contact-us"
+            className="btn-14 py-2 rounded-full font-semibold"
+          >
+            Contact Us
+          </Link>
+        </div> */}
       </div>
     </>
   );
