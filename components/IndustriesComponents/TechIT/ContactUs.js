@@ -11,7 +11,7 @@ const ContactUs = () => {
           </p>
         </div>
         <div className="container mx-auto">
-          <ul className="list-disc text-white lg:text-lg pt-5 list-inside">
+          <ul className="list-disc text-white lg:text-lg pt-5 lg:px-5">
             <li>
               Generate Marketing Qualified Leads (MQLs) with email marketing,
               SEM and SMM

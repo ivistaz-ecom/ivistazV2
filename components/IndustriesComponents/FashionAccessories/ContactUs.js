@@ -12,7 +12,7 @@ const ContactUs = () => {
           </p>
         </div>
         <div className="container mx-auto">
-          <ul className="list-disc text-white lg:text-lg pt-5 list-inside">
+          <ul className="list-disc text-white lg:text-lg pt-5 lg:px-5">
             <li>
               Bridging the gap between online visitors and sales (in-store and
               online) both on your e-store, as well as on marketplaces and
