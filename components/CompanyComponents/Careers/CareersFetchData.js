@@ -8,7 +8,7 @@ const CareersFetchData = () => {
   const options = [
     {
       value: "seo_&_social_media_executive",
-      label: "SEO & Social Media Executive",
+      label: "Executive - SEO, Social Media, and Email Marketing",
     },
     { value: "inside_sales_executive", label: "Inside Sales Executive" },
     { value: "account_executive", label: "Account Executive" },
