@@ -17,6 +17,7 @@ const HomePage = () => {
           width={300}
           height={80}
           alt="IVISTAZ Logo"
+          priority
         />
       </div>
       <Link
