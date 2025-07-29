@@ -7,26 +7,24 @@ import {
   FaLinkedinIn,
   FaXTwitter,
 } from "react-icons/fa6";
-import StartTheConversation from "./StartTheConversation";
+import StartTheConversation from "./Unlock";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const Footer = () => {
+const EComFooter = () => {
   const pathname = usePathname();
 
   // Don't show footer on the main page
   if (pathname === "/") return null;
-  if (pathname === "/performance-marketing-for-ecommerce") return null;
   return (
     <footer className="bg-black text-white pt-20 pb-10 text-center px-4">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl sm:text-5xl font-semibold mb-4">
-          Partner with us to achieve your goals
+          Book a Free Performance Audit
         </h2>
-        <p className="text-gray-400 text-lg sm:text-xl mb-10">
-          Whether you have a challenge to solve or a goal to reach,{" "}
-          <br className="hidden sm:inline" />
-          we can design solutions for your needs
+        <p className="text-white font-monument-light text-lg sm:text-xl mb-10 pt-5">
+          We’ll review your current ads, website, email flows, and audience
+          targeting to spot what’s working and what can be improved.
         </p>
 
         {/* Call to Action Circle */}
@@ -110,4 +108,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default EComFooter;

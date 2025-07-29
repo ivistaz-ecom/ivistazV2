@@ -4,6 +4,7 @@ import React, { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import Link from "next/link";
+import AnimationButton from "./ExploreCaseStudiesButton";
 
 const slides = [
   {
@@ -46,90 +47,95 @@ const CaseStudiesNew = () => {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <div className="relative w-full overflow-hidden">
-      {/* Embla Carousel */}
-      <div className="embla" ref={emblaRef}>
-        <div className="flex">
-          {slides.map((slide, index) => (
-            <div className="flex-[0_0_100%] relative group" key={index}>
-              <Image
-                src={slide.image}
-                alt={`Slide ${index + 1}`}
-                width={1200}
-                height={600}
-                className="w-full lg:h-[600px] h-[200px] object-cover"
-              />
-              <Link href={slide.caseLink}>
-                {/* Replaced Overlay Card */}
-                <div className=" bottom-0 left-0 right-0 z-10 w-full">
-                  <div className="relative group w-full h-[130px] flex items-stretch">
-                    {/* Main Card */}
-                    <div className="flex-1 bg-white shadow flex items-center p-6 z-10 w-full">
-                      <div className="lg:flex justify- items-center gap-5 w-full">
-                        <h2
-                          className={`lg:text-[30px] font-monument-bold text-xl ${slide.textColor}`}
-                        >
-                          {slide.title}
-                        </h2>
-                        <span className="h-20 w-0.5 bg-[#C3C3C3]"></span>
-                        <p className="lg:text-[24px] font-monument-light text-black text-sm pt-3">
-                          {slide.subtitle}
-                        </p>
+    <>
+      <div className="relative w-full overflow-hidden">
+        {/* Embla Carousel */}
+        <div className="embla" ref={emblaRef}>
+          <div className="flex">
+            {slides.map((slide, index) => (
+              <div className="flex-[0_0_100%] relative group" key={index}>
+                <Image
+                  src={slide.image}
+                  alt={`Slide ${index + 1}`}
+                  width={1200}
+                  height={600}
+                  className="w-full lg:h-[600px] h-[200px] object-cover"
+                />
+                <Link href={slide.caseLink}>
+                  {/* Replaced Overlay Card */}
+                  <div className=" bottom-0 left-0 right-0 z-10 w-full">
+                    <div className="relative group w-full h-[130px] flex items-stretch">
+                      {/* Main Card */}
+                      <div className="flex-1 bg-white shadow flex items-center p-6 z-10 w-full">
+                        <div className="lg:flex justify- items-center gap-5 w-full">
+                          <h2
+                            className={`lg:text-[30px] font-monument-bold text-xl ${slide.textColor}`}
+                          >
+                            {slide.title}
+                          </h2>
+                          <span className="h-20 w-0.5 bg-[#C3C3C3]"></span>
+                          <p className="lg:text-[24px] font-monument-light text-black text-sm pt-3">
+                            {slide.subtitle}
+                          </p>
+                        </div>
                       </div>
-                    </div>
 
-                    {/* Arrow Block */}
-                    <div
-                      className="lg:w-32 w-20 h-auto flex items-center justify-center shadow 
+                      {/* Arrow Block */}
+                      <div
+                        className="lg:w-32 w-20 h-auto flex items-center justify-center shadow 
       md:flex 
       
       opacity-100 
       transition-all duration-500 ease-in-out"
-                      style={{
-                        background: `linear-gradient(to bottom, ${slide.gradientFrom}, ${slide.gradientTo})`,
-                      }}
-                    >
-                      <Image
-                        src="/new-home-page/white-arrow-right.png"
-                        alt="arrow black"
-                        width={30}
-                        height={30}
-                      />
+                        style={{
+                          background: `linear-gradient(to bottom, ${slide.gradientFrom}, ${slide.gradientTo})`,
+                        }}
+                      >
+                        <Image
+                          src="/new-home-page/white-arrow-right.png"
+                          alt="arrow black"
+                          width={30}
+                          height={30}
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Link>
-            </div>
-          ))}
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
 
-      {/* Navigation Arrows */}
-      <button
-        onClick={scrollPrev}
-        className="absolute left-4 lg:top-1/2 top-[30%] -translate-y-1/2 z-10 text-white"
-      >
-        <Image
-          src="/new-home-page/right.svg"
-          width={30}
-          height={30}
-          alt="Prev"
-          className="lg:w-10 lg:h-10 w-5 h-5"
-        />
-      </button>
-      <button
-        onClick={scrollNext}
-        className="absolute right-4 lg:top-1/2 top-[30%] -translate-y-1/2 z-10 text-white"
-      >
-        <Image
-          src="/new-home-page/left.svg"
-          width={30}
-          height={30}
-          alt="Next"
-          className="lg:w-10 lg:h-10 w-5 h-5"
-        />
-      </button>
-    </div>
+        {/* Navigation Arrows */}
+        <button
+          onClick={scrollPrev}
+          className="absolute left-4 lg:top-1/2 top-[30%] -translate-y-1/2 z-10 text-white"
+        >
+          <Image
+            src="/new-home-page/right.svg"
+            width={30}
+            height={30}
+            alt="Prev"
+            className="lg:w-10 lg:h-10 w-5 h-5"
+          />
+        </button>
+        <button
+          onClick={scrollNext}
+          className="absolute right-4 lg:top-1/2 top-[30%] -translate-y-1/2 z-10 text-white"
+        >
+          <Image
+            src="/new-home-page/left.svg"
+            width={30}
+            height={30}
+            alt="Next"
+            className="lg:w-10 lg:h-10 w-5 h-5"
+          />
+        </button>
+      </div>
+      <div>
+     
+      </div>
+    </>
   );
 };
 

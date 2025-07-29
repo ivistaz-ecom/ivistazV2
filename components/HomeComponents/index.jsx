@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Banner from "./Banner";
 import CaseStudiesNew from "./CaseStudiesNew";
-import ExploreCaseStudiesButton from "./ExploreCaseStudies";
+import ExploreCaseStudiesButton from "./ExploreCaseStudiesButton";
 import EverythingConnect from "./EverythingConnect";
 import ExploreOurSolutions from "./ExploreOurSolutions";
 import PartnerCarousel from "./Partner";

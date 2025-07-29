@@ -1,7 +1,15 @@
 // utils/caseStudies.js
+// while updating the new case studies place on top
 export const caseStudiesData = [
   {
-    id: 1,
+    link: "/case-studies/consumer-travel-case-study-spicejet",
+    stats: "17%",
+    title: "Growth in Direct Online Bookings",
+    description: " For a Leading Airline",
+    buttonText: "Read More",
+    image: "/case-studies/shoping.svg",
+  },
+  {
     link: "/case-studies/b2b-email-marketing-case-study-delivering-qualified-leads-to-generate-interest-to-invest-in-the-clients-social-impact-projects",
     stats: "10.8%",
     title: "Lead Conversion Rate",
@@ -11,7 +19,6 @@ export const caseStudiesData = [
     image: "/case-studies/magnet.svg",
   },
   {
-    id: 2,
     link: "/case-studies/b2b-lead-gen-case-study-delivering-outcomes-with-paid-marketing-for-a-global-retail-giants-csr-project",
     stats: "300,000",
     title: "Unique Leads in 3 Years",
@@ -21,7 +28,6 @@ export const caseStudiesData = [
   },
 
   {
-    id: 3,
     link: "/case-studies/thought-leadership-content-development-for-a-global-b2b-hi-tech-company",
     stats: "50",
     title: "Thought Leadership Assets",
@@ -31,7 +37,6 @@ export const caseStudiesData = [
   },
 
   {
-    id: 4,
     link: "/case-studies/seo-case-study-for-a-global-technology-company-increased-visibility-with-organic-search-results",
     stats: "287%",
     title: " Increase in Keyword Ranking with 352 Keywords on Page One",
@@ -43,7 +48,6 @@ export const caseStudiesData = [
 
   
   {
-    id: 5,
     link: "/case-studies/online-sales-success-for-a-leading-kitchen-appliance-brand",
     stats: "8x",
     title: "Increase in online sales",
@@ -52,7 +56,6 @@ export const caseStudiesData = [
     image: "/case-studies/shoping.svg",
   },
   {
-    id: 6,
     link: "/case-studies/premier-hotel-chain-case-study-increased-direct-online-bookings-and-global-reach",
     stats: "7%",
     title: "Increase in Direct Online Bookings and 30% Higher Revenue",
@@ -61,7 +64,6 @@ export const caseStudiesData = [
     image: "/case-studies/shoping.svg",
   },
   {
-    id: 7,
     link: "/case-studies/top-hotel-chain-case-study-boosting-direct-online-bookings-and-revenue",
     stats: "14%",
     title: "Direct Online Bookings and Doubled Average Rate of Return",
@@ -70,7 +72,6 @@ export const caseStudiesData = [
     image: "/case-studies/shoping.svg",
   },
   {
-    id: 8,
     link: "/case-studies/digital-marketing-case-study-increasing-website-traffic-and-online-revenue-for-a-major-hotel-chain",
     stats: "8%",
     title: " Direct Online Bookings and 32% Boost in Wedding and MICE Leads",
@@ -79,7 +80,6 @@ export const caseStudiesData = [
     image: "/case-studies/shoping.svg",
   },
   {
-    id: 9,
     link: "/case-studies/digital-marketing-strategy-case-study-boosting-audio-equipment-sales-with-seo-and-amazon-marketing-2",
     stats: " 53%",
     title: "Boost in Website Traffic and 66% Social Media Conversions",
@@ -88,7 +88,6 @@ export const caseStudiesData = [
     image: "/case-studies/search.svg",
   },
   {
-    id: 10,
     link: "case-studies/leading-jewelry-and-accessories-brand-case-study-increased-traffic-revenues-and-social-media-engagement",
     stats: "2x",
     title: " Revenue Growth Every 3 Years",
@@ -97,7 +96,6 @@ export const caseStudiesData = [
     image: "/case-studies/shoping.svg",
   },
   {
-    id: 11,
     link: "case-studies/top-beauty-brand-case-study-optimising-ecommerce-conversion-and-mobile-engagement",
     stats: "2.8%",
     title: " Conversion Rate from 0.8% in 3 Months",
@@ -107,7 +105,6 @@ export const caseStudiesData = [
     image: "/case-studies/message.svg",
   },
   {
-    id: 12,
     link: "/case-studies/luxury-automobile-dealership-case-study-cost-optimization-and-sales-conversion",
     stats: "1 in 14",
     title: " Lead Conversion and Cost per Lead Reduced (CPL) to Rs.1,292",
@@ -116,7 +113,6 @@ export const caseStudiesData = [
     image: "/case-studies/magnet.svg",
   },
   {
-    id: 13,
     link: "/case-studies/leading-water-purifier-brand-boosted-monthly-online-sales-from-1-5-cr-to-12-cr",
     stats: "700%",
     title: "Increase in Online Sales",
@@ -124,4 +120,5 @@ export const caseStudiesData = [
     buttonText: "Read More",
     image: "/case-studies/shoping.svg",
   },
+  
 ];
