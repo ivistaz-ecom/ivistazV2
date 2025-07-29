@@ -5,8 +5,16 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const HomePage = () => {
-  const [showSecondSection, setShowSecondSection] = useState(true); // Default to true
+  const [showSecondSection, setShowSecondSection] = useState(true);
   const secondSectionRef = useRef(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => setIsDesktop(window.innerWidth > 767);
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
 
   return (
     <>
@@ -39,7 +47,7 @@ const HomePage = () => {
             <h2 className="text-white text-3xl md:text-[60px] font-monument-bold pb-3">
               WHAT DOES
             </h2>
-            <div className="text">
+            <div className={`text ${!isDesktop ? "no-anim" : ""}`}>
               <span>P</span>
               <span>E</span>
               <span>R</span>
@@ -57,93 +65,102 @@ const HomePage = () => {
             </h2>
           </div>
 
-          <motion.div
-            className="flex flex-col items-center"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              visible: { transition: { staggerChildren: 0.25 } },
-            }}
-          >
-            <div className="flex flex-col md:flex-row items-center justify-end gap-3 w-full lg:pt-0 pt-10">
-              {[
-                {
-                  href: "/sales",
-                  src: "/mainpage/online_sale.svg",
-                  text: "Online Sales",
-                },
-                { href: "/leads", src: "/mainpage/leads.svg", text: "Leads" },
-                {
-                  href: "/traffic",
-                  src: "/mainpage/traffic.svg",
-                  text: "Traffic",
-                },
-              ].map((item, idx) => (
-                <motion.div
-                  key={idx}
-                  variants={{
-                    hidden: { opacity: 0, y: 40 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
-                >
+          {isDesktop ? (
+            /* Framer Motion Animations for Desktop */
+            <motion.div
+              className="flex flex-col items-center"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                visible: { transition: { staggerChildren: 0.25 } },
+              }}
+            >
+              <div className="flex flex-col md:flex-row items-center justify-end gap-3 w-full lg:pt-0 pt-10">
+                {[
+                  { href: "/sales", src: "/mainpage/online_sale.svg", text: "Online Sales" },
+                  { href: "/leads", src: "/mainpage/leads.svg", text: "Leads" },
+                  { href: "/traffic", src: "/mainpage/traffic.svg", text: "Traffic" },
+                ].map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    variants={{
+                      hidden: { opacity: 0, y: 40 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                  >
+                    <Link
+                      href={item.href}
+                      className="btn h-btn blurb-ripple-out flex items-center gap-2 justify-start lg:justify-center w-3/4 overflow-hidden"
+                    >
+                      <Image src={item.src} alt={item.text} width={30} height={30} />
+                      <span>{item.text}</span>
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="flex flex-col md:flex-row items-center justify-center gap-3 lg:pt-6 pt-3 w-full">
+                {[
+                  { href: "/keyword-ranking", src: "/mainpage/keyword.svg", text: "Keyword Ranking" },
+                  { href: "/engagement", src: "/mainpage/engagement.svg", text: "Engagement" },
+                ].map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    variants={{
+                      hidden: { opacity: 0, y: 40 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
+                    transition={{ duration: 1, ease: "easeInOut", delay: 0.1 * (idx + 0.5) }}
+                  >
+                    <Link
+                      href={item.href}
+                      className="btn h1-btn blurb-ripple-out flex items-center gap-2 justify-start lg:justify-center w-3/4 overflow-hidden"
+                    >
+                      <Image src={item.src} alt={item.text} width={30} height={30} />
+                      <span className="text-center">{item.text}</span>
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ) : (
+            /* Simple Non-Animated Layout for Mobile */
+            <div className="flex flex-col items-center">
+              <div className="flex flex-col md:flex-row items-center justify-end gap-3 w-full lg:pt-0 pt-10">
+                {[
+                  { href: "/sales", src: "/mainpage/online_sale.svg", text: "Online Sales" },
+                  { href: "/leads", src: "/mainpage/leads.svg", text: "Leads" },
+                  { href: "/traffic", src: "/mainpage/traffic.svg", text: "Traffic" },
+                ].map((item, idx) => (
                   <Link
+                    key={idx}
                     href={item.href}
                     className="btn h-btn blurb-ripple-out flex items-center gap-2 justify-start lg:justify-center w-3/4 overflow-hidden"
                   >
-                    <Image
-                      src={item.src}
-                      alt={item.text}
-                      width={30}
-                      height={30}
-                    />
+                    <Image src={item.src} alt={item.text} width={30} height={30} />
                     <span>{item.text}</span>
                   </Link>
-                </motion.div>
-              ))}
-            </div>
+                ))}
+              </div>
 
-            <div className="flex flex-col md:flex-row items-center justify-center gap-3 lg:pt-6 pt-3 w-full">
-              {[
-                {
-                  href: "/keyword-ranking",
-                  src: "/mainpage/keyword.svg",
-                  text: "Keyword Ranking",
-                },
-                {
-                  href: "/engagement",
-                  src: "/mainpage/engagement.svg",
-                  text: "Engagement",
-                },
-              ].map((item, idx) => (
-                <motion.div
-                  key={idx}
-                  variants={{
-                    hidden: { opacity: 0, y: 40 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  transition={{
-                    duration: 1,
-                    ease: "easeInOut",
-                    delay: 0.1 * (idx + 0.5),
-                  }}
-                >
+              <div className="flex flex-col md:flex-row items-center justify-center gap-3 lg:pt-6 pt-3 w-full">
+                {[
+                  { href: "/keyword-ranking", src: "/mainpage/keyword.svg", text: "Keyword Ranking" },
+                  { href: "/engagement", src: "/mainpage/engagement.svg", text: "Engagement" },
+                ].map((item, idx) => (
                   <Link
+                    key={idx}
                     href={item.href}
                     className="btn h1-btn blurb-ripple-out flex items-center gap-2 justify-start lg:justify-center w-3/4 overflow-hidden"
                   >
-                    <Image
-                      src={item.src}
-                      alt={item.text}
-                      width={30}
-                      height={30}
-                    />
+                    <Image src={item.src} alt={item.text} width={30} height={30} />
                     <span className="text-center">{item.text}</span>
                   </Link>
-                </motion.div>
-              ))}
+                ))}
+              </div>
             </div>
-          </motion.div>
+          )}
         </div>
       </div>
 
@@ -173,30 +190,19 @@ const HomePage = () => {
         .text span:nth-child(11) { animation-delay: 1.1s; }
 
         @keyframes pop {
-          0% {
-            transform: scale(1);
-            opacity: 0;
-          }
-          50% {
-            transform: scale(1.5);
-            opacity: 1;
-          }
-          100% {
-            transform: scale(1);
-            opacity: 1;
-          }
+          0% { transform: scale(1); opacity: 0; }
+          50% { transform: scale(1.5); opacity: 1; }
+          100% { transform: scale(1); opacity: 1; }
         }
 
         .iv-bg {
           overflow-y: auto;
           -webkit-overflow-scrolling: touch;
         }
+
+        /* Disable all animations on mobile */
         @media (max-width: 767px) {
-          .text span {
-            display: inline-block;
-            animation: pop 0.4s ease-in-out;
-            font-size: 25px !important;
-          }
+          .text span { animation: none !important; opacity: 1 !important; transform: none !important; font-size: 25px !important }
         }
       `}</style>
     </>
