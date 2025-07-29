@@ -53,6 +53,7 @@ export const menuItems = [
         // { label: "Education", pageLink: "/industries/education" },
         // { label: "Law", pageLink: "/industries/law" },
       ],
+      
     },
     {
       title: "Blogs",
