@@ -5,7 +5,7 @@ import WhatWeOffer from "./WhatWeOffer";
 import Results from "./Results";
 import EComFooter from "./EComFooter";
 import WhyChooseUS from "./WhyChooseUS";
-import HowWeWork from "./HowWeWork";
+import HowWeWork from "../ECommerceLandingPage/HowWeWork/HowWeWork";
 
 const index = () => {
   return (
