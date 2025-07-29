@@ -26,6 +26,7 @@ const HomePage = () => {
           height={80}
           alt="IVISTAZ Logo"
           priority
+          fetchpriority="high"
         />
       </div>
       <Link
@@ -77,9 +78,17 @@ const HomePage = () => {
             >
               <div className="flex flex-col md:flex-row items-center justify-end gap-3 w-full lg:pt-0 pt-10">
                 {[
-                  { href: "/sales", src: "/mainpage/online_sale.svg", text: "Online Sales" },
+                  {
+                    href: "/sales",
+                    src: "/mainpage/online_sale.svg",
+                    text: "Online Sales",
+                  },
                   { href: "/leads", src: "/mainpage/leads.svg", text: "Leads" },
-                  { href: "/traffic", src: "/mainpage/traffic.svg", text: "Traffic" },
+                  {
+                    href: "/traffic",
+                    src: "/mainpage/traffic.svg",
+                    text: "Traffic",
+                  },
                 ].map((item, idx) => (
                   <motion.div
                     key={idx}
@@ -93,7 +102,12 @@ const HomePage = () => {
                       href={item.href}
                       className="btn h-btn blurb-ripple-out flex items-center gap-2 justify-start lg:justify-center w-3/4 overflow-hidden"
                     >
-                      <Image src={item.src} alt={item.text} width={30} height={30} />
+                      <Image
+                        src={item.src}
+                        alt={item.text}
+                        width={30}
+                        height={30}
+                      />
                       <span>{item.text}</span>
                     </Link>
                   </motion.div>
@@ -102,8 +116,16 @@ const HomePage = () => {
 
               <div className="flex flex-col md:flex-row items-center justify-center gap-3 lg:pt-6 pt-3 w-full">
                 {[
-                  { href: "/keyword-ranking", src: "/mainpage/keyword.svg", text: "Keyword Ranking" },
-                  { href: "/engagement", src: "/mainpage/engagement.svg", text: "Engagement" },
+                  {
+                    href: "/keyword-ranking",
+                    src: "/mainpage/keyword.svg",
+                    text: "Keyword Ranking",
+                  },
+                  {
+                    href: "/engagement",
+                    src: "/mainpage/engagement.svg",
+                    text: "Engagement",
+                  },
                 ].map((item, idx) => (
                   <motion.div
                     key={idx}
@@ -111,13 +133,22 @@ const HomePage = () => {
                       hidden: { opacity: 0, y: 40 },
                       visible: { opacity: 1, y: 0 },
                     }}
-                    transition={{ duration: 1, ease: "easeInOut", delay: 0.1 * (idx + 0.5) }}
+                    transition={{
+                      duration: 1,
+                      ease: "easeInOut",
+                      delay: 0.1 * (idx + 0.5),
+                    }}
                   >
                     <Link
                       href={item.href}
                       className="btn h1-btn blurb-ripple-out flex items-center gap-2 justify-start lg:justify-center w-3/4 overflow-hidden"
                     >
-                      <Image src={item.src} alt={item.text} width={30} height={30} />
+                      <Image
+                        src={item.src}
+                        alt={item.text}
+                        width={30}
+                        height={30}
+                      />
                       <span className="text-center">{item.text}</span>
                     </Link>
                   </motion.div>
@@ -129,16 +160,29 @@ const HomePage = () => {
             <div className="flex flex-col items-center">
               <div className="flex flex-col md:flex-row items-center justify-end gap-3 w-full lg:pt-0 pt-10">
                 {[
-                  { href: "/sales", src: "/mainpage/online_sale.svg", text: "Online Sales" },
+                  {
+                    href: "/sales",
+                    src: "/mainpage/online_sale.svg",
+                    text: "Online Sales",
+                  },
                   { href: "/leads", src: "/mainpage/leads.svg", text: "Leads" },
-                  { href: "/traffic", src: "/mainpage/traffic.svg", text: "Traffic" },
+                  {
+                    href: "/traffic",
+                    src: "/mainpage/traffic.svg",
+                    text: "Traffic",
+                  },
                 ].map((item, idx) => (
                   <Link
                     key={idx}
                     href={item.href}
                     className="btn h-btn blurb-ripple-out flex items-center gap-2 justify-start lg:justify-center w-3/4 overflow-hidden"
                   >
-                    <Image src={item.src} alt={item.text} width={30} height={30} />
+                    <Image
+                      src={item.src}
+                      alt={item.text}
+                      width={30}
+                      height={30}
+                    />
                     <span>{item.text}</span>
                   </Link>
                 ))}
@@ -146,15 +190,28 @@ const HomePage = () => {
 
               <div className="flex flex-col md:flex-row items-center justify-center gap-3 lg:pt-6 pt-3 w-full">
                 {[
-                  { href: "/keyword-ranking", src: "/mainpage/keyword.svg", text: "Keyword Ranking" },
-                  { href: "/engagement", src: "/mainpage/engagement.svg", text: "Engagement" },
+                  {
+                    href: "/keyword-ranking",
+                    src: "/mainpage/keyword.svg",
+                    text: "Keyword Ranking",
+                  },
+                  {
+                    href: "/engagement",
+                    src: "/mainpage/engagement.svg",
+                    text: "Engagement",
+                  },
                 ].map((item, idx) => (
                   <Link
                     key={idx}
                     href={item.href}
                     className="btn h1-btn blurb-ripple-out flex items-center gap-2 justify-start lg:justify-center w-3/4 overflow-hidden"
                   >
-                    <Image src={item.src} alt={item.text} width={30} height={30} />
+                    <Image
+                      src={item.src}
+                      alt={item.text}
+                      width={30}
+                      height={30}
+                    />
                     <span className="text-center">{item.text}</span>
                   </Link>
                 ))}
