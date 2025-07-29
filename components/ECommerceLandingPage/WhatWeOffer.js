@@ -6,7 +6,7 @@ import Carousel from "./Carousel/Carousel";
 const WhatWeOffer = () => {
   return (
     <div className="bg-black text-white lg:py-20 py-10 overflow-hidden w-full">
-      <h2 className="text-center text-4xl md:text-5xl font-monument-light lg:mb-16 mb-7x">
+      <h2 className="text-center text-4xl md:text-5xl font-monument-light lg:mb-16 mb-7">
         What We <span className="text-[#EA561F]"> Offer</span>
       </h2>
 

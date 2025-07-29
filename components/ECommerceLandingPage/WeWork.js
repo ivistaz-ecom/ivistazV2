@@ -8,7 +8,7 @@ const WeWork = () => {
           <p className="text-xl md:text-3xl font-monument-light text-center text-black">
             We work with e-commerce brands to improve what matters most:
           </p>
-          <p className="text-xl md:text-3xl font-monument-light text-center text-black pt-7">
+          <p className="text-xl md:text-3xl font-monument-light text-center text-black pt-7 lg:px-0 px-5">
             <span className="text-[#EA561F]">
               {" "}
               conversion rates, repeat purchases,

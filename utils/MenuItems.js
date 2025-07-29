@@ -50,10 +50,9 @@ export const menuItems = [
         { label: "Jewelry", pageLink: "/industries/jewellery" },
         { label: "NGOs", pageLink: "/industries/ngos" },
         { label: "Tech/IT", pageLink: "/industries/technology-IT" },
-        // { label: "Education", pageLink: "/industries/education" },
-        // { label: "Law", pageLink: "/industries/law" },
+        { label: "Education", pageLink: "/industries/education" },
+        { label: "Law", pageLink: "/industries/law" },
       ],
-      
     },
     {
       title: "Blogs",
