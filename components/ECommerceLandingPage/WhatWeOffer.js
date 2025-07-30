@@ -26,7 +26,7 @@ const WhatWeOffer = () => {
         <div className=" lg:w-[50%]">
           <Image
             alt="customer"
-            src="/e-commerce/customer.png"
+            src="/e-commerce/img-customer.webp"
             width={500}
             height={500}
             className="w-full"
@@ -39,7 +39,7 @@ const WhatWeOffer = () => {
         <div className=" lg:w-[50%]">
           <Image
             alt="customer"
-            src="/e-commerce/convo.png"
+            src="/e-commerce/conversion.webp"
             width={500}
             height={500}
             className="w-full"
@@ -71,7 +71,7 @@ const WhatWeOffer = () => {
         <div className=" lg:w-[50%]">
           <Image
             alt="customer"
-            src="/e-commerce/retention.png"
+            src="/e-commerce/img-retention.webp"
             width={500}
             height={500}
             className="w-full"

@@ -10,7 +10,7 @@ const HowWeWork = () => {
       </h2>
       <div>
         <Image
-          src="/e-commerce/how.png"
+          src="/e-commerce/how-we-work.webp"
           width={1200}
           height={800}
           alt="how we work"

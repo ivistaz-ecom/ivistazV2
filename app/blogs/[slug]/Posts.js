@@ -143,7 +143,7 @@ const Posts = ({ slug }) => {
           data.map((post) => (
             <div className="flex flex-col" key={post.id}>
               {/* Breadcrumb */}
-              <div className="flex items-center mb-4 text-black lg:text-[16px] text-[14px]">
+              <div className="flex items-center mb-10 text-black lg:text-[16px] text-[14px]">
                 <Link href="/blogs" className="hover:underline">
                   <span className="px-1">Blogs</span>
                 </Link>
@@ -159,7 +159,7 @@ const Posts = ({ slug }) => {
                 src={post.acf.desktop_banner_image.url}
                 alt={post.title.rendered}
                 loading="lazy"
-                className="w-full h-full rounded-4xl pt-5 object-cover"
+                className="w-full h-full rounded-4xl object-cover"
                 width={800}
                 height={600}
               />
