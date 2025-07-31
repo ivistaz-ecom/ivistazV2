@@ -34,7 +34,7 @@ const WhyChooseUS = () => {
                 alt="tick"
               />
               <p className="text-lg lg:text-xl font-monument-light">
-                Deep understanding of growth levers like ROAS, AOV, and CVR
+                Deep understanding of growth levers like <b className="font-monument-bold">ROAS, AOV,</b> and <b className="font-monument-bold">CVR</b>
               </p>
             </div>
             <div className="py-3 flex items-center justify-start gap-3">

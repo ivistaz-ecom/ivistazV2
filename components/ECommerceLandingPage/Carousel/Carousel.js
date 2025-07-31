@@ -11,11 +11,11 @@ const Carousel = () => {
   const sliderRef = useRef(null);
   const [slideIndex, setSlideIndex] = useState(0);
 
-  const maxSlides = 4; // adjust if dynamic
+  const maxSlides = 5; // Total slides - 1 (since indexing starts at 0)
 
   return (
     <section className="py-7 md:py-14 flex flex-col gap-16">
-      <input
+      {/* <input
         type="range"
         min={0}
         max={maxSlides}
@@ -25,13 +25,13 @@ const Carousel = () => {
         style={{
           appearance: "none",
           WebkitAppearance: "none",
-          background: `linear-gradient(to right, #fff ${
-            (slideIndex / maxSlides) * 100
-          }%, #565656 ${(slideIndex / maxSlides) * 100}%)`,
+                      background: `linear-gradient(to right, #fff ${
+              (slideIndex / maxSlides) * 100
+            }%, #565656 ${(slideIndex / maxSlides) * 100}%)`,
           height: "2px",
           borderRadius: "9999px",
         }}
-      />
+      /> */}
 
       <style jsx>{`
         input[type="range"]::-webkit-slider-thumb {
@@ -64,7 +64,7 @@ const Carousel = () => {
       </div>
 
       {/* Slider Controls */}
-      <div className="w-full container mx-auto flex flex-col md:flex-row items-center justify-center lg:justify-end gap-3 px-4 -mt-8">
+      <div className="w-full container mx-auto flex flex-col md:flex-row items-center justify-center lg:justify-end gap-3 px-4 -mt-10">
         <div className="flex gap-10">
           <button
             onClick={() => sliderRef.current?.slickPrev()}

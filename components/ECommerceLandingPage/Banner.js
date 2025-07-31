@@ -13,7 +13,7 @@ const Banner = () => {
           playsInline
           poster="/generation-for-tech/blue-bg-poster.jpg" // fallback image for fast loading
         >
-          <source src="/e-commerce/banner-ecom.mp4" type="video/mp4" />
+          <source src="/e-commerce/ecom-dark.mp4" type="video/mp4" />
           <source src="/e-commerce/banner-ecom.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>

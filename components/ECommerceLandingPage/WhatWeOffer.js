@@ -5,22 +5,22 @@ import Carousel from "./Carousel/Carousel";
 
 const WhatWeOffer = () => {
   return (
-    <div className="bg-black text-white lg:py-20 py-10 overflow-hidden w-full">
+    <div className="bg-black text-white pt-10 overflow-hidden w-full">
       <h2 className="text-center text-4xl md:text-5xl font-monument-light lg:mb-16 mb-7">
         What We <span className="text-[#EA561F]"> Offer</span>
       </h2>
 
       {/* Customer */}
       <div className="flex lg:flex-row flex-col-reverse">
-        <div className="bg-gradient-to-r from-[#3732B4] via-[#3732B4] to-[#8240BA] lg:w-[50%] flex items-center flex-col justify-center lg:p-15 p-5">
-          <h3 className="text-2xl md:text-5xl font-semibold lg:mb-7 mb-5">
-            Customer Acquisition, Built for E-Commerce
+        <div className="bg-gradient-to-r from-[#3732B4] via-[#3732B4] to-[#8240BA] lg:w-[50%] flex items-start flex-col justify-center lg:p-15 p-5">
+          <h3 className="text-2xl md:text-5xl font-semibold lg:mb-7 mb-5 lg:leading-13">
+            Customer Acquisition, <br /> Built for E-Commerce
           </h3>
           <p className="text-md md:text-xl font-monument-light">
             Paid campaigns tailored to your margins, funnels, and product
-            categories. We focus on reducing your customer acquisition cost
-            (CAC), optimizing the cost per purchase (CPP), and increasing your
-            click-through rate (CTR).
+            categories. We focus on reducing your <b className="font-monument-bold">customer acquisition cost
+            (CAC), optimizing the cost per purchase (CPP),</b> and <b className="font-monument-bold">increasing your
+            click-through rate (CTR).</b>
           </p>
         </div>
         <div className=" lg:w-[50%]">
@@ -45,26 +45,28 @@ const WhatWeOffer = () => {
             className="w-full"
           />
         </div>
-        <div className="bg-gradient-to-r from-[#1484A5] via-[#0B9D70] to-[#0B9D70] lg:w-[50%] flex items-center flex-col justify-center lg:p-15 p-5">
-          <h3 className="text-2xl md:text-5xl font-semibold lg:mb-7 mb-5">
-            Conversion Optimization That Lifts Revenue
+        <div className="bg-gradient-to-r from-[#1484A5] via-[#0B9D70] to-[#0B9D70] lg:w-[50%] flex items-start flex-col justify-center lg:p-15 p-5">
+          <h3 className="text-2xl md:text-5xl font-semibold lg:mb-7 mb-5 lg:leading-13">
+            Conversion Optimization <br /> That Lifts Revenue
           </h3>
           <p className="text-md md:text-xl font-monument-light">
             We fine-tune the path from click to checkout. From landing pages to
-            creatives, we optimize every touchpoint to improve conversion rate
-            (CVR) and average order value (AOV).
+            creatives, we optimize every touchpoint to improve{" "}
+            <b className="font-monument-bold">conversion rate (CVR)</b> and <b className="font-monument-bold">average order value (AOV).</b>
           </p>
         </div>
       </div>
       {/* Retention */}
       <div className="flex lg:flex-row flex-col-reverse">
-        <div className="bg-gradient-to-r from-[#C7501B] via-[#C7501B] to-[#D96A8C] lg:w-[50%] flex items-center flex-col justify-center lg:p-15 p-5">
-          <h3 className="text-2xl md:text-5xl font-semibold lg:mb-7 mb-5">
-            Retention Campaigns That Drive Repeat Business
+        <div className="bg-gradient-to-r from-[#C7501B] via-[#C7501B] to-[#D96A8C] lg:w-[50%] flex items-start flex-col justify-center lg:p-15 p-5">
+          <h3 className="text-2xl md:text-5xl font-semibold lg:mb-7 mb-5 lg:leading-13">
+            Retention Campaigns <br className="hidden lg:block" /> That Drive
+            Repeat Business
           </h3>
           <p className="text-md md:text-xl font-monument-light">
             We build email journeys, SMS flows, and remarketing strategies that
-            improve repeat purchase rate, lift customer lifetime value (CLV),
+            improve repeat purchase rate, lift{" "}
+            <b className="font-monument-bold">customer lifetime value (CLV),</b>{" "}
             and reduce cart abandonment rates.
           </p>
         </div>

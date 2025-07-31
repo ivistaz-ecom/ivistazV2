@@ -21,6 +21,12 @@ export const CarouselData = [
   },
   {
     title: "Technology",
-    desc: "E-commerce-ready infrastructure with integrated backend systems (PIN code logic, CRM, inventory, logistics) and intuitive front-end experiences",
+    desc: (
+      <>
+        E-commerce-ready infrastructure with integrated backend systems (PIN
+        code logic, CRM, inventory, logistics) and intuitive front-end
+        experiences
+      </>
+    ),
   },
 ];
