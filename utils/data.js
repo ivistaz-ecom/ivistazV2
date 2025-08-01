@@ -221,7 +221,7 @@ export const IndutriesCardData = [
   },
   {
     title: "Education",
-    imgUrl: "/industries/education-banner.png",
+    imgUrl: "/industries/education-banner-new.png",
     pageLink: "/industries/education",
   },
   {
