@@ -9,7 +9,7 @@ const Content = () => {
             Education
           </h1>
 
-          <p className="text-center lg:text-2xl font-monument-bold lg:p-0 p-5">
+          <p className="text-center lg:text-2xl font-monument-bold lg:px-0 px-5 lg:pt-0 pt-5">
             Students search online before they choose where to study.
           </p>
           <div className="flex justify-center flex-col items-center lg:p-0 p-5">

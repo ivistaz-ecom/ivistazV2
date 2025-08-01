@@ -7,9 +7,9 @@ const Content = () => {
   return (
     <>
       <div className="pt-5">
-        <div className="bg-white rounded-4xl lg:p-10 p-5">
-          <h2 className="text-[48px] text-[#000] font-monument-bold">
-            Industries
+        <div className="bg-white rounded-4xl lg:p-10 p-5 text-center">
+          <h2 className="lg:text-[60px] text-4xl text-[#000] uppercase">
+          Industries
           </h2>
           <p className="font-monument-light lg:text-lg pt-3">
             Client expectations have taken a quantum leap, compelling

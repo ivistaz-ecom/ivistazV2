@@ -8,7 +8,7 @@ const Content = () => {
           <h1 className="text-[40px] text-[#ff0000] uppercase font-monument-bold text-center lg:py-10 pt-5">
             Law
           </h1>
-          <p className="text-center lg:text-2xl font-monument-bold lg:p-0 p-5">
+          <p className="text-center lg:text-2xl font-monument-bold lg:px-0 px-5 lg:pt-0 pt-5">
             Digital discovery is now a key driver of client acquisition in legal
             services.
           </p>

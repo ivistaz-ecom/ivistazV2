@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -62,7 +63,7 @@ const ContactUs = () => {
               to deliver a seamless experience with a website that’s optimised
               for search, credibility, and conversion.
             </li>
-            
+
             <li className="py-5">
               <span className="font-monument-bold">
                 Report on key performance metrics
@@ -80,6 +81,15 @@ const ContactUs = () => {
             Contact Us
           </Link>
         </div> */}
+      </div>
+      <div className="lg:p-16 p-7">
+        <Image
+          src="/industries/education-002.png"
+          alt="education"
+          width={1200}
+          height={1000}
+          className="w-full h-full object-cover"
+        />
       </div>
     </>
   );

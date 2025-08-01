@@ -181,42 +181,52 @@ export const MasteryAboutUsData = [
 export const IndutriesCardData = [
   {
     title: "Appliances",
-    imgUrl: "/performance/industries/industries-icons/appliances.svg",
+    imgUrl: "/industries/app-banner.png",
     pageLink: "/industries/appliances",
   },
   {
     title: "Automobiles",
-    imgUrl: "/performance/industries/industries-icons/automobile.svg",
+    imgUrl: "/industries/auto-mobiles-banner.png",
     pageLink: "/industries/automobiles",
   },
   {
     title: "Beauty & Wellness",
-    imgUrl: "/performance/industries/industries-icons/beauty_and_wellness.svg",
+    imgUrl: "/industries/beauty-banner.png",
     pageLink: "/industries/beauty-wellness",
   },
   {
     title: "Fashion & Accessories",
-    imgUrl: "/performance/industries/industries-icons/fashion_acc.svg",
+    imgUrl: "/industries/fashion.png",
     pageLink: "/industries/fashion-accessories",
   },
   {
     title: "Hospitality",
-    imgUrl: "/performance/industries/industries-icons/hospitality.svg",
+    imgUrl: "/industries/hospitality-banner.png",
     pageLink: "/industries/hospitality",
   },
   {
     title: "Jewelry",
-    imgUrl: "/performance/industries/industries-icons/jewellery.svg",
+    imgUrl: "/industries/jewellery.png",
     pageLink: "/industries/jewellery",
   },
   {
     title: "Not-for-Profits/NGOs",
-    imgUrl: "/performance/industries/industries-icons/ngos.svg",
+    imgUrl: "/industries/ngo-new.png",
     pageLink: "/industries/ngos",
   },
   {
     title: "Tech/IT",
-    imgUrl: "/performance/industries/industries-icons/tech_it.svg",
+    imgUrl: "/industries/tech-banner.png",
     pageLink: "/industries/technology-IT",
+  },
+  {
+    title: "Education",
+    imgUrl: "/industries/education-banner.png",
+    pageLink: "/industries/education",
+  },
+  {
+    title: "Law",
+    imgUrl: "/industries/law-banner.png",
+    pageLink: "/industries/law",
   },
 ];

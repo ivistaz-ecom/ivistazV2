@@ -7,19 +7,19 @@ const BreadCrumb = () => {
     <div>
       {/* Breadcrumb */}
       <div className="flex items-center mb-3 whitespace-nowrap">
-        <Link href="/welcome" className="text-white text-md px-1">
+        <Link href="/welcome" className="text-black text-md px-1">
           Home
         </Link>
-        <span className="px-1 text-white">
+        <span className="px-1 text-black">
           <CiCircleChevRight />
         </span>
         <Link href="/performance">
-          <span className="text-white text-md px-1">Performance</span>
+          <span className="text-black text-md px-1">Performance</span>
         </Link>
-        <span className="px-1 text-white">
+        <span className="px-1 text-black">
           <CiCircleChevRight />
         </span>
-        <span className="text-white text-md px-1">Industries</span>
+        <span className="text-black text-md px-1">Industries</span>
       </div>
     </div>
   );

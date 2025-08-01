@@ -17,7 +17,7 @@ const page = () => {
   return (
     <>
       <NextSeo {...seoData} />
-      <div className="iv-bg  flex flex-col justify-between pt-24 border-b-2 border-dashed border-[#2D2D2D]">
+      <div className="flex flex-col justify-between pt-24">
         <div className="container mx-auto lg:px-0 px-4">
           <IndustriesComponents />
         </div>
