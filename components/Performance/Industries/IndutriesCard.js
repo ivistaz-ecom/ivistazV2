@@ -35,6 +35,7 @@ const IndutriesCard = () => {
                   <FaChevronRight className="text-2xl text-black group-hover:text-white lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300" />
                 </div>
               </Link>
+              
             </div>
           ))}
         </div>

@@ -84,7 +84,7 @@ const ContactUs = () => {
       </div>
       <div className="lg:p-16 p-7">
         <Image
-          src="/industries/education-002.png"
+          src="/industries/education-banner.png"
           alt="education"
           width={1200}
           height={1000}

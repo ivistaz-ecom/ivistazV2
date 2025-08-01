@@ -11,7 +11,7 @@ export default function ReadTheCaseStudyButton() {
     <>
       <div className="">
         <div className="relative w-full flex items-center justify-center h-48 -mt-10">
-          <Link href="/case-studies">
+          <Link href="/case-studies/leading-water-purifier-brand-boosted-monthly-online-sales-from-1-5-cr-to-12-cr">
             <motion.div
               onHoverStart={() => setHovered(true)}
               onHoverEnd={() => setHovered(false)}

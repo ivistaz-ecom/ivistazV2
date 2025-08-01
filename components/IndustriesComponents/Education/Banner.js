@@ -8,7 +8,7 @@ const Banner = () => {
         <div>
           <Image
             className="w-full lg:h-full h-60 object-cover pt-18"
-            src="/industries/education-banner.png"
+            src="/industries/education-banner-new.png"
             width={800}
             height={600}
             alt="banner appliances"
