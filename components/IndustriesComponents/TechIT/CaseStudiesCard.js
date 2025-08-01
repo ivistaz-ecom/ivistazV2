@@ -12,9 +12,13 @@ const CaseStudiesCard = () => {
             Smarter Lead Generation + Scalable Digital Execution for Tech
             Companies
           </h3>
-          <Link href="/b2b-lead-generation-for-tech" className="border iv-bg text-white p-3 rounded-lg mb-5 lg:mb-10 text-2xl w-52 text-center">
+          <Link
+            href="/b2b-lead-generation-for-tech"
+            className="border iv-bg text-white p-3 rounded-lg mb-5 lg:mb-10 text-2xl w-52 text-center"
+          >
             Explore More
           </Link>
+
           <h3 className="lg:text-[22px] text-md text-center lg:pt-12 lg:pb-0 pb-5 pt-5">
             Here are some instances where our expertise and cutting-edge
             solutions have propelled Tech/IT companies to success
