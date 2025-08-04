@@ -5,7 +5,7 @@ const WeWork = () => {
     <>
       <div className="bg-white">
         <div className="container mx-auto lg:h-[300px] lg:py-0 py-10 lg:w-[80%] flex flex-col justify-center items-center">
-          <p className="text-xl md:text-3xl font-monument-light text-center text-black">
+          <p className="text-xl md:text-3xl font-monument-light text-center text-black px-5">
             We work with e-commerce brands to improve what matters most:{" "}
             <span className="text-[#EA561F]">
               {" "}

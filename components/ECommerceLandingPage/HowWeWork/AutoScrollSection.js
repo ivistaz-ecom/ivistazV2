@@ -42,11 +42,8 @@ export default function AutoScrollSection() {
                 height={30}
                 alt="star"
               />
-               <p className="text-lg lg:text-2xl font-monument-light">{text}</p>
+              <p className="text-lg lg:text-2xl font-monument-light">{text}</p>
             </div>
-            
-             
-            
           </div>
         ))}
       </Slider>

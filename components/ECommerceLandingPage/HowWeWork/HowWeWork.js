@@ -24,7 +24,7 @@ const HowWeWork = () => {
       </div>
       <AutoScrollSection />
       <div>
-        <p className="font-monument-light text-center pt-10">
+        <p className="font-monument-light text-center pt-10 px-4">
           From strategy to reporting, we deliver end-to-end support that helps
           you hit growth goals while staying in control.
         </p>

@@ -8,13 +8,11 @@ const WhyChooseUS = () => {
         <div className="container mx-auto flex items-center lg:gap-52 gap-10 flex-col md:flex-row lg:px-0">
           <div>
             <h4 className="lg:text-5xl text-3xl">
-              Why
-              <br />
-              Choose Us
+              Why <br className="hidden md:block" /> Choose Us
             </h4>
           </div>
           <div>
-            <div className="py-3 flex items-center justify-start gap-3">
+            <div className=" flex items-center justify-start gap-3">
               <Image
                 src="/generation-for-tech/tick-orange.svg"
                 width={30}
@@ -34,7 +32,9 @@ const WhyChooseUS = () => {
                 alt="tick"
               />
               <p className="text-lg lg:text-xl font-monument-light">
-                Deep understanding of growth levers like <b className="font-monument-bold">ROAS, AOV,</b> and <b className="font-monument-bold">CVR</b>
+                Deep understanding of growth levers like{" "}
+                <b className="font-monument-bold">ROAS, AOV,</b> and{" "}
+                <b className="font-monument-bold">CVR</b>
               </p>
             </div>
             <div className="py-3 flex items-center justify-start gap-3">
