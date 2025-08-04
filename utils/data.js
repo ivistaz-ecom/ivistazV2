@@ -195,6 +195,11 @@ export const IndutriesCardData = [
     pageLink: "/industries/beauty-wellness",
   },
   {
+    title: "Education",
+    imgUrl: "/industries/education-banner-new.png",
+    pageLink: "/industries/education",
+  },
+  {
     title: "Fashion & Accessories",
     imgUrl: "/industries/fashion.png",
     pageLink: "/industries/fashion-accessories",
@@ -210,6 +215,11 @@ export const IndutriesCardData = [
     pageLink: "/industries/jewellery",
   },
   {
+    title: "Law",
+    imgUrl: "/industries/law-banner.png",
+    pageLink: "/industries/law",
+  },
+  {
     title: "Not-for-Profits/NGOs",
     imgUrl: "/industries/ngo-new.png",
     pageLink: "/industries/ngos",
@@ -218,15 +228,5 @@ export const IndutriesCardData = [
     title: "Tech/IT",
     imgUrl: "/industries/tech-banner.png",
     pageLink: "/industries/technology-IT",
-  },
-  {
-    title: "Education",
-    imgUrl: "/industries/education-banner-new.png",
-    pageLink: "/industries/education",
-  },
-  {
-    title: "Law",
-    imgUrl: "/industries/law-banner.png",
-    pageLink: "/industries/law",
   },
 ];
