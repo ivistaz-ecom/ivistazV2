@@ -15,7 +15,8 @@ const WeWork = () => {
           </p>
           <p className="text-xl md:text-3xl font-monument-light text-center text-black pt-7 lg:px-0 px-5">
             With sharp, creative, channel-specific strategies and
-            performance-first execution, we help you grow without overspending.
+            performance-first execution, <br className="hidden lg:block" /> we
+            help you grow without overspending.
           </p>
         </div>
       </div>

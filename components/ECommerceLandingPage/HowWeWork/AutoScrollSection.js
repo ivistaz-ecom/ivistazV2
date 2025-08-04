@@ -12,7 +12,7 @@ export default function AutoScrollSection() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0, // Continuous effect
-    speed: 5000, // Smooth speed
+    speed: 6000, // Smooth speed
     cssEase: "linear", // For continuous flow
     arrows: false,
     pauseOnHover: false,
