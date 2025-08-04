@@ -24,7 +24,7 @@ const Banner = () => {
         {/* Content */}
         <div className="relative z-10 text-white flex flex-col items-center justify-center pt-[500px] h-full text-center">
           <h1 className="text-3xl md:text-[60px]">
-            Performance Marketing for{" "}
+            Performance Marketing for{" "} <br className="md:hidden" />
             <span className="text-3xl md:text-[60px] text-[#EA561F]">
               E-Commerce Brands{" "}
             </span>
