@@ -22,13 +22,15 @@ const Banner = () => {
         <div className="absolute inset-0 bg-black opacity-50"></div>
 
         {/* Content */}
-        <div className="relative z-10 text-white flex flex-col items-center justify-center h-full text-center">
+        <div className="relative z-10 text-white flex flex-col items-center justify-center pt-[500px] h-full text-center">
           <h1 className="text-3xl md:text-[60px]">
             Performance Marketing for{" "}
+            <span className="text-3xl md:text-[60px] text-[#EA561F]">
+              E-Commerce Brands{" "}
+            </span>
           </h1>
 
-          <h1 className="text-3xl md:text-[60px] text-[#EA561F]">
-            E-Commerce Brands{" "}
+          <h1 className="text-3xl md:text-[60px]">
             <span className="text-3xl md:text-[60px] text-white">
               That Want to{" "}
             </span>
