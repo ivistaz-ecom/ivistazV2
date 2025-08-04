@@ -9,7 +9,7 @@ const CaseStudiesCard = () => {
       <div>
         <div className="container mx-auto flex flex-col items-center justify-center">
           <h3 className="lg:text-[32px] text-xl text-center lg:py-10 lg:p-0 p-5 ">
-            Performance Marketing for E-commerce Brands That want to Scale
+            Performance Marketing for E-commerce Brands That Want to Scale
             Smarter
           </h3>
           <Link

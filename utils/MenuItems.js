@@ -42,16 +42,17 @@ export const menuItems = [
         { label: "Appliances", pageLink: "/industries/appliances" },
         { label: "Automobiles", pageLink: "/industries/automobiles" },
         { label: "Beauty & Wellness", pageLink: "/industries/beauty-wellness" },
+        { label: "Education", pageLink: "/industries/education" },
         {
           label: "Fashion & Accessories",
           pageLink: "/industries/fashion-accessories",
         },
         { label: "Hospitality", pageLink: "/industries/hospitality" },
         { label: "Jewelry", pageLink: "/industries/jewellery" },
+        { label: "Law", pageLink: "/industries/law" },
         { label: "NGOs", pageLink: "/industries/ngos" },
         { label: "Tech/IT", pageLink: "/industries/technology-IT" },
-        { label: "Education", pageLink: "/industries/education" },
-        { label: "Law", pageLink: "/industries/law" },
+        
       ],
     },
     {
