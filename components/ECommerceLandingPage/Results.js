@@ -9,7 +9,7 @@ const Results = () => {
           <p className="text-3xl md:text-5xl font-monument-light text-center text-black">
             Results You Can<span className="text-[#ED1C24]"> Measure</span>
           </p>
-          <p className="text-lg lg:px-0 px-2 md:text-3xl font-monument-light text-center text-black pt-7">
+          <p className="text-lg lg:px-0 px-4 md:text-3xl font-monument-light text-center text-black pt-7">
             We partnered with India’s leading water purifier brand to boost
             their online sales through carefully crafted search engine marketing
             campaigns, optimizing for intent, visibility, and efficiency across
