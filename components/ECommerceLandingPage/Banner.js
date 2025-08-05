@@ -25,7 +25,7 @@ const Banner = () => {
         <div className="relative z-10 text-white flex flex-col items-center justify-center pt-[500px] h-full text-center">
           <h1 className="text-2xl md:text-[60px]">
             Performance Marketing for{" "} <br className="md:hidden" />
-            <span className="text-2xl md:text-[60px] text-[#EA561F]">
+            <span className="text-2xl md:text-[60px] text-[#ff5c00]">
               E-Commerce Brands{" "}
             </span>
           </h1>
@@ -34,7 +34,7 @@ const Banner = () => {
             <span className="text-2xl md:text-[60px] text-white">
               That Want to{" "}
             </span>
-            <span className="text-[#EA561F]">Scale Smarter</span>
+            <span className="text-[#ff5c00]">Scale Smarter</span>
           </h1>
         </div>
       </div>

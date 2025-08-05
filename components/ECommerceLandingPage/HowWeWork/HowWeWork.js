@@ -6,7 +6,7 @@ const HowWeWork = () => {
   return (
     <div className="bg-black text-white py-10 overflow-hidden w-full">
       <h2 className="text-center text-4xl md:text-5xl font-monument-light lg:mb-16 mb-7">
-        How We <span className="text-[#EA561F]"> Work</span>
+        How We <span className="text-[#ff5c00]"> Work</span>
       </h2>
       <div>
         <Image

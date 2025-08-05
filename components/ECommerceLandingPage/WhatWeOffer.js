@@ -7,7 +7,7 @@ const WhatWeOffer = () => {
   return (
     <div className="bg-black text-white pt-10 overflow-hidden w-full">
       <h2 className="text-center text-4xl md:text-5xl font-monument-light lg:mb-16 mb-7">
-        What We <span className="text-[#EA561F]"> Offer</span>
+        What We <span className="text-[#ff5c00]"> Offer</span>
       </h2>
 
       {/* Customer */}
@@ -83,7 +83,7 @@ const WhatWeOffer = () => {
       <div className="text-center flex flex-col items-center justify-center">
         <h3 className="lg:text-[60px] text-2xl text-center font-monument-light pt-10 text-[#DBDBDB]">
           End-to-end{" "}
-          <span className="text-[#EA561F]"> E-commerce Services</span>
+          <span className="text-[#ff5c00]"> E-commerce Services</span>
         </h3>
         <h3 className="lg:text-[60px] text-2xl text-center font-monument-light text-[#DBDBDB]">
           for Your Brand
