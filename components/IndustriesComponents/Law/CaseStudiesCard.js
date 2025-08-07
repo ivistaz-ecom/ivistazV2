@@ -7,7 +7,7 @@ const CaseStudiesCard = () => {
     <>
       <div>
         <div className="container mx-auto flex flex-col items-center justify-center">
-        <h3 className="lg:text-[32px] text-center lg:w-3xl lg:pt-10 lg:p-0 p-5">
+        <h3 className="lg:text-[22px] text-center lg:w-3xl lg:pt-10 lg:p-0 p-5">
             Here’s how we’ve supported law firms in building a stronger digital
             presence
           </h3>
