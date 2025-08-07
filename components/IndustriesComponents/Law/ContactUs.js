@@ -69,15 +69,6 @@ const ContactUs = () => {
           </Link>
         </div> */}
       </div>
-      <div className="lg:p-16 p-7">
-        <Image
-          src="/industries/law-002.png"
-          alt="law"
-          width={1200}
-          height={1000}
-          className="w-full h-full object-cover"
-        />
-      </div>
     </>
   );
 };

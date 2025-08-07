@@ -1,15 +1,15 @@
 import React from "react";
-import CaseStudiesCategoriesComponents from "../CaseStudiesPropsFetch/CaseStudiesCategoriesComponents"
+import CaseStudiesCategoriesComponents from "../CaseStudiesPropsFetch/CaseStudiesCategoriesComponents";
 
 const CaseStudiesCard = () => {
-  const categoryId = 11;
+  const categoryId = 38;
   return (
     <>
       <div>
         <div className="container mx-auto flex flex-col items-center justify-center">
-          <h3 className="lg:text-[32px] text-center lg:w-3xl lg:py-10 lg:p-0 p-5">
-            Here’s how we have helped appliance brands to win in the e-commerce
-            channel
+        <h3 className="lg:text-[32px] text-center lg:w-3xl lg:pt-10 lg:p-0 p-5">
+            Here’s how we’ve supported law firms in building a stronger digital
+            presence
           </h3>
           <div>
             <CaseStudiesCategoriesComponents categoryId={categoryId} />
