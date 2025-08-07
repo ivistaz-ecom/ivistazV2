@@ -2,6 +2,14 @@
 // while updating the new case studies place on top
 export const caseStudiesData = [
   {
+    link: "/case-studies/legal-services-case-study",
+    stats: "3X",
+    title: "Traffic Growth in One Year",
+    description: "For a Leading Law Firm",
+    buttonText: "Read More",
+    image: "/case-studies/magnet.svg",
+  },
+  {
     link: "/case-studies/consumer-travel-case-study-spicejet",
     stats: "17%",
     title: "Growth in Direct Online Bookings",
