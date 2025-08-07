@@ -1,14 +1,13 @@
 import React from "react";
 import CaseStudiesCategoriesComponents from "../CaseStudiesPropsFetch/CaseStudiesCategoriesComponents";
-import Link from "next/link";
 
 const CaseStudiesCard = () => {
   const categoryId = 38;
   return (
     <>
       <div>
-        <div className="container mx-auto flex flex-col items-center justify-center">
-          <h3 className="lg:text-[22px] text-md text-center lg:pt-12 lg:pb-0 pb-5 pt-5">
+        <div className="container flex flex-col items-center justify-center">
+          <h3 className="lg:text-[22px] text-center lg:w-3xl lg:pt-10 lg:p-0 p-5">
             Here’s how we’ve supported law firms in building a stronger digital
             presence
           </h3>

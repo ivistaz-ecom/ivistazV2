@@ -48,8 +48,7 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
 
   return (
     <>
-      <style jsx>
-        {`
+      <style jsx>{`
         .post-content-title {
           overflow: hidden;
           text-overflow: ellipsis;
@@ -64,64 +63,27 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
         }
-      
-       
-        
-        h1, h2, h3, h4, h5, h6 {
-          margin-bottom: 1rem !important;
-        }
-        h1, h2, h3, h4, h5, h6, p {
-          margin-top: 1rem !important;
-        }
-        
-        ul li{
-        margin-bottom: 0.5rem !important
-        font-size: 20px !important
-        }
+      `}</style>
 
-        ul{
-        padding-left: 20px !important;
-        margin-top: 1rem !important
-        }
-
-        h4{
-        font-size: 24px !important
-        }
-
-        h3{
-        font-size: 28px !important
-        }
-        
-        h2 { 
-        font-size: 32px !important
-        }
-
-        b {
-        font-weight: 700 !important;
-        font-style: normal !important;
-        }
-      `}
-      </style>
-
-      <div className="container lg:py-10">
+      <div className="container mx-auto lg:pt-5">
         {data ? (
           data.map((item) => (
             <div key={item.id} className="mb-10">
-              <Image
+              <img
                 src={item.acf.thumbnail_image.url}
                 alt={item.title.rendered}
                 width={1200}
                 height={600}
-                className="w-[100vw] h-auto object-cover"
+                className="w-full h-auto"
               />
-              <div className="bg-white shadow-lg p-6  flex flex-col lg:flex-row justify-between items-center gap-4">
+              <div className="bg-white shadow-lg flex flex-col lg:flex-row justify-between gap-4">
                 <div className="lg:w-1/3">
                   <div
-                    className="text-xl font-monument-bold text-red-600 post-content-title text-left"
+                    className="text-xl font-monument-bold text-red-600 post-content-title"
                     dangerouslySetInnerHTML={{ __html: item.title.rendered }}
                   />
                 </div>
-                <div className="lg:w-xl lg:self-center text-left">
+                <div className="lg:w-xl lg:self-center">
                   <p
                     className="text-gray-600 post-content"
                     dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}
@@ -130,7 +92,7 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
                 <div className="lg:w-auto lg:self-center">
                   <button
                     onClick={() => handleShowModal(item)}
-                    className="text-red-600 font-medium flex items-center gap-2 hover:underline text-xl"
+                    className="text-red-600 font-medium flex items-center hover:underline text-xl"
                   >
                     Learn More
                     <FiArrowUpRight size={24} />
@@ -173,7 +135,10 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
                   }}
                 />
                 <div className="mt-6 flex justify-center">
-                  <Link href="/contact-us" className="btn-14">
+                  <Link
+                    href="/contact-us"
+                    className="btn-14"
+                  >
                     Contact Us
                   </Link>
                 </div>
@@ -189,12 +154,15 @@ const CaseStudiesCategoriesComponents = ({ categoryId }) => {
               pathname === "/traffic" ||
               pathname === "/keyword-ranking" ||
               pathname === "/engagement") && (
-              <Link href="/welcome" className="btn-14">
+              <Link
+                href="/welcome"
+                className="btn-14"
+              >
                 Enter website
               </Link>
             )}
             {pathname.startsWith("/industries") && (
-              <Link href="/case-studies" className="btn-18 mb-10 lg:mb-0">
+              <Link href="/case-studies" className="btn-18">
                 View All Case Studies
               </Link>
             )}
