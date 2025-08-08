@@ -52,12 +52,18 @@ const Content = () => {
             helping you with online leads, sales, or bookings, our focus will
             also be to optimise your Cost Per Lead (CPL).
           </p>
-          <p className="text-[#ed2023] text-[20px] font-monument-bold pt-5 pb-10">
+
+          <p className="text-[#ed2023] text-[20px] font-monument-bold pt-5">
             Need help with your Search Engine Marketing?{" "}
             <Link href="/contact-us" className="underline">
               Contact us
             </Link>{" "}
-            today.
+          </p>
+          <p className="text-[#ed2023] text-[20px] font-monument-bold pt-5 pb-10">
+            Explore our ecommerce marketing services{" "}
+            <Link href="/performance-marketing-for-ecommerce" className="underline">
+              here
+            </Link>
           </p>
         </div>
       </div>

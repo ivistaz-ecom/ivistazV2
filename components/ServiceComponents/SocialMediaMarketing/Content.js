@@ -37,12 +37,18 @@ const Content = () => {
             working to generate traffic through Twitter ads, LinkedIn ads,
             YouTube ads and Facebook ads.
           </p>
-          <p className="text-[#ed2023] text-[20px] font-monument-bold pt-5 pb-10">
+          <p className="text-[#ed2023] text-[20px] font-monument-bold pt-5">
           Leads, online sales, enquiries, room bookings - what goals do you want to achieve with social media marketing?{" "}
             <Link href="/contact-us" className="underline">
               Contact us
             </Link>{" "}
             today.
+          </p>
+          <p className="text-[#ed2023] text-[20px] font-monument-bold pt-5 pb-10">
+            Explore our ecommerce marketing services{" "}
+            <Link href="/performance-marketing-for-ecommerce" className="underline">
+              here
+            </Link>
           </p>
         </div>
       </div>
