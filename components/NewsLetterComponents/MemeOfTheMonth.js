@@ -9,8 +9,8 @@ const MemeOfTheMonth = () => {
           <Image
             src="/news-letter/meme.svg"
             alt="meme"
-            width={1000}
-            height={1000}
+            width={800}
+            height={800}
             className="lg:px-0 px-4"
           />
         </div>
@@ -28,9 +28,9 @@ const MemeOfTheMonth = () => {
           <Image
             src="/news-letter/wait.png"
             alt="meme"
-            width={1000}
-            height={1000}
-            className="py-5 lg:py-10 w-full h-full object-cover"
+            width={800}
+            height={800}
+            className="py-5 lg:py-10"
           />
         </div>
         <div className="flex flex-col items-center justify-center">

@@ -61,7 +61,7 @@ const SeoSection = () => {
           <div className="flex lg:flex-row flex-col items-center justify-center gap-10">
             <div className="">
               <Image
-                src="/news-letter/seo-3.png"
+                src="/news-letter/spidy.png"
                 alt="seo"
                 width={600}
                 height={600}
@@ -91,7 +91,7 @@ const SeoSection = () => {
             </div>
             <div className="">
               <Image
-                src="/news-letter/seo-4.png"
+                src="/news-letter/hold.png"
                 alt="seo"
                 width={600}
                 height={600}
@@ -105,11 +105,10 @@ const SeoSection = () => {
               living for the highs, memes, and the next big ranking leap.
             </p>
             <p className="text-center text-xl font-monument-bold text-[#000] lg:w-[65%] mt-10  lg:px-0 px-4">
-              So when Google’s maze leaves you lost, remember your SEO team,
-              living for the highs, memes, and the next big ranking leap.
+              From the SEO Team: May your keywords shine and your rankings soar!
             </p>
-            <p className="text-center text-xl font-monument-light text-[#292727] w-[65%] mt-10">
-              Susmita
+            <p className="text-center text-xl font-monument-bold text-[#292727] w-[65%] mt-10">
+              Susmitha
             </p>
           </div>
         </div>

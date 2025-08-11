@@ -10,8 +10,8 @@ const PictureOfTheMonth = () => {
             <Image
               src="/news-letter/picture.svg"
               alt="picture"
-              width={400}
-              height={400}
+              width={350}
+              height={350}
               className="lg:px-0 px-4"
             />
           </div>
@@ -28,8 +28,8 @@ const PictureOfTheMonth = () => {
             <Image
               src="/news-letter/shreya.png"
               alt="picture"
-              width={800}
-              height={800}
+              width={400}
+              height={400}
               className="w-full h-full object-cover lg:px-0 px-3"
             />
           </div>

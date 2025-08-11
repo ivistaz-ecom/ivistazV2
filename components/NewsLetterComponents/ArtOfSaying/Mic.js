@@ -33,7 +33,7 @@ const Mic = () => {
         </div>
       </div>
       <div className="container mx-auto flex items-center justify-center py-5 gap-10">
-        <p className="text-center lg:w-[75%] font-monument-light text-lg lg:px-0 px-4">
+        <p className="text-center lg:w-[80%] font-monument-light text-lg lg:px-0 px-4">
           We hope the energy carries into next week for round two of the
           madness. By the time you’re reading this, the competition will be
           over, so we hope whichever team won treats us!

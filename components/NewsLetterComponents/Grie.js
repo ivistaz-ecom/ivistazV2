@@ -17,7 +17,7 @@ const Grie = () => {
         <div className="flex flex-col items-center justify-center lg:py-10 py-5">
           <p className="text-center lg:w-[75%] font-monument-light text-lg lg:px-0 px-4">
             We’ve been wanting a team outing for so long that at this point, any
-            memory of the last outing has started to fade away/has started to
+            memory of the last outing has started to
             sound like folklore. It’s time to give the employees a chance to
             show their true and drunk selves.
           </p>

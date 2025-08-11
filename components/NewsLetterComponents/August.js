@@ -9,8 +9,8 @@ const August = () => {
           <Image
             src="/news-letter/aug.svg"
             alt="august"
-            width={400}
-            height={400}
+            width={550}
+            height={550}
             className="object-cover lg:px-0 px-4"
           />
         </div>
