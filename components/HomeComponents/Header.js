@@ -57,6 +57,7 @@ const Header = () => {
   }, [activeMenu]);
 
   if (pathname === "/") return null;
+  if (pathname === "/newsletter") return null;
 
   return (
     <>

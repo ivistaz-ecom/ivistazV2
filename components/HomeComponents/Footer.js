@@ -17,6 +17,7 @@ const Footer = () => {
   // Don't show footer on the main page
   if (pathname === "/") return null;
   if (pathname === "/performance-marketing-for-ecommerce") return null;
+  if (pathname === "/newsletter") return null;
   return (
     <footer className="bg-black text-white pt-20 pb-10 text-center px-4">
       <div className="max-w-4xl mx-auto">
