@@ -70,11 +70,10 @@ const SeoSection = () => {
             </div>
             <div>
               <p className="text-xl lg:w-[500px] font-monument-light  lg:px-0 px-4">
-                Life on the SEO team means wearing many hats, detective, wizard,
-                cat-herder. We chase wins: one day a keyword’s up, the next an
-                algorithm update throws everything into chaos. Google’s
-                algorithm is an unpredictable librarian, loving your blog today,
-                abandoning it tomorrow for sea shanties!
+                SEO is never simple. Traffic drops, rankings fall, and you hear
+                the collective groan. But we bounce back. With updates named
+                Panda, Penguin, and Possum, we keep finding new tricks to please
+                the algorithm.
               </p>
             </div>
           </div>
