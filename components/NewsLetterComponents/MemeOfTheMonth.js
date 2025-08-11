@@ -16,7 +16,7 @@ const MemeOfTheMonth = () => {
         </div>
         <div className="flex items-center justify-center">
           <Image
-            src="/news-letter/us-waiting.svg"
+            src="/news-letter/response.svg"
             alt="meme"
             width={600}
             height={600}
