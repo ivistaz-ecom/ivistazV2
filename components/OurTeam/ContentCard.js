@@ -13,7 +13,7 @@ const ContentCard = () => {
           expertise, creativity, and executional rigour of the team behind it.
           Our people bring together deep experience across industries, including
           appliances, law, education, finance, real estate, automobiles, beauty
-          and wellness, fashion and accessories, hospitality, NGOs, and
+          and wellness, fashion and accessories, hospitality, NGOs,
           technology and IT. This breadth of knowledge allows us to offer a
           balance of strategic thinking, technical excellence, and creative
           vision to every engagement.
