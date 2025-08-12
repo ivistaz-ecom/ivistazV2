@@ -8,11 +8,11 @@ export const teamsData = [
           value:
             "Strategic Planning, Project Management, Digital Campaign Execution, Analytics and Reporting, and Stakeholder Coordination",
         },
-        {
-          label: "Industries Served",
-          value:
-            "Technology, Hospitality, E-Commerce, Education, Social Impact, D2C, Finance, and Real Estate",
-        },
+        // {
+        //   label: "Industries Served",
+        //   value:
+        //     "Technology, Hospitality, E-Commerce, Education, Social Impact, D2C, Finance, and Real Estate",
+        // },
       ],
       description:
         "Our account managers serve as the central point of communication and coordination, ensuring seamless collaboration between teams, maintaining project momentum, and delivering outcomes aligned with client expectations and timelines.",
@@ -22,11 +22,11 @@ export const teamsData = [
       title: "Copywriting Team",
       experience: "6+ Years",
       strengths: [
-        {
-          label: "Industries Served",
-          value:
-            "Technology, Hospitality, E-Commerce, Education, Social Impact, D2C, Finance, and Real Estate",
-        },
+        // {
+        //   label: "Industries Served",
+        //   value:
+        //     "Technology, Hospitality, E-Commerce, Education, Social Impact, D2C, Finance, and Real Estate",
+        // },
       ],
       description:
         "Our writers craft clear, engaging, and brand-aligned narratives that strengthen user experience and drive meaningful connections—whether it’s a landing page, campaign, or full-fledged website.",
@@ -45,11 +45,11 @@ export const teamsData = [
           label: "Certifications",
           value: "User Interface & Interactive Design",
         },
-        {
-          label: "Industries Served",
-          value:
-            "Technology, Hospitality, E-Commerce, Education, Social Impact, Finance, and Real Estate",
-        },
+        // {
+        //   label: "Industries Served",
+        //   value:
+        //     "Technology, Hospitality, E-Commerce, Education, Social Impact, Finance, and Real Estate",
+        // },
       ],
       description:
         "Our UI/UX specialists focus on designing intuitive, mobile-first experiences that reflect brand personality while ensuring ease of use, visual coherence, and strong engagement across platforms.",
@@ -64,11 +64,11 @@ export const teamsData = [
           value:
             "On-Page SEO, Technical SEO, Local SEO, and Paid Media Strategy Across LinkedIn, Meta, and Google",
         },
-        {
-          label: "Industries Served",
-          value:
-            "Technology, Hospitality, E-Commerce, Education, Social Impact, D2C, Finance, and Real Estate",
-        },
+        // {
+        //   label: "Industries Served",
+        //   value:
+        //     "Technology, Hospitality, E-Commerce, Education, Social Impact, D2C, Finance, and Real Estate",
+        // },
       ],
       description:
         "Our SEO and performance marketing specialists ensure that digital properties are search-optimized, discoverable, and conversion-ready from the ground up, integrating best practices at every stage of development.",
@@ -87,11 +87,11 @@ export const teamsData = [
           label: "Certifications",
           value: "Sitecore Developer Certification (.NET & XP), React Developer Certification, Laravel & MERN Stack",
         },
-        {
-          label: "Industries Served",
-          value:
-            "Technology, Hospitality, E-Commerce, Education, Social Impact, Finance, and Real Estate",
-        },
+        // {
+        //   label: "Industries Served",
+        //   value:
+        //     "Technology, Hospitality, E-Commerce, Education, Social Impact, Finance, and Real Estate",
+        // },
       ],
       description:
         "Our development team specializes in building robust, scalable digital platforms with a focus on performance, accessibility, security, and seamless third-party integrations.",

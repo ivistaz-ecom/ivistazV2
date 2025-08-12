@@ -188,7 +188,7 @@ const Header = () => {
             ))}
 
             <Link href="/case-studies">
-              <button className="relative py-2 px-4 bg-[#D0AC59] rounded-full overflow-hidden group hover:text-black text-white duration-200 transition">
+              <button className="relative py-2 px-4 bg-[#FE5B02] rounded-full overflow-hidden group hover:text-black text-white duration-200 transition">
                 <span className="absolute inset-0 bg-white  transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
                 <span className="relative z-10">Case Studies</span>
               </button>
@@ -288,9 +288,9 @@ const Header = () => {
                 <Link href="/case-studies">
                   <button
                     onClick={() => setMobileOpen(false)}
-                    className="relative py-2 px-4 bg-white rounded-full overflow-hidden group text-black"
+                    className="relative py-2 px-4 bg-[#FE5B02] rounded-full overflow-hidden group text-white"
                   >
-                    <span className="absolute inset-0 bg-[#D0AC59] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
+                    <span className="absolute inset-0 bg-[#FE5B02] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
                     <span className="relative z-10">Case Studies</span>
                   </button>
                 </Link>
