@@ -29,7 +29,7 @@ export const teamsData = [
         // },
       ],
       description:
-        "Our writers craft clear, engaging, and brand-aligned narratives that strengthen user experience and drive meaningful connections—whether it’s a landing page, campaign, or full-fledged website.",
+        "Our writers craft clear, engaging, and brand-aligned narratives that strengthen user experience and drive meaningful connections, whether it’s a landing page, campaign, full-fledged website, or B2B, B2C, and thought leadership content.",
       style: "border border-[#FA0001] text-black",
     },
     {

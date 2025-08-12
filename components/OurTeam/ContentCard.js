@@ -10,7 +10,7 @@ const ContentCard = () => {
         </div>
         <p className="font-monument-light text-lg">
           At iVistaz, we believe that the strength of any project lies in the
-          expertise, creativity, and executional rigour of the team behind it.
+          expertise, creativity, and executional rigor of the team behind it.
           Our people bring together deep experience across industries, including
           appliances, law, education, finance, real estate, automobiles, beauty
           and wellness, fashion and accessories, hospitality, NGOs,
