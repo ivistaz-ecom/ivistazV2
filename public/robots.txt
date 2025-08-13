@@ -33,4 +33,13 @@ Disallow:
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Allow: /
+
+# Sitemaps
 Sitemap: https://ivistaz.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
