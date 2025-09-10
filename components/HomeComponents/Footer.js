@@ -18,6 +18,7 @@ const Footer = () => {
   if (pathname === "/") return null;
   if (pathname === "/performance-marketing-for-ecommerce") return null;
   if (pathname === "/newsletter") return null;
+  if (pathname === "/september-newsletter") return null;
   return (
     <footer className="bg-black text-white pt-20 pb-10 text-center px-4">
       <div className="max-w-4xl mx-auto">
