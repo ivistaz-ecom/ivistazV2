@@ -28,11 +28,11 @@ const SpecialSection = () => {
           From Sanjana, who loves new experiences and whose excitement to learn
           is infectious. To Dikshith. quiet, but not really, who can talk
           endlessly, especially over peri-peri French fries. Kevin, with his fun
-          facts and quirky choice of socks. Sanjiban with his an amazing ability
+          facts and quirky choice of socks. Sanjiban with his amazing ability
           to spot food anywhere in the office. Saarika, bringing golden
           retriever energy (with just the right touch of sarcasm). Shreya, whose
           witty one-liners make you wonder where she’s been hiding all that
-          badassness. Aaathreya, our unasked-for encyclopedia and his spot-on
+          badassness. Aathreya, our unasked-for encyclopedia and his spot-on
           imitations of his Aniketh, whom we have never met.
         </p>
         <p className="lg:text-2xl myriad-pro-semibold">

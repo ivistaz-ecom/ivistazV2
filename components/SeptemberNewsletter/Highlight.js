@@ -7,7 +7,7 @@ const Highlight = () => {
       <div className="flex flex-col items-center justify-center">
         <div className="w-full">
           <Image
-            src="/sept-newsletter/highlight.png"
+            src="/sept-newsletter/highlight-2.png"
             alt="grie"
             width={1200}
             height={1000}
@@ -16,7 +16,7 @@ const Highlight = () => {
         </div>
         <div className="p-10 w-full">
           <Image
-            src="/sept-newsletter/painting.png"
+            src="/sept-newsletter/painting-2.png"
             alt="grie"
             width={1200}
             height={1000}
