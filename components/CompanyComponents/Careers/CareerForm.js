@@ -44,27 +44,41 @@ const CareerForms = () => {
 
   const handleTextChange = (e) => {
     const { name, value } = e.target;
-    const newErrors = {};
+    const newErrors = { ...errors };
 
     if (name === "yourName") {
-      if (!nameRegex.test(value)) newErrors[name] = "Invalid character in name";
-      else setyourName(value);
+      setyourName(value);
+      if (value && !nameRegex.test(value)) {
+        newErrors[name] = "Invalid character in name";
+      } else {
+        delete newErrors[name];
+      }
     }
     if (name === "yourEmail") {
-      if (!emailRegex.test(value))
+      setyourEmail(value);
+      if (value && !emailRegex.test(value)) {
         newErrors[name] = "Please enter a valid email address.";
-      else if (!isValidEmail(value))
+      } else if (value && !isValidEmail(value)) {
         newErrors[name] = "This email domain is not allowed.";
-      else setyourEmail(value);
+      } else {
+        delete newErrors[name];
+      }
     }
     if (name === "yourPhone") {
-      if (!numRegex.test(value))
+      setyourPhone(value);
+      if (value && !numRegex.test(value)) {
         newErrors[name] = "Please enter a valid phone number.";
-      else setyourPhone(value);
+      } else {
+        delete newErrors[name];
+      }
     }
     if (name === "yourJobType") {
-      if (value === "Job Type") newErrors[name] = "Please select a job type";
-      else setyourJobType(value);
+      setyourJobType(value);
+      if (value === "Job Type") {
+        newErrors[name] = "Please select a job type";
+      } else {
+        delete newErrors[name];
+      }
     }
 
     setErrors(newErrors);
@@ -96,10 +110,46 @@ const CareerForms = () => {
     setyourPhone("");
     setyourJobType("");
     setyourFile(null);
+    setErrors({});
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate all fields before submission
+    const newErrors = {};
+    
+    if (!yourName) {
+      newErrors.yourName = "Name is required";
+    } else if (!nameRegex.test(yourName)) {
+      newErrors.yourName = "Invalid character in name";
+    }
+
+    if (!yourEmail) {
+      newErrors.yourEmail = "Email is required";
+    } else if (!emailRegex.test(yourEmail)) {
+      newErrors.yourEmail = "Please enter a valid email address.";
+    } else if (!isValidEmail(yourEmail)) {
+      newErrors.yourEmail = "This email domain is not allowed.";
+    }
+
+    if (!yourPhone) {
+      newErrors.yourPhone = "Phone is required";
+    } else if (!numRegex.test(yourPhone)) {
+      newErrors.yourPhone = "Please enter a valid phone number.";
+    } else if (yourPhone.length < 10) {
+      newErrors.yourPhone = "Phone number must be 10 digits.";
+    }
+
+    if (!yourJobType || yourJobType === "Job Type") {
+      newErrors.yourJobType = "Please select a job type";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
     setIsSubmitting(true); // Start loading
 
     const formData = new FormData();
