@@ -59,6 +59,7 @@ const Header = () => {
   if (pathname === "/") return null;
   if (pathname === "/newsletter") return null;
   if (pathname === "/september-newsletter") return null;
+  if (pathname === "/october-newsletter") return null;
 
   return (
     <>

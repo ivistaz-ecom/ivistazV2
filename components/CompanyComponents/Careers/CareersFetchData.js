@@ -17,7 +17,7 @@ const CareersFetchData = () => {
 
   const categoryId = 25;
   const [data, setData] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);``
   const [selectedItem, setSelectedItem] = useState(null);
   const [visibleItems, setVisibleItems] = useState(4);
   const [isLoading, setIsLoading] = useState(true);

@@ -1274,6 +1274,11 @@ body {
   font-style: italic;
 }
 
+.myriad-pro-light-italic {
+  font-family: 'Myriad Pro', sans-serif;
+  font-weight: 300 !important;
+  font-style: italic !important;
+}
 .myriad-pro-bold-italic {
   font-family: 'Myriad Pro', sans-serif;
   font-weight: bold;
