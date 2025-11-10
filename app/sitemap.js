@@ -13,12 +13,12 @@ export default async function sitemap() {
       blogUrls = posts.map((post) => ({
         url: `${baseUrl}/blogs/${post.slug}`,
         lastModified: new Date(post.modified),
-        changeFrequency: 'weekly',
+        changeFrequency: "weekly",
         priority: 0.7,
       }));
     }
   } catch (error) {
-    console.error('Error fetching blog posts for sitemap:', error);
+    console.error("Error fetching blog posts for sitemap:", error);
   }
 
   // Static pages
@@ -26,70 +26,70 @@ export default async function sitemap() {
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'daily',
+      changeFrequency: "daily",
       priority: 1,
     },
     {
       url: `${baseUrl}/blogs`,
       lastModified: new Date(),
-      changeFrequency: 'daily',
+      changeFrequency: "daily",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/case-studies`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/contact-us`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.6,
     },
     {
       url: `${baseUrl}/our-team`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.6,
     },
     {
       url: `${baseUrl}/our-clients`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.6,
     },
     {
       url: `${baseUrl}/service/search-engine-optimization`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/service/search-engine-marketing`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/service/social-media-marketing`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/service/content-development-b2b-b2c`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/service/website-design-and-development`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 0.8,
     },
   ];
 
   return [...staticPages, ...blogUrls];
-} 
+}

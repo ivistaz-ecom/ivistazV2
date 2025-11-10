@@ -176,8 +176,8 @@ export default function EnquiryForm() {
     setFormErrors({ ...formErrors, [name]: "" });
   };
 
-  console.log(responseMsg);
-  console.log(formData);
+  // console.log(responseMsg);
+  // console.log(formData);
   const validate = () => {
     const errors = {};
 
