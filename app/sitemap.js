@@ -13,7 +13,7 @@ export default async function sitemap() {
       blogUrls = posts.map((post) => ({
         url: `${baseUrl}/blogs/${post.slug}`,
         lastModified: new Date(post.modified),
-        changeFrequency: "weekly",
+        changeFrequency: "daily",
         priority: 0.7,
       }));
     }
